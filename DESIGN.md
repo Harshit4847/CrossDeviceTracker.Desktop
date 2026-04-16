@@ -1,113 +1,243 @@
-# CrossDeviceTracker.Desktop — Design Document
+# CrossDeviceTracker.Desktop - Design Document
 
 ---
 
-## 1. Desktop Client Purpose
+## 1. Overview
 
-The CrossDeviceTracker.Desktop application is responsible for monitoring foreground application activity on Windows devices and reporting usage logs to the backend API.
+The `CrossDeviceTracker.Desktop` application is responsible for:
 
-The desktop client operates as the primary data collection component in the CrossDeviceTracker system.
+- Tracking foreground application usage on Windows
+- Measuring active engagement time
+- Storing usage data locally (offline-first)
+- Preparing data for synchronization with backend API
 
----
+The system follows a separation of concerns design:
 
-## 2. System Architecture
+- Core (tracking logic)
+- Data (local persistence)
+- Sync (future implementation)
 
-The CrossDeviceTracker system consists of three major components:
+## 2. Architecture
 
-```
-User Device (Windows Desktop Client)
+```text
+Core (Tracking Engine)
         ↓
-Collect foreground application usage data
-
-Backend API
+Data Layer (SQLite Storage)
         ↓
-Store and process time logs
-
-Dashboard (Future)
-        ↓
-Visualize screen time analytics
-```
-
----
-
-## 3. Foreground Window Detection
-
-The desktop client will detect the currently active window using Windows Win32 APIs.
-
-The detection process follows these steps:
-
-1. Call `GetForegroundWindow()` to obtain the handle of the active window.
-2. Use `GetWindowThreadProcessId()` to retrieve the process ID.
-3. Use the process ID to identify the application name.
-
-This process will run periodically to monitor application usage.
-
----
-
-## 4. Application Usage Tracking Strategy
-
-The system will track usage in **time blocks** instead of logging every detection event.
-
-**Example:**
-
-| Field | Value |
-|-------|-------|
-| Application | Chrome |
-| StartTime | 10:00 |
-| EndTime | 10:10 |
-| Duration | 600 seconds |
-
-When the foreground application changes, the previous block is finalized and a new block begins.
-
----
-
-## 5. Tracking Interval
-
-The desktop client will periodically check the active window.
-
-Initial implementation will use a **fixed polling interval** (e.g., 2 seconds).
-
-This interval balances accuracy and CPU usage.
-
----
-
-## 6. Data Flow
-
-```
-Foreground Window Detection
-        ↓
-Track application start time
-        ↓
-Detect application change
-        ↓
-Finalize usage block
-        ↓
-Store usage log locally
-        ↓
-Send logs to backend API
+Sync Layer (Future: Backend API)
 ```
 
----
+Responsibilities:
 
-## 7. Device Authentication
+| Layer | Responsibility |
+|-------|----------------|
+| Core | Detect app usage, calculate time, create logs |
+| Data | Persist logs locally |
+| Sync | Send logs to backend (future) |
 
-The desktop client will authenticate with the backend using a **device JWT** obtained during the device linking process.
+## 3. Tracking Strategy
 
-All API requests from the desktop client will include this device JWT in the `Authorization` header.
+### 3.1 Polling
 
-**Example header:**
+- The system uses polling every 2 seconds
+- Simpler than event-based tracking
+- Acceptable trade-off between accuracy and performance
 
+### 3.2 Foreground Detection Pipeline
+
+```text
+GetForegroundWindow()
+        ↓
+GetWindowThreadProcessId()
+        ↓
+Process.GetProcessById()
+        ↓
+Process.ProcessName
 ```
-Authorization: Bearer <device_jwt>
+
+## 4. Tracking Logic
+
+### 4.1 Core Idea
+
+Track one active application at a time.
+
+A session ends when:
+
+- App changes
+- System locks
+- Application stops
+
+### 4.2 State Variables
+
+The tracker maintains:
+
+- `previousApp` -> currently tracked app
+- `startTime` -> when the session started
+- `isRunning` -> loop control flag
+
+### 4.3 Main Loop
+
+```text
+while (isRunning):
+
+    currentApp = getCurrentApp()
+    currentTime = now
+
+    if currentApp != previousApp:
+
+        if previousApp exists:
+            FinalizeSession(currentTime)
+
+        startTime = currentTime
+        previousApp = currentApp
+
+    wait 2 seconds
 ```
 
----
+### 4.4 Session Finalization
 
-## 8. Future Components
+```text
+endTime = currentTime
+duration = endTime - startTime
 
-The desktop client will later include additional modules:
+create Log object
 
-- Local storage for offline log persistence
-- Background service execution
-- System tray application
-- Log batching and synchronization
+SaveLogAsync(log)
+```
+
+## 5. Log Model
+
+Represents a single app usage session.
+
+- `Id` (GUID)
+- `AppName`
+- `StartTime`
+- `EndTime`
+- `Duration`
+- `SyncStatus`
+- `CreatedAt`
+
+### 5.1 SyncStatus
+
+- `Pending` -> not yet synced
+- `Sent` -> successfully synced
+- `Failed` -> failed to sync
+
+### 5.2 Design Principles
+
+- `Log` is a Core model, not Data-specific
+- Created in memory, then persisted
+- Used for local storage
+- Used for backend sync
+- Used for debugging
+
+## 6. Data Layer
+
+### 6.1 Interface
+
+`SaveLogAsync(Log log)`
+
+### 6.2 Responsibilities
+
+- Persist logs to SQLite
+- Handle storage reliability
+- No business logic
+
+## 7. Startup Behavior
+
+```text
+previousApp = getCurrentApp()
+startTime = currentTime
+isRunning = true
+```
+
+Tracking starts from current moment.
+
+Prevents fake sessions.
+
+## 8. Shutdown Behavior
+
+```text
+Stop():
+    FinalizeSession(currentTime)
+    isRunning = false
+```
+
+Important rules:
+
+- Must finalize last session
+- Must save to DB
+- Must NOT block on network
+
+## 9. Event Handling
+
+Sessions are finalized on:
+
+- App change
+- System lock
+- Application shutdown
+
+## 10. Separation of Concerns
+
+Core SHOULD:
+
+- Detect app usage
+- Calculate time
+- Create logs
+
+Core SHOULD NOT:
+
+- Access database directly
+- Send data to backend
+
+## 11. Offline-First Design
+
+- Logs are stored locally first
+- Sync happens later
+
+Ensures:
+
+- No data loss
+- Works without internet
+
+## 12. Sync Strategy (Future)
+
+```text
+Fetch logs where SyncStatus = Pending
+        ↓
+Send to backend
+        ↓
+Update status (Sent / Failed)
+```
+
+A separate Sync Service will implement this flow.
+
+## 13. Timing Considerations
+
+- Polling interval: 2 seconds
+- Possible inaccuracy: +/- 2 seconds
+- Backend applies tolerance validation
+
+## 14. Key Design Decisions
+
+| Decision | Reason |
+|----------|--------|
+| Polling over events | Simplicity |
+| GUID for IDs | Offline-safe uniqueness |
+| Store EndTime | Query performance and validation |
+| SyncStatus enum | Reliable retry logic |
+| Separate Core/Data | Clean architecture |
+
+## 15. Summary
+
+The desktop application is designed as a:
+
+- Tracking engine
+- Offline-first system
+- Cleanly separated architecture
+
+It ensures:
+
+- Accurate session tracking
+- Reliable local storage
+- Future scalability for backend sync
