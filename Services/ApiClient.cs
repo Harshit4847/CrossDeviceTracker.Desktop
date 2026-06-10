@@ -2,11 +2,6 @@ using System;
 
 public class ApiClient
 {
-    public static void Main()
-    {
-        //Console.WriteLine("Hello world!");
-        Console.Write("Congratulations!");
-        Console.Write(" ");
-        Console.Write("You wrote your first lines of code.");
-    }
+    // TODO: Implement API client for syncing logs with backend
+    // This will use device JWT from DeviceAuthService
 }
