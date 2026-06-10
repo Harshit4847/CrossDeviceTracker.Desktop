@@ -101,4 +101,17 @@ public class SqliteLogRepository : ILogRepository
             }
         }
     }
+
+    public async Task DeleteAllLogsAsync()
+    {
+        using (var connection = new SQLiteConnection(ConnectionString))
+        {
+            await connection.OpenAsync();
+            using (var command = connection.CreateCommand())
+            {
+                command.CommandText = "DELETE FROM Logs";
+                await command.ExecuteNonQueryAsync();
+            }
+        }
+    }
 }

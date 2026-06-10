@@ -19,6 +19,22 @@ Windows Desktop Client  →  Backend API  →  Dashboard (Future)
 
 ---
 
+## Features
+
+### System Tray Integration
+- **Minimize to Tray** — Click the close button to minimize the app to the system tray instead of closing it
+- **Background Tracking** — App continues tracking even when minimized
+- **Quick Access** — Double-click the tray icon to show/hide the window
+- **Context Menu** — Right-click tray icon to Show or Exit
+
+### GUI Features
+- **Real-time Status Display** — Shows current tracking status
+- **Current App Display** — View which app is currently active
+- **Activity Log** — See recent app usage with start times and durations
+- **Clear Logs** — Clean up the activity log
+
+---
+
 ## How It Works
 
 1. **Foreground Detection** — Polls the active window using Win32 APIs (`GetForegroundWindow`, `GetWindowThreadProcessId`) at a fixed interval (default: 2 seconds).
@@ -34,7 +50,7 @@ Windows Desktop Client  →  Backend API  →  Dashboard (Future)
 |-----------|------------|
 | Runtime | .NET 10 |
 | Language | C# |
-| Project Type | Console Application |
+| Project Type | Windows Forms GUI Application |
 | Target Platform | Windows |
 
 ---
@@ -83,7 +99,7 @@ CrossDeviceTracker.Desktop/
 | Phase 2 | Track per-application time blocks | Not started |
 | Phase 3 | Store usage logs locally | Not started |
 | Phase 4 | Send usage logs to backend API | Not started |
-| Phase 5 | Background execution & system tray | Not started |
+| Phase 5 | Background execution & system tray | ✅ Complete |
 
 ---
 

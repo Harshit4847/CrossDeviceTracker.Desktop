@@ -11,6 +11,7 @@ public class AppTracker
 
     private readonly ILogRepository _repository;
     private string? _previousApp;
+    private string? _currentApp;
     private DateTime _sessionStartTime;
     private bool _isRunning;
 
@@ -25,12 +26,15 @@ public class AppTracker
         _repository = repository ?? throw new ArgumentNullException(nameof(repository));
     }
 
+    public string? GetCurrentAppName() => _currentApp;
+
     public async Task StartAsync()
     {
         await _repository.InitializeAsync();
 
         _isRunning = true;
         _previousApp = GetCurrentApp();
+        _currentApp = _previousApp;
         _sessionStartTime = DateTime.UtcNow;
 
         Console.WriteLine("🎯 App Tracker started");
@@ -42,6 +46,7 @@ public class AppTracker
             try
             {
                 var currentApp = GetCurrentApp();
+                _currentApp = currentApp;
                 var currentTime = DateTime.UtcNow;
 
                 if (currentApp != _previousApp)

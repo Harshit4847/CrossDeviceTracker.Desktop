@@ -8,4 +8,5 @@ public interface ILogRepository
     Task<List<Log>> GetPendingLogsAsync();
     Task UpdateSyncStatusAsync(Guid logId, SyncStatus status);
     Task InitializeAsync();
+    Task DeleteAllLogsAsync();
 }
