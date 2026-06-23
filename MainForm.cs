@@ -15,14 +15,16 @@ public class MainForm : Form
     private Label? _statusLabel;
     private Label? _currentAppLabel;
     private ListView? _logsListView;
-    private Button? _clearLogsButton;
+    private bool _isExiting;
+    private bool _isRelinkDialogOpen;
 
-    public MainForm()
+    public MainForm(IDeviceAuthService deviceAuthService, IApiClient apiClient, ILogRepository repository)
     {
-        _repository = new SqliteLogRepository();
+        _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         _tracker = new AppTracker(_repository);
-        _deviceAuthService = new DeviceAuthService();
-        _apiClient = new ApiClient(_deviceAuthService, _repository);
+        _deviceAuthService = deviceAuthService ?? throw new ArgumentNullException(nameof(deviceAuthService));
+        _apiClient = apiClient ?? throw new ArgumentNullException(nameof(apiClient));
+        _apiClient.DeviceUnauthorized += ApiClient_DeviceUnauthorized;
 
         InitializeComponent();
         SetupTrayIcon();
@@ -46,7 +48,7 @@ public class MainForm : Form
 
         _statusLabel = new Label
         {
-            Text = "🎯 App Tracker - Running",
+            Text = "App Tracker - Running",
             Font = new Font("Segoe UI", 14, FontStyle.Bold),
             Dock = DockStyle.Top,
             Height = 35,
@@ -64,7 +66,7 @@ public class MainForm : Form
 
         var logsLabel = new Label
         {
-            Text = "Recent Activity:",
+            Text = "Pending / Failed Activity:",
             Font = new Font("Segoe UI", 10, FontStyle.Bold),
             Dock = DockStyle.Top,
             Height = 25,
@@ -83,18 +85,19 @@ public class MainForm : Form
         _logsListView.Columns.Add("App", 150);
         _logsListView.Columns.Add("Start Time", 150);
         _logsListView.Columns.Add("Duration", 100);
+        _logsListView.Columns.Add("Sync", 90);
 
-        _clearLogsButton = new Button
+        var clearLogsButton = new Button
         {
             Text = "Clear Logs",
             Dock = DockStyle.Bottom,
             Height = 40,
             Margin = new Padding(0, 10, 0, 0)
         };
-        _clearLogsButton.Click += ClearLogsButton_Click;
+        clearLogsButton.Click += ClearLogsButton_Click;
 
         panel.Controls.Add(_logsListView);
-        panel.Controls.Add(_clearLogsButton);
+        panel.Controls.Add(clearLogsButton);
         panel.Controls.Add(logsLabel);
         panel.Controls.Add(_currentAppLabel);
         panel.Controls.Add(_statusLabel);
@@ -112,21 +115,19 @@ public class MainForm : Form
         };
 
         var contextMenu = new ContextMenuStrip();
-        contextMenu.Items.Add("Show", null, (s, e) => Show());
+        contextMenu.Items.Add("Show", null, (_, _) => RestoreFromTray());
         contextMenu.Items.Add(new ToolStripSeparator());
-        contextMenu.Items.Add("Link Device", null, (s, e) => _ = LinkDeviceAsync());
-        contextMenu.Items.Add("Exit", null, (s, e) => ExitApplication());
+        contextMenu.Items.Add("Relink Device", null, (_, _) => _ = LinkDeviceAsync(forceRelink: true));
+        contextMenu.Items.Add("Exit", null, (_, _) => ExitApplication());
 
         _notifyIcon.ContextMenuStrip = contextMenu;
-        _notifyIcon.DoubleClick += (s, e) => Show();
+        _notifyIcon.DoubleClick += (_, _) => RestoreFromTray();
     }
 
     private async void StartTracker()
     {
-        // Initialize database
         await _repository.InitializeAsync();
 
-        // Start the AppTracker in background
         _ = Task.Run(async () =>
         {
             try
@@ -135,11 +136,15 @@ public class MainForm : Form
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}", "App Tracker Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                BeginInvoke(() => MessageBox.Show(
+                    this,
+                    $"Error: {ex.Message}",
+                    "App Tracker Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error));
             }
         });
 
-        // Start the SyncService in background
         _syncService = new SyncService(_apiClient);
         _ = Task.Run(async () =>
         {
@@ -153,24 +158,28 @@ public class MainForm : Form
             }
         });
 
-        // UI update timer
         var updateTimer = new System.Windows.Forms.Timer
         {
             Interval = 2000
         };
-        updateTimer.Tick += (s, e) => UpdateUI();
+        updateTimer.Tick += (_, _) => UpdateUI();
         updateTimer.Start();
     }
 
     private async void UpdateUI()
     {
-        // Update current app
         if (_currentAppLabel != null)
         {
             _currentAppLabel.Text = $"Current App: {_tracker.GetCurrentAppName() ?? "N/A"}";
         }
 
-        // Refresh logs from database
+        if (_statusLabel != null)
+        {
+            var isLinked = await _deviceAuthService.IsLinkedAsync();
+            _statusLabel.Text = isLinked ? "App Tracker - Running" : "App Tracker - Relink Required";
+            _statusLabel.ForeColor = isLinked ? Color.Green : Color.DarkOrange;
+        }
+
         try
         {
             var logs = await _repository.GetPendingLogsAsync();
@@ -184,28 +193,31 @@ public class MainForm : Form
 
     private void RefreshLogsListView(List<Models.Log> logs)
     {
-        if (_logsListView == null) return;
+        if (_logsListView == null)
+        {
+            return;
+        }
 
-        // Clear existing items but keep columns
         _logsListView.Items.Clear();
 
-        // Add logs in reverse order (most recent first)
         foreach (var log in logs.OrderByDescending(l => l.StartTime))
         {
             var item = new ListViewItem(log.AppName);
             item.SubItems.Add(log.StartTime.ToString("HH:mm:ss"));
             item.SubItems.Add($"{log.Duration.TotalSeconds:F0}s");
+            item.SubItems.Add(log.SyncStatus.ToString());
             _logsListView.Items.Add(item);
         }
     }
 
     private void MainForm_FormClosing(object? sender, FormClosingEventArgs e)
     {
-        if (e.CloseReason == CloseReason.UserClosing)
+        if (!_isExiting && e.CloseReason == CloseReason.UserClosing)
         {
             e.Cancel = true;
             Hide();
             WindowState = FormWindowState.Minimized;
+            _notifyIcon?.ShowBalloonTip(1500, "App Tracker", "Tracking continues in the background.", ToolTipIcon.Info);
         }
     }
 
@@ -220,81 +232,93 @@ public class MainForm : Form
     private async void ClearLogsButton_Click(object? sender, EventArgs e)
     {
         var result = MessageBox.Show(
+            this,
             "Are you sure you want to clear all logs?",
             "Clear Logs",
             MessageBoxButtons.YesNo,
             MessageBoxIcon.Question);
 
-        if (result == DialogResult.Yes)
+        if (result != DialogResult.Yes)
         {
-            try
-            {
-                await _repository.DeleteAllLogsAsync();
-                _logsListView?.Items.Clear();
-                MessageBox.Show("All logs cleared successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error clearing logs: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            return;
+        }
+
+        try
+        {
+            await _repository.DeleteAllLogsAsync();
+            _logsListView?.Items.Clear();
+            MessageBox.Show(this, "All logs cleared successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(this, $"Error clearing logs: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 
-    private async Task LinkDeviceAsync()
+    private async Task LinkDeviceAsync(bool forceRelink = false)
     {
+        if (_isRelinkDialogOpen)
+        {
+            return;
+        }
+
         try
         {
-            // Check if already authenticated
-            var isAuthenticated = await _deviceAuthService.IsAuthenticatedAsync();
-            if (isAuthenticated)
+            var isLinked = await _deviceAuthService.IsLinkedAsync();
+            if (isLinked && !forceRelink)
             {
-                MessageBox.Show(
-                    "Device is already linked. Use 'Unlink Device' to change accounts.",
-                    "Device Linked",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+                MessageBox.Show(this, "Device is already linked.", "Device Linked", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
-            // Show linking dialog
-            using (var dialog = new DeviceLinkingDialog())
-            {
-                if (dialog.ShowDialog(this) == DialogResult.OK)
-                {
-                    var linkingService = new DeviceLinkingService(_deviceAuthService);
-                    var result = await linkingService.LinkDeviceAsync(dialog.Email, dialog.Password);
+            _isRelinkDialogOpen = true;
+            RestoreFromTray();
 
-                    if (result)
-                    {
-                        MessageBox.Show(
-                            $"✅ Device linked successfully!\n\nEmail: {dialog.Email}\nDevice: {Environment.MachineName}",
-                            "Success",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show(
-                            "Failed to link device. Please check your credentials and try again.",
-                            "Linking Failed",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error);
-                    }
-                }
+            using var dialog = new DeviceLinkingDialog(_deviceAuthService,
+                forceRelink ? "Paste a new device token to relink this device." : null);
+
+            if (dialog.ShowDialog(this) == DialogResult.OK)
+            {
+                MessageBox.Show(this, "Device linked successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                await _apiClient.SyncPendingLogsAsync();
             }
         }
         catch (Exception ex)
         {
-            MessageBox.Show(
-                $"Error linking device: {ex.Message}",
-                "Error",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Error);
+            MessageBox.Show(this, $"Error linking device: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+        finally
+        {
+            _isRelinkDialogOpen = false;
+        }
+    }
+
+    private void ApiClient_DeviceUnauthorized(object? sender, EventArgs e)
+    {
+        if (IsDisposed)
+        {
+            return;
+        }
+
+        BeginInvoke(async () =>
+        {
+            _notifyIcon?.ShowBalloonTip(2500, "Relink required", "Your device token expired or was revoked.", ToolTipIcon.Warning);
+            await _deviceAuthService.UnlinkAsync();
+            _ = LinkDeviceAsync(forceRelink: true);
+        });
+    }
+
+    private void RestoreFromTray()
+    {
+        Show();
+        WindowState = FormWindowState.Normal;
+        Activate();
     }
 
     private async void ExitApplication()
     {
+        _isExiting = true;
+
         await _tracker.StopAsync();
 
         if (_syncService != null)
@@ -304,11 +328,5 @@ public class MainForm : Form
 
         _notifyIcon?.Dispose();
         Application.Exit();
-    }
-
-    protected override void OnShown(EventArgs e)
-    {
-        base.OnShown(e);
-        Show();
     }
 }

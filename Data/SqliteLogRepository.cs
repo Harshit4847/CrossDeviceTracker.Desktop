@@ -63,7 +63,7 @@ public class SqliteLogRepository : ILogRepository
             await connection.OpenAsync();
             using (var command = connection.CreateCommand())
             {
-                command.CommandText = "SELECT * FROM Logs WHERE SyncStatus = 'Pending' ORDER BY CreatedAt ASC";
+                command.CommandText = "SELECT * FROM Logs WHERE SyncStatus IN ('Pending', 'Failed') ORDER BY CreatedAt ASC";
                 using (var reader = await command.ExecuteReaderAsync())
                 {
                     while (await reader.ReadAsync())

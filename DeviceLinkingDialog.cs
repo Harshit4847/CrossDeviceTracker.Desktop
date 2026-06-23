@@ -1,28 +1,24 @@
+using CrossDeviceTracker.Desktop.Services;
+
 namespace CrossDeviceTracker.Desktop;
 
 public class DeviceLinkingDialog : Form
 {
-    private TextBox? _emailTextBox;
-    private TextBox? _passwordTextBox;
-    private Button? _linkButton;
-    private Button? _cancelButton;
+    private TextBox? _tokenTextBox;
     private Label? _statusLabel;
-    private bool _isLinking = false;
+    private readonly IDeviceAuthService _authService;
 
-    public string Email { get; private set; } = string.Empty;
-    public string Password { get; private set; } = string.Empty;
-    public bool Success { get; private set; }
-
-    public DeviceLinkingDialog()
+    public DeviceLinkingDialog(IDeviceAuthService authService, string? message = null)
     {
-        InitializeComponent();
+        _authService = authService ?? throw new ArgumentNullException(nameof(authService));
+        InitializeComponent(message);
     }
 
-    private void InitializeComponent()
+    private void InitializeComponent(string? message)
     {
-        Text = "Link Device to CrossDeviceTracker";
-        Width = 400;
-        Height = 300;
+        Text = "Link Device";
+        Width = 460;
+        Height = 270;
         StartPosition = FormStartPosition.CenterScreen;
         FormBorderStyle = FormBorderStyle.FixedDialog;
         MaximizeBox = false;
@@ -34,140 +30,125 @@ public class DeviceLinkingDialog : Form
             Padding = new Padding(20)
         };
 
-        // Title
         var titleLabel = new Label
         {
-            Text = "Link Your Device",
+            Text = "Link this device",
             Font = new Font("Segoe UI", 14, FontStyle.Bold),
             Dock = DockStyle.Top,
-            Height = 35,
+            Height = 36,
             TextAlign = ContentAlignment.MiddleLeft
         };
 
-        // Email label and textbox
-        var emailLabel = new Label
+        var messageLabel = new Label
         {
-            Text = "Email:",
-            Font = new Font("Segoe UI", 10),
-            Dock = DockStyle.Top,
-            Height = 25,
-            Padding = new Padding(0, 10, 0, 0)
-        };
-
-        _emailTextBox = new TextBox
-        {
-            Dock = DockStyle.Top,
-            Height = 30,
-            Padding = new Padding(5)
-        };
-
-        // Password label and textbox
-        var passwordLabel = new Label
-        {
-            Text = "Password:",
-            Font = new Font("Segoe UI", 10),
-            Dock = DockStyle.Top,
-            Height = 25,
-            Padding = new Padding(0, 10, 0, 0)
-        };
-
-        _passwordTextBox = new TextBox
-        {
-            Dock = DockStyle.Top,
-            Height = 30,
-            PasswordChar = '●',
-            Padding = new Padding(5)
-        };
-
-        // Status label
-        _statusLabel = new Label
-        {
-            Text = "",
+            Text = message ?? "Paste the device token from your account to continue.",
             Font = new Font("Segoe UI", 9),
             Dock = DockStyle.Top,
-            Height = 30,
-            Padding = new Padding(0, 10, 0, 0),
-            ForeColor = Color.Red,
-            AutoSize = true
+            Height = 42
         };
 
-        // Buttons panel
+        var tokenLabel = new Label
+        {
+            Text = "Device token",
+            Font = new Font("Segoe UI", 10),
+            Dock = DockStyle.Top,
+            Height = 26,
+            Padding = new Padding(0, 8, 0, 0)
+        };
+
+        _tokenTextBox = new TextBox
+        {
+            Dock = DockStyle.Top,
+            Height = 76,
+            Multiline = true,
+            ScrollBars = ScrollBars.Vertical
+        };
+
+        _statusLabel = new Label
+        {
+            Font = new Font("Segoe UI", 9),
+            Dock = DockStyle.Top,
+            Height = 28,
+            ForeColor = Color.Red,
+            Padding = new Padding(0, 8, 0, 0)
+        };
+
         var buttonsPanel = new Panel
         {
             Dock = DockStyle.Bottom,
-            Height = 50,
-            Padding = new Padding(0, 10, 0, 0)
+            Height = 48
         };
 
-        _linkButton = new Button
+        var linkButton = new Button
         {
             Text = "Link Device",
-            Width = 100,
-            Height = 35,
-            Location = new Point(150, 8),
-            BackColor = Color.Green,
-            ForeColor = Color.White,
-            Font = new Font("Segoe UI", 10, FontStyle.Bold)
+            Width = 110,
+            Height = 34,
+            Anchor = AnchorStyles.Top | AnchorStyles.Right,
+            Location = new Point(210, 8)
         };
-        _linkButton.Click += LinkButton_Click;
+        linkButton.Click += LinkButton_Click;
 
-        _cancelButton = new Button
+        var cancelButton = new Button
         {
             Text = "Cancel",
-            Width = 100,
-            Height = 35,
-            Location = new Point(260, 8)
+            Width = 90,
+            Height = 34,
+            Anchor = AnchorStyles.Top | AnchorStyles.Right,
+            Location = new Point(330, 8)
         };
-        _cancelButton.Click += CancelButton_Click;
+        cancelButton.Click += (_, _) =>
+        {
+            DialogResult = DialogResult.Cancel;
+            Close();
+        };
 
-        buttonsPanel.Controls.Add(_linkButton);
-        buttonsPanel.Controls.Add(_cancelButton);
+        buttonsPanel.Controls.Add(linkButton);
+        buttonsPanel.Controls.Add(cancelButton);
 
-        // Add controls to panel in reverse order (bottom to top)
         panel.Controls.Add(buttonsPanel);
         panel.Controls.Add(_statusLabel);
-        panel.Controls.Add(_passwordTextBox);
-        panel.Controls.Add(passwordLabel);
-        panel.Controls.Add(_emailTextBox);
-        panel.Controls.Add(emailLabel);
+        panel.Controls.Add(_tokenTextBox);
+        panel.Controls.Add(tokenLabel);
+        panel.Controls.Add(messageLabel);
         panel.Controls.Add(titleLabel);
 
         Controls.Add(panel);
+        AcceptButton = linkButton;
+        CancelButton = cancelButton;
     }
 
-    private void LinkButton_Click(object? sender, EventArgs e)
+    private async void LinkButton_Click(object? sender, EventArgs e)
     {
-        if (_isLinking) return;
-
-        var email = _emailTextBox?.Text?.Trim();
-        var password = _passwordTextBox?.Text;
-
-        if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
+        var token = _tokenTextBox?.Text?.Trim();
+        if (string.IsNullOrWhiteSpace(token))
         {
-            ShowStatus("Please enter email and password", Color.Red);
+            ShowStatus("Link token is required.", Color.Red);
             return;
         }
 
-        Email = email;
-        Password = password;
-        Success = true;
-        DialogResult = DialogResult.OK;
-        Close();
-    }
+        ShowStatus("Linking device...", Color.Blue);
 
-    private void CancelButton_Click(object? sender, EventArgs e)
-    {
-        Success = false;
-        DialogResult = DialogResult.Cancel;
-        Close();
-    }
-
-    public void ShowStatus(string message, Color color)
-    {
-        if (_statusLabel != null)
+        try
         {
-            _statusLabel.Text = message;
-            _statusLabel.ForeColor = color;
+            await _authService.LinkDeviceAsync(token);
+            DialogResult = DialogResult.OK;
+            Close();
         }
+        catch (Exception ex)
+        {
+            ShowStatus(ex.Message, Color.Red);
+        }
+    }
+
+    private void ShowStatus(string message, Color color)
+    {
+        if (_statusLabel == null)
+        {
+            return;
+        }
+
+        _statusLabel.Text = message;
+        _statusLabel.ForeColor = color;
     }
 }

@@ -7,21 +7,29 @@ namespace CrossDeviceTracker.Desktop.Services;
 
 public interface IApiClient
 {
+    event EventHandler? DeviceUnauthorized;
+    string? DeviceJwt { get; set; }
     Task<bool> SyncPendingLogsAsync();
     Task<bool> SendLogAsync(Log log);
+    Task<LinkDesktopResponse> LinkDeviceAsync(string linkToken);
 }
 
 public class ApiClient : IApiClient
 {
     private const string TimelogsEndpoint = "/api/timelogs";
     private readonly HttpClient _httpClient;
-    private readonly IDeviceAuthService _authService;
     private readonly ILogRepository _repository;
     private string _baseUrl = "https://crossdevicetracker-api-hy-erhyaffahwaufsba.southeastasia-01.azurewebsites.net";
-
-    public ApiClient(IDeviceAuthService authService, ILogRepository repository)
+    private readonly JsonSerializerOptions _jsonOptions = new()
     {
-        _authService = authService ?? throw new ArgumentNullException(nameof(authService));
+        PropertyNameCaseInsensitive = true
+    };
+
+    public event EventHandler? DeviceUnauthorized;
+    public string? DeviceJwt { get; set; }
+
+    public ApiClient(ILogRepository repository)
+    {
         _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         _httpClient = new HttpClient { Timeout = TimeSpan.FromSeconds(30) };
     }
@@ -31,8 +39,7 @@ public class ApiClient : IApiClient
         try
         {
             // Check if device is authenticated
-            var isAuthenticated = await _authService.IsAuthenticatedAsync();
-            if (!isAuthenticated)
+            if (string.IsNullOrWhiteSpace(DeviceJwt))
             {
                 Console.WriteLine("⚠️  Device not authenticated. Sync skipped. Please link device first.");
                 return false;
@@ -82,10 +89,9 @@ public class ApiClient : IApiClient
     {
         try
         {
-            var jwt = await _authService.GetDeviceJwtAsync();
-            var deviceId = await _authService.GetDeviceIdAsync();
+            var jwt = DeviceJwt;
 
-            if (string.IsNullOrEmpty(jwt) || string.IsNullOrEmpty(deviceId))
+            if (string.IsNullOrEmpty(jwt))
             {
                 Console.WriteLine("❌ Missing authentication credentials");
                 return false;
@@ -94,7 +100,7 @@ public class ApiClient : IApiClient
             // Build the request body
             var payload = new
             {
-                deviceId = deviceId,
+                deviceId = (string?)null,
                 appName = log.AppName,
                 startTime = log.StartTime.ToString("O"),
                 durationSeconds = (int)log.Duration.TotalSeconds
@@ -117,6 +123,12 @@ public class ApiClient : IApiClient
                 Console.WriteLine($"  ✓ Sent: {log.AppName} ({log.Duration.TotalSeconds:F0}s)");
                 return true;
             }
+            else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+                DeviceUnauthorized?.Invoke(this, EventArgs.Empty);
+                Console.WriteLine("  Device authorization expired. Relink required.");
+                return false;
+            }
             else
             {
                 var errorContent = await response.Content.ReadAsStringAsync();
@@ -128,6 +140,62 @@ public class ApiClient : IApiClient
         {
             Console.WriteLine($"  ❌ Error sending {log.AppName}: {ex.Message}");
             return false;
+        }
+    }
+
+    public async Task<LinkDesktopResponse> LinkDeviceAsync(string linkToken)
+    {
+        if (string.IsNullOrWhiteSpace(linkToken))
+        {
+            throw new ArgumentException("Link token is required.", nameof(linkToken));
+        }
+
+        var payload = new
+        {
+            linkToken = linkToken.Trim(),
+            deviceName = Environment.MachineName,
+            platform = "Windows"
+        };
+
+        var json = JsonSerializer.Serialize(payload);
+        var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+        var response = await _httpClient.PostAsync($"{_baseUrl}/api/devices/link", content);
+
+        if (response.IsSuccessStatusCode)
+        {
+            var responseContent = await response.Content.ReadAsStringAsync();
+            var result = JsonSerializer.Deserialize<LinkDesktopResponse>(responseContent, _jsonOptions);
+            if (result == null || string.IsNullOrWhiteSpace(result.DeviceJwt))
+            {
+                throw new Exception("Invalid response from server: Device JWT is empty.");
+            }
+            return result;
+        }
+        else
+        {
+            var errorContent = await response.Content.ReadAsStringAsync();
+            string errorMessage = "Failed to link device.";
+            try
+            {
+                using var doc = JsonDocument.Parse(errorContent);
+                if (doc.RootElement.TryGetProperty("message", out var msgProp))
+                {
+                    errorMessage = msgProp.GetString() ?? errorMessage;
+                }
+                else if (doc.RootElement.TryGetProperty("error", out var errProp))
+                {
+                    errorMessage = errProp.GetString() ?? errorMessage;
+                }
+            }
+            catch
+            {
+                if (!string.IsNullOrWhiteSpace(errorContent))
+                {
+                    errorMessage = errorContent;
+                }
+            }
+            throw new Exception(errorMessage);
         }
     }
 }

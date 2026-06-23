@@ -2,6 +2,80 @@
 
 ---
 
+## Development Update — Device Linking Integration
+
+### Status: Completed
+
+The desktop application is now successfully able to link with the backend using the desktop linking flow.
+
+### Completed Flow
+
+1. User generates a desktop linking token from the backend.
+2. User enters the linking token into the desktop application.
+3. Desktop application sends:
+
+   * Link Token
+   * Device Name
+   * Platform
+4. Backend validates the token.
+5. Backend creates a device record.
+6. Backend issues a Device JWT.
+7. Desktop application receives and stores the Device JWT.
+8. Linked device appears in the backend database.
+
+### Verification
+
+Confirmed:
+
+* Desktop linking token is accepted by the backend.
+* Device record is created successfully.
+* Device JWT is returned successfully.
+* Desktop application can complete the linking process without errors.
+
+### Current Project Status
+
+#### Completed
+
+* Foreground Window Detection
+* App Change Detection
+* Session Tracking
+* Duration Calculation
+* SQLite Persistence
+* Lock / Unlock Handling
+* Windows Forms UI
+* Desktop Device Linking
+* Device JWT Acquisition
+
+#### In Progress
+
+* Device JWT Persistence
+* Backend Time Log Synchronization
+* Unauthorized Device Handling
+* Background Sync Service
+
+### Current Issue Under Investigation
+
+Time logs are successfully created and stored locally in SQLite with SyncStatus = Pending.
+
+However, logs are not yet appearing in the backend database.
+
+Current sync pipeline status:
+
+Tracker Engine → SQLite Storage → Pending Logs → Backend Sync ❌
+
+The next debugging task is to determine whether:
+
+* Sync requests are not being sent.
+* Device JWT is not attached correctly.
+* Backend is rejecting requests.
+* Time log endpoint validation is failing.
+
+### Next Milestone
+
+Implement and verify successful upload of pending time logs from SQLite to the backend API and update SyncStatus from Pending to Sent after successful synchronization.
+
+---
+
 ## 1. Project Initialization
 
 Created a new GitHub repository for the Windows desktop client of the CrossDeviceTracker system.
@@ -12,22 +86,36 @@ The desktop application will be responsible for tracking foreground application 
 
 ---
 
-## 2. Initial Project Structure
+## 2. Project Structure
 
-The project was initialized as a .NET console application.
+The project is a .NET Windows Forms application with a layered architecture.
 
 Current repository structure:
 
 ```
 CrossDeviceTracker.Desktop
 │
-├── CrossDeviceTracker.Desktop.csproj
-├── Program.cs
+├── Core/
+│   └── AppTracker.cs              # Foreground app tracking engine
+├── Data/
+│   ├── ILogRepository.cs          # Persistence interface
+│   └── SqliteLogRepository.cs     # SQLite implementation
+├── Models/
+│   └── Log.cs                     # Session log model
+├── Services/
+│   ├── ApiClient.cs               # Backend API client
+│   ├── DeviceAuthService.cs       # Device JWT auth (planned)
+│   └── SyncService.cs             # Log sync service (planned)
+├── MainForm.cs                    # Windows Forms UI
+├── DeviceLinkingDialog.cs         # Device linking UI
+├── Program.cs                     # Application entry point
+├── appsettings.json               # Configuration
+├── DESIGN.md
+├── DOCUMENT.md
+├── IMPLEMENTATION.md
 ├── README.md
 └── .gitignore
 ```
-
-The console application will be used first to prototype foreground window detection before adding UI or background services.
 
 ---
 
@@ -42,29 +130,39 @@ The CrossDeviceTracker.Desktop application will act as the Windows client respon
 
 ---
 
-## 4. Development Plan
+## 4. Screen Time Definition
 
-The desktop client will be developed incrementally in the following phases:
+The tracker measures active foreground application usage.
 
-| Phase | Goal |
-|-------|------|
-| **Phase 1** | Detect the active foreground window on Windows |
-| **Phase 2** | Track time spent on each application and generate time blocks |
-| **Phase 3** | Store usage logs locally |
-| **Phase 4** | Send usage logs to the backend API |
-| **Phase 5** | Add background execution and system tray integration |
+Time spent on Windows lock screen (LockApp) is excluded from tracking and analytics.
 
 ---
 
-## 5. First Development Goal
+## 5. Development Plan
 
-**Implement foreground window detection.**
+The desktop client is being developed incrementally in the following phases:
 
-The application will check the active window every few seconds and print the detected application name to the console.
+| Phase | Goal | Status |
+|-------|------|--------|
+| **Phase 1** | Detect the active foreground window on Windows | ✅ Complete |
+| **Phase 2** | Track time spent on each application and generate time blocks | ✅ Complete |
+| **Phase 3** | Store usage logs locally (SQLite) | ✅ Complete |
+| **Phase 4** | Lock/unlock session handling | ✅ Complete |
+| **Phase 5** | Device JWT authentication | ⏳ Planned |
+| **Phase 6** | Backend synchronization (send usage logs to API) | ⏳ Planned |
+| **Phase 7** | Background execution and system tray integration | ⏳ Planned |
 
 ---
 
-## 6. Backend Integration
+## 6. First Development Goal
+
+**Implement foreground window detection.** ✅ Done
+
+The application polls the active window every 2 seconds via `AppTracker`, detects app changes, and persists completed sessions to SQLite. The Windows Forms UI displays current app and recent activity.
+
+---
+
+## 7. Backend Integration
 
 The desktop client will communicate with the CrossDeviceTracker backend API.
 
@@ -72,7 +170,7 @@ Device authentication will use the device JWT generated during the desktop linki
 
 ---
 
-## 7. Tracking Engine Design (Finalized)
+## 8. Tracking Engine Design (Finalized)
 
 ### Goal
 
@@ -223,31 +321,35 @@ Not:
 
 ### Edge Cases
 
-Handle:
+| Case | Status |
+|------|--------|
+| App exit / shutdown | ✅ Finalizes last session on close |
+| App change | ✅ Finalizes session and saves to SQLite |
+| System lock / unlock | ✅ LockApp excluded; session finalized on lock, resumed on unlock |
 
-- App exit
-- System lock
-- Shutdown
-
-Always finalize the last session.
+Always finalize the last session on shutdown.
 
 ### Two Engines
 
-1. Tracker Engine (Now)
+1. **Tracker Engine** ✅
    - Detect usage
    - Create logs
    - Save locally
-2. Sync Engine (Later)
+2. **Sync Engine** ⏳
    - Read pending logs
    - Send to backend
    - Update status
 
-### Current Stage (Execution Now)
+### Current Stage
 
-Design is complete. No more planning needed.
+Core tracking, session management, lock/unlock handling, Windows Forms UI, and SQLite persistence are complete. Next priorities:
 
-Do next in this exact order:
+1. **Phase 5** — Device JWT authentication: link device and attach token to API requests.
+2. **Phase 6** — Backend synchronization: send pending logs via `SyncService`.
+3. **Phase 7** — Background execution and system tray: keep tracking when minimized; tray icon with show/exit.
 
-1. Print active app every 2 seconds.
-2. Detect app change.
-3. Print session logs.
+### Future Consideration
+
+Crash recovery for unfinalized sessions is not currently implemented.
+
+Sessions are persisted when finalized (app change or application shutdown).

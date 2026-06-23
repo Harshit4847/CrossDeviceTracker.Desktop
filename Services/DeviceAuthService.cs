@@ -1,39 +1,65 @@
-using System.Text;
 using System.Text.Json;
 
 namespace CrossDeviceTracker.Desktop.Services;
 
 public interface IDeviceAuthService
 {
-    Task<string?> GetDeviceJwtAsync();
-    Task SaveDeviceJwtAsync(string jwt);
-    Task<string?> GetDeviceIdAsync();
-    Task SaveDeviceIdAsync(string deviceId);
-    Task<bool> IsAuthenticatedAsync();
+    Task<bool> IsLinkedAsync();
+    Task<string?> LoadDeviceJwtAsync();
+    Task<DeviceAuthState?> LoadDeviceAsync();
+    Task LinkDeviceAsync(string linkToken);
+    Task SaveDeviceJwtAsync(string deviceJwt);
+    Task UnlinkAsync();
 }
 
-public interface IDeviceLinkingService
+public sealed class DeviceAuthState
 {
-    Task<bool> LinkDeviceAsync(string userEmail, string userPassword);
-    Task<bool> UnlinkDeviceAsync();
+    public required string DeviceJwt { get; set; }
+    public string? DeviceName { get; set; }
+    public DateTime? LinkedAt { get; set; }
 }
 
 public class DeviceAuthService : IDeviceAuthService
 {
-    private const string ConfigFileName = "appsettings.json";
-    private readonly string _configPath;
-
-    public DeviceAuthService()
+    private const string DeviceFileName = "device.json";
+    private readonly string _deviceFilePath;
+    private readonly IApiClient _apiClient;
+    private readonly JsonSerializerOptions _jsonOptions = new()
     {
-        _configPath = Path.Combine(AppContext.BaseDirectory, ConfigFileName);
+        PropertyNameCaseInsensitive = true,
+        WriteIndented = true
+    };
+
+    public DeviceAuthService(IApiClient apiClient)
+    {
+        _apiClient = apiClient ?? throw new ArgumentNullException(nameof(apiClient));
+        _deviceFilePath = Path.Combine(AppContext.BaseDirectory, DeviceFileName);
     }
 
-    public async Task<string?> GetDeviceJwtAsync()
+    public async Task<bool> IsLinkedAsync()
     {
+        var jwt = await LoadDeviceJwtAsync();
+        return !string.IsNullOrWhiteSpace(jwt);
+    }
+
+    public async Task<string?> LoadDeviceJwtAsync()
+    {
+        var device = await LoadDeviceAsync();
+        return device?.DeviceJwt;
+    }
+
+    public async Task<DeviceAuthState?> LoadDeviceAsync()
+    {
+        if (!File.Exists(_deviceFilePath))
+        {
+            return null;
+        }
+
         try
         {
-            var config = await LoadConfigAsync();
-            return config.TryGetValue("Device:Jwt", out var jwt) ? (string?)jwt : null;
+            await using var stream = File.OpenRead(_deviceFilePath);
+            var device = await JsonSerializer.DeserializeAsync<DeviceAuthState>(stream, _jsonOptions);
+            return string.IsNullOrWhiteSpace(device?.DeviceJwt) ? null : device;
         }
         catch
         {
@@ -41,240 +67,69 @@ public class DeviceAuthService : IDeviceAuthService
         }
     }
 
-    public async Task SaveDeviceJwtAsync(string jwt)
+    public async Task LinkDeviceAsync(string linkToken)
     {
-        var config = await LoadConfigAsync();
-        config["Device:Jwt"] = jwt;
-        await SaveConfigAsync(config);
+        if (string.IsNullOrWhiteSpace(linkToken))
+        {
+            throw new ArgumentException("Link token is required.", nameof(linkToken));
+        }
+
+        var response = await _apiClient.LinkDeviceAsync(linkToken);
+        if (string.IsNullOrWhiteSpace(response?.DeviceJwt))
+        {
+            throw new Exception("Device JWT not received from server.");
+        }
+
+        var device = new DeviceAuthState
+        {
+            DeviceJwt = response.DeviceJwt.Trim(),
+            DeviceName = Environment.MachineName,
+            LinkedAt = DateTime.UtcNow
+        };
+
+        await SaveDeviceAsync(device);
+        _apiClient.DeviceJwt = device.DeviceJwt;
     }
 
-    public async Task<string?> GetDeviceIdAsync()
+    public async Task SaveDeviceJwtAsync(string deviceJwt)
     {
-        try
+        if (string.IsNullOrWhiteSpace(deviceJwt))
         {
-            var config = await LoadConfigAsync();
-            var deviceId = config.TryGetValue("Device:Id", out var id) ? (string?)id : null;
-
-            if (string.IsNullOrEmpty(deviceId))
-            {
-                deviceId = Guid.NewGuid().ToString();
-                config["Device:Id"] = deviceId;
-                await SaveConfigAsync(config);
-            }
-
-            return deviceId;
+            throw new ArgumentException("Device JWT is required.", nameof(deviceJwt));
         }
-        catch
+
+        var currentDevice = await LoadDeviceAsync();
+        var device = new DeviceAuthState
         {
-            return Guid.NewGuid().ToString();
-        }
+            DeviceJwt = deviceJwt.Trim(),
+            DeviceName = currentDevice?.DeviceName ?? Environment.MachineName,
+            LinkedAt = currentDevice?.LinkedAt ?? DateTime.UtcNow
+        };
+
+        await SaveDeviceAsync(device);
+        _apiClient.DeviceJwt = device.DeviceJwt;
     }
 
-    public async Task SaveDeviceIdAsync(string deviceId)
+    public Task UnlinkAsync()
     {
-        var config = await LoadConfigAsync();
-        config["Device:Id"] = deviceId;
-        await SaveConfigAsync(config);
+        if (File.Exists(_deviceFilePath))
+        {
+            File.Delete(_deviceFilePath);
+        }
+
+        _apiClient.DeviceJwt = null;
+        return Task.CompletedTask;
     }
 
-    public async Task<bool> IsAuthenticatedAsync()
+    private async Task SaveDeviceAsync(DeviceAuthState device)
     {
-        var jwt = await GetDeviceJwtAsync();
-        return !string.IsNullOrEmpty(jwt);
-    }
-
-    private async Task<Dictionary<string, object?>> LoadConfigAsync()
-    {
-        if (!File.Exists(_configPath))
+        var directory = Path.GetDirectoryName(_deviceFilePath);
+        if (!string.IsNullOrEmpty(directory))
         {
-            return new Dictionary<string, object?>
-            {
-                { "Api:BaseUrl", "https://crossdevicetracker-api-hy-erhyaffahwaufsba.southeastasia-01.azurewebsites.net" },
-                { "Api:TimeoutSeconds", 30 },
-                { "Api:SyncIntervalSeconds", 30 },
-                { "Device:Id", null },
-                { "Device:Jwt", null }
-            };
+            Directory.CreateDirectory(directory);
         }
 
-        try
-        {
-            var json = await File.ReadAllTextAsync(_configPath);
-            using (var doc = JsonDocument.Parse(json))
-            {
-                var config = new Dictionary<string, object?>();
-                FlattenJsonElement(doc.RootElement, "", config);
-                return config;
-            }
-        }
-        catch
-        {
-            return new Dictionary<string, object?>();
-        }
-    }
-
-    private async Task SaveConfigAsync(Dictionary<string, object?> config)
-    {
-        try
-        {
-            using (var stream = File.Create(_configPath))
-            using (var writer = new Utf8JsonWriter(stream, new JsonWriterOptions { Indented = true }))
-            {
-                writer.WriteStartObject();
-
-                // Api section
-                writer.WritePropertyName("Api");
-                writer.WriteStartObject();
-                writer.WriteString("BaseUrl", (string?)config["Api:BaseUrl"]);
-                writer.WriteNumber("TimeoutSeconds", ((int?)config["Api:TimeoutSeconds"]) ?? 30);
-                writer.WriteNumber("SyncIntervalSeconds", ((int?)config["Api:SyncIntervalSeconds"]) ?? 30);
-                writer.WriteEndObject();
-
-                // Device section
-                writer.WritePropertyName("Device");
-                writer.WriteStartObject();
-                writer.WriteString("Id", (string?)config["Device:Id"]);
-                writer.WriteString("Jwt", (string?)config["Device:Jwt"]);
-                writer.WriteEndObject();
-
-                writer.WriteEndObject();
-                await writer.FlushAsync();
-            }
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Error saving config: {ex.Message}");
-        }
-    }
-
-    private void FlattenJsonElement(JsonElement element, string prefix, Dictionary<string, object?> dict)
-    {
-        foreach (var property in element.EnumerateObject())
-        {
-            var key = string.IsNullOrEmpty(prefix) ? property.Name : $"{prefix}:{property.Name}";
-
-            switch (property.Value.ValueKind)
-            {
-                case JsonValueKind.Object:
-                    FlattenJsonElement(property.Value, key, dict);
-                    break;
-                case JsonValueKind.String:
-                    dict[key] = property.Value.GetString();
-                    break;
-                case JsonValueKind.Number:
-                    dict[key] = property.Value.GetInt32();
-                    break;
-                case JsonValueKind.Null:
-                    dict[key] = null;
-                    break;
-                default:
-                    dict[key] = property.Value.ToString();
-                    break;
-            }
-        }
-    }
-}
-
-public class DeviceLinkingService : IDeviceLinkingService
-{
-    private const string DevicesEndpoint = "/api/devices/link";
-    private const string BaseUrl = "https://crossdevicetracker-api-hy-erhyaffahwaufsba.southeastasia-01.azurewebsites.net";
-    private readonly IDeviceAuthService _deviceAuthService;
-    private readonly HttpClient _httpClient;
-
-    public DeviceLinkingService(IDeviceAuthService deviceAuthService)
-    {
-        _deviceAuthService = deviceAuthService ?? throw new ArgumentNullException(nameof(deviceAuthService));
-        _httpClient = new HttpClient { Timeout = TimeSpan.FromSeconds(30) };
-    }
-
-    public async Task<bool> LinkDeviceAsync(string userEmail, string userPassword)
-    {
-        try
-        {
-            var deviceId = await _deviceAuthService.GetDeviceIdAsync();
-
-            if (string.IsNullOrEmpty(deviceId))
-            {
-                Console.WriteLine("❌ Failed to get device ID");
-                return false;
-            }
-
-            // Prepare the request body
-            var payload = new
-            {
-                email = userEmail,
-                password = userPassword,
-                deviceId = deviceId,
-                deviceName = Environment.MachineName,
-                deviceType = "Windows"
-            };
-
-            var json = JsonSerializer.Serialize(payload);
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
-
-            // Send request to backend
-            var response = await _httpClient.PostAsync($"{BaseUrl}{DevicesEndpoint}", content);
-
-            if (response.IsSuccessStatusCode)
-            {
-                var responseContent = await response.Content.ReadAsStringAsync();
-                using (var doc = JsonDocument.Parse(responseContent))
-                {
-                    var root = doc.RootElement;
-                    if (root.TryGetProperty("token", out var tokenElement))
-                    {
-                        var jwt = tokenElement.GetString();
-                        if (!string.IsNullOrEmpty(jwt))
-                        {
-                            await _deviceAuthService.SaveDeviceJwtAsync(jwt);
-                            Console.WriteLine($"✅ Device linked successfully!");
-                            Console.WriteLine($"   Device ID: {deviceId}");
-                            Console.WriteLine($"   Device Name: {Environment.MachineName}");
-                            return true;
-                        }
-                    }
-                }
-
-                Console.WriteLine("❌ No JWT token in response");
-                return false;
-            }
-            else
-            {
-                var errorContent = await response.Content.ReadAsStringAsync();
-                Console.WriteLine($"❌ Linking failed: {response.StatusCode} - {errorContent}");
-                return false;
-            }
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"❌ Error during device linking: {ex.Message}");
-            return false;
-        }
-    }
-
-    public async Task<bool> UnlinkDeviceAsync()
-    {
-        try
-        {
-            var deviceId = await _deviceAuthService.GetDeviceIdAsync();
-            var jwt = await _deviceAuthService.GetDeviceJwtAsync();
-
-            if (string.IsNullOrEmpty(jwt))
-            {
-                Console.WriteLine("⚠️  Device not linked");
-                return false;
-            }
-
-            // Clear local JWT
-            await _deviceAuthService.SaveDeviceJwtAsync("");
-            Console.WriteLine("✅ Device unlinked successfully");
-            return true;
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"❌ Error during device unlinking: {ex.Message}");
-            return false;
-        }
+        await using var stream = File.Create(_deviceFilePath);
+        await JsonSerializer.SerializeAsync(stream, device, _jsonOptions);
     }
 }

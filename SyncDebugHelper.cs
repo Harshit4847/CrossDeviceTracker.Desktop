@@ -28,16 +28,17 @@ public class SyncDebugHelper
 
         try
         {
-            var deviceId = await _deviceAuthService.GetDeviceIdAsync();
-            var isAuthenticated = await _deviceAuthService.IsAuthenticatedAsync();
+            var device = await _deviceAuthService.LoadDeviceAsync();
+            var deviceName = device?.DeviceName;
+            var isAuthenticated = await _deviceAuthService.IsLinkedAsync();
 
-            Console.WriteLine($"Device ID: {deviceId}");
+            Console.WriteLine($"Device Name: {deviceName}");
             Console.WriteLine($"Authenticated: {(isAuthenticated ? "✅ Yes" : "❌ No")}");
 
             if (isAuthenticated)
             {
-                var jwt = await _deviceAuthService.GetDeviceJwtAsync();
-                Console.WriteLine($"JWT Token: {(jwt?.Substring(0, 20) + "...")}");
+                var jwt = await _deviceAuthService.LoadDeviceJwtAsync();
+                Console.WriteLine($"JWT Token: {(jwt?.Substring(0, Math.Min(20, jwt.Length)) + "...")}");
             }
         }
         catch (Exception ex)

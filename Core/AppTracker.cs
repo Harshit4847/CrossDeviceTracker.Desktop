@@ -8,6 +8,7 @@ namespace CrossDeviceTracker.Desktop.Core;
 public class AppTracker
 {
     private const int PollingIntervalMs = 2000;
+    private const string LockAppProcessName = "LockApp";
 
     private readonly ILogRepository _repository;
     private string? _previousApp;
@@ -33,23 +34,27 @@ public class AppTracker
         await _repository.InitializeAsync();
 
         _isRunning = true;
-        _previousApp = GetCurrentApp();
-        _currentApp = _previousApp;
+        var initialApp = GetCurrentApp();
+        _currentApp = initialApp;
+        _previousApp = ToTrackableApp(initialApp);
         _sessionStartTime = DateTime.UtcNow;
 
         Console.WriteLine("🎯 App Tracker started");
-        Console.WriteLine($"Initial app: {_previousApp}");
+        Console.WriteLine($"Initial app: {initialApp ?? "N/A"}");
+        if (IsLockApp(initialApp))
+            Console.WriteLine("Lock screen active — LockApp excluded from tracking");
         Console.WriteLine("Polling every 2 seconds...\n");
 
         while (_isRunning)
         {
             try
             {
-                var currentApp = GetCurrentApp();
-                _currentApp = currentApp;
+                var rawApp = GetCurrentApp();
+                var trackableApp = ToTrackableApp(rawApp);
+                _currentApp = rawApp;
                 var currentTime = DateTime.UtcNow;
 
-                if (currentApp != _previousApp)
+                if (trackableApp != _previousApp)
                 {
                     if (_previousApp != null)
                     {
@@ -57,8 +62,16 @@ public class AppTracker
                     }
 
                     _sessionStartTime = currentTime;
-                    _previousApp = currentApp;
-                    Console.WriteLine($"→ App changed to: {currentApp}");
+                    _previousApp = trackableApp;
+
+                    if (trackableApp != null)
+                    {
+                        Console.WriteLine($"→ App changed to: {trackableApp}");
+                    }
+                    else if (IsLockApp(rawApp))
+                    {
+                        Console.WriteLine("→ System locked (LockApp ignored)");
+                    }
                 }
 
                 await Task.Delay(PollingIntervalMs);
@@ -100,6 +113,12 @@ public class AppTracker
         await _repository.SaveLogAsync(log);
         Console.WriteLine($"✓ Logged: {log}");
     }
+
+    private static bool IsLockApp(string? appName) =>
+        string.Equals(appName, LockAppProcessName, StringComparison.OrdinalIgnoreCase);
+
+    private static string? ToTrackableApp(string? appName) =>
+        IsLockApp(appName) ? null : appName;
 
     private string? GetCurrentApp()
     {
