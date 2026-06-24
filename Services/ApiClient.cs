@@ -188,7 +188,7 @@ public class ApiClient : IApiClient
                     errorMessage = errProp.GetString() ?? errorMessage;
                 }
             }
-            catch
+            catch (JsonException)
             {
                 if (!string.IsNullOrWhiteSpace(errorContent))
                 {

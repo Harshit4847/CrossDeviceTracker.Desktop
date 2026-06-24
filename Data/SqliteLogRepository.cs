@@ -68,16 +68,23 @@ public class SqliteLogRepository : ILogRepository
                 {
                     while (await reader.ReadAsync())
                     {
-                        logs.Add(new Log
+                        try
                         {
-                            Id = Guid.Parse(reader["Id"].ToString()!),
-                            AppName = reader["AppName"].ToString()!,
-                            StartTime = DateTime.Parse(reader["StartTime"].ToString()!),
-                            EndTime = DateTime.Parse(reader["EndTime"].ToString()!),
-                            Duration = TimeSpan.FromSeconds(double.Parse(reader["DurationSeconds"].ToString()!)),
-                            SyncStatus = Enum.Parse<SyncStatus>(reader["SyncStatus"].ToString()!),
-                            CreatedAt = DateTime.Parse(reader["CreatedAt"].ToString()!)
-                        });
+                            logs.Add(new Log
+                            {
+                                Id = Guid.Parse(reader["Id"].ToString()!),
+                                AppName = reader["AppName"].ToString()!,
+                                StartTime = DateTime.Parse(reader["StartTime"].ToString()!),
+                                EndTime = DateTime.Parse(reader["EndTime"].ToString()!),
+                                Duration = TimeSpan.FromSeconds(double.Parse(reader["DurationSeconds"].ToString()!)),
+                                SyncStatus = Enum.Parse<SyncStatus>(reader["SyncStatus"].ToString()!),
+                                CreatedAt = DateTime.Parse(reader["CreatedAt"].ToString()!)
+                            });
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine($"⚠️  Skipping corrupt log row: {ex.Message}");
+                        }
                     }
                 }
             }

@@ -155,6 +155,16 @@ public class MainForm : Form
             catch (Exception ex)
             {
                 Console.WriteLine($"Sync service error: {ex.Message}");
+                BeginInvoke(() =>
+                {
+                    _notifyIcon?.ShowBalloonTip(3000, "Sync Error",
+                        $"Sync service stopped unexpectedly: {ex.Message}", ToolTipIcon.Error);
+                    if (_statusLabel != null)
+                    {
+                        _statusLabel.Text = "App Tracker - Sync Error";
+                        _statusLabel.ForeColor = Color.Red;
+                    }
+                });
             }
         });
 

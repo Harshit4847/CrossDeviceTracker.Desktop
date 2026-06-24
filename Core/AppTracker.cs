@@ -90,7 +90,14 @@ public class AppTracker
 
         if (_previousApp != null)
         {
-            await FinalizeSessionAsync(DateTime.UtcNow);
+            try
+            {
+                await FinalizeSessionAsync(DateTime.UtcNow);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"⚠️  Failed to save final session on shutdown: {ex.Message}");
+            }
         }
 
         _isRunning = false;
@@ -136,8 +143,9 @@ public class AppTracker
             var process = Process.GetProcessById((int)processId);
             return process.ProcessName;
         }
-        catch
+        catch (Exception ex)
         {
+            Console.WriteLine($"⚠️  Could not detect foreground app: {ex.Message}");
             return null;
         }
     }
