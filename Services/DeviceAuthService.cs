@@ -61,8 +61,9 @@ public class DeviceAuthService : IDeviceAuthService
             var device = await JsonSerializer.DeserializeAsync<DeviceAuthState>(stream, _jsonOptions);
             return string.IsNullOrWhiteSpace(device?.DeviceJwt) ? null : device;
         }
-        catch
+        catch (Exception ex)
         {
+            Console.WriteLine($"⚠️  Failed to load device state from {_deviceFilePath}: {ex.Message}");
             return null;
         }
     }

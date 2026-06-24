@@ -58,13 +58,6 @@ public class SyncService : ISyncService
 
     public async Task SyncOnceAsync()
     {
-        try
-        {
-            await _apiClient.SyncPendingLogsAsync();
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Error during sync: {ex.Message}");
-        }
+        await _apiClient.SyncPendingLogsAsync();
     }
 }
