@@ -1,5 +1,6 @@
 using System.Text;
 using System.Text.Json;
+using Microsoft.Extensions.Configuration;
 using CrossDeviceTracker.Desktop.Data;
 using CrossDeviceTracker.Desktop.Models;
 
@@ -19,7 +20,7 @@ public class ApiClient : IApiClient
     private const string TimelogsEndpoint = "/api/timelogs";
     private readonly HttpClient _httpClient;
     private readonly ILogRepository _repository;
-    private string _baseUrl = "https://crossdevicetracker-api-hy-erhyaffahwaufsba.southeastasia-01.azurewebsites.net";
+    private readonly string _baseUrl;
     private readonly JsonSerializerOptions _jsonOptions = new()
     {
         PropertyNameCaseInsensitive = true
@@ -31,7 +32,17 @@ public class ApiClient : IApiClient
     public ApiClient(ILogRepository repository)
     {
         _repository = repository ?? throw new ArgumentNullException(nameof(repository));
-        _httpClient = new HttpClient { Timeout = TimeSpan.FromSeconds(30) };
+
+        var configuration = new ConfigurationBuilder()
+            .SetBasePath(AppContext.BaseDirectory)
+            .AddJsonFile("appsettings.json", optional: false)
+            .Build();
+
+        _baseUrl = configuration["Api:BaseUrl"]
+            ?? throw new InvalidOperationException("Api:BaseUrl is not configured in appsettings.json.");
+
+        var timeoutSeconds = int.TryParse(configuration["Api:TimeoutSeconds"], out var t) ? t : 30;
+        _httpClient = new HttpClient { Timeout = TimeSpan.FromSeconds(timeoutSeconds) };
     }
 
     public async Task<bool> SyncPendingLogsAsync()
@@ -109,14 +120,12 @@ public class ApiClient : IApiClient
             var json = JsonSerializer.Serialize(payload);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            // Add authorization header
-            _httpClient.DefaultRequestHeaders.Authorization = 
+            using var request = new HttpRequestMessage(HttpMethod.Post, $"{_baseUrl}{TimelogsEndpoint}");
+            request.Content = content;
+            request.Headers.Authorization =
                 new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", jwt);
 
-            // Send request
-            var response = await _httpClient.PostAsync(
-                $"{_baseUrl}{TimelogsEndpoint}",
-                content);
+            var response = await _httpClient.SendAsync(request);
 
             if (response.IsSuccessStatusCode)
             {

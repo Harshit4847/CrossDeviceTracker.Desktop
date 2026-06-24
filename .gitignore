@@ -55,3 +55,7 @@ Desktop.ini
 ## User-specific files
 *.env
 *.local
+
+## Runtime data and credentials
+logs.db
+device.json
