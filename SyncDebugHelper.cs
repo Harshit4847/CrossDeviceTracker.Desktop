@@ -37,8 +37,7 @@ public class SyncDebugHelper
 
             if (isAuthenticated)
             {
-                var jwt = await _deviceAuthService.LoadDeviceJwtAsync();
-                Console.WriteLine($"JWT Token: {(jwt?.Substring(0, Math.Min(20, jwt.Length)) + "...")}");
+                Console.WriteLine("JWT Token: [present]");
             }
         }
         catch (Exception ex)
