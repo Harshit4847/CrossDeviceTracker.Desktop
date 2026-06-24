@@ -124,39 +124,19 @@ public class MainForm : Form
         _notifyIcon.DoubleClick += (_, _) => RestoreFromTray();
     }
 
-    private async void StartTracker()
+    private void StartTracker()
     {
-        await _repository.InitializeAsync();
-
-        _ = Task.Run(async () =>
-        {
-            try
-            {
-                await _tracker.StartAsync();
-            }
-            catch (Exception ex)
-            {
-                BeginInvoke(() => MessageBox.Show(
-                    this,
-                    $"Error: {ex.Message}",
-                    "App Tracker Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error));
-            }
-        });
+        _ = RunBackgroundServiceAsync(_tracker.StartAsync, ex =>
+            BeginInvoke(() => MessageBox.Show(
+                this,
+                $"Error: {ex.Message}",
+                "App Tracker Error",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error)));
 
         _syncService = new SyncService(_apiClient);
-        _ = Task.Run(async () =>
-        {
-            try
-            {
-                await _syncService.StartAsync();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Sync service error: {ex.Message}");
-            }
-        });
+        _ = RunBackgroundServiceAsync(_syncService.StartAsync, ex =>
+            Console.WriteLine($"Sync service error: {ex.Message}"));
 
         var updateTimer = new System.Windows.Forms.Timer
         {
@@ -164,6 +144,18 @@ public class MainForm : Form
         };
         updateTimer.Tick += (_, _) => UpdateUI();
         updateTimer.Start();
+    }
+
+    private static async Task RunBackgroundServiceAsync(Func<Task> serviceStart, Action<Exception> onError)
+    {
+        try
+        {
+            await serviceStart();
+        }
+        catch (Exception ex)
+        {
+            onError(ex);
+        }
     }
 
     private async void UpdateUI()
