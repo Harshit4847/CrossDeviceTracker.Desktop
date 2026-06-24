@@ -14,9 +14,11 @@ public interface IDeviceAuthService
 
 public sealed class DeviceAuthState
 {
+    public required string DeviceId { get; set; }
     public required string DeviceJwt { get; set; }
     public string? DeviceName { get; set; }
     public DateTime? LinkedAt { get; set; }
+    public bool Verify { get; set; }
 }
 
 public class DeviceAuthService : IDeviceAuthService
