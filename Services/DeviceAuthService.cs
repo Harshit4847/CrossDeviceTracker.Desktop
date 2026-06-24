@@ -1,4 +1,5 @@
 using System.Text.Json;
+using CrossDeviceTracker.Desktop.Core.Helpers;
 
 namespace CrossDeviceTracker.Desktop.Services;
 
@@ -24,11 +25,6 @@ public class DeviceAuthService : IDeviceAuthService
     private const string DeviceFileName = "device.json";
     private readonly string _deviceFilePath;
     private readonly IApiClient _apiClient;
-    private readonly JsonSerializerOptions _jsonOptions = new()
-    {
-        PropertyNameCaseInsensitive = true,
-        WriteIndented = true
-    };
 
     public DeviceAuthService(IApiClient apiClient)
     {
@@ -58,7 +54,7 @@ public class DeviceAuthService : IDeviceAuthService
         try
         {
             await using var stream = File.OpenRead(_deviceFilePath);
-            var device = await JsonSerializer.DeserializeAsync<DeviceAuthState>(stream, _jsonOptions);
+            var device = await JsonSerializer.DeserializeAsync<DeviceAuthState>(stream, JsonDefaults.WriteOptions);
             return string.IsNullOrWhiteSpace(device?.DeviceJwt) ? null : device;
         }
         catch
@@ -130,6 +126,6 @@ public class DeviceAuthService : IDeviceAuthService
         }
 
         await using var stream = File.Create(_deviceFilePath);
-        await JsonSerializer.SerializeAsync(stream, device, _jsonOptions);
+        await JsonSerializer.SerializeAsync(stream, device, JsonDefaults.WriteOptions);
     }
 }

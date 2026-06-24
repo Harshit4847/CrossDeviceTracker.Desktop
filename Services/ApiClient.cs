@@ -1,5 +1,5 @@
-using System.Text;
 using System.Text.Json;
+using CrossDeviceTracker.Desktop.Core.Helpers;
 using CrossDeviceTracker.Desktop.Data;
 using CrossDeviceTracker.Desktop.Models;
 
@@ -19,11 +19,7 @@ public class ApiClient : IApiClient
     private const string TimelogsEndpoint = "/api/timelogs";
     private readonly HttpClient _httpClient;
     private readonly ILogRepository _repository;
-    private string _baseUrl = "https://crossdevicetracker-api-hy-erhyaffahwaufsba.southeastasia-01.azurewebsites.net";
-    private readonly JsonSerializerOptions _jsonOptions = new()
-    {
-        PropertyNameCaseInsensitive = true
-    };
+    private readonly string _baseUrl = "https://crossdevicetracker-api-hy-erhyaffahwaufsba.southeastasia-01.azurewebsites.net";
 
     public event EventHandler? DeviceUnauthorized;
     public string? DeviceJwt { get; set; }
@@ -38,18 +34,15 @@ public class ApiClient : IApiClient
     {
         try
         {
-            // Check if device is authenticated
             if (string.IsNullOrWhiteSpace(DeviceJwt))
             {
                 Console.WriteLine("⚠️  Device not authenticated. Sync skipped. Please link device first.");
                 return false;
             }
 
-            // Get pending logs
             var logs = await _repository.GetPendingLogsAsync();
             if (logs.Count == 0)
             {
-                // Silent - don't spam console every 30 seconds with no logs
                 return true;
             }
 
@@ -59,7 +52,6 @@ public class ApiClient : IApiClient
             int successCount = 0;
             int failureCount = 0;
 
-            // Send each log individually (batch endpoint not yet available)
             foreach (var log in logs)
             {
                 var success = await SendLogAsync(log);
@@ -97,7 +89,6 @@ public class ApiClient : IApiClient
                 return false;
             }
 
-            // Build the request body
             var payload = new
             {
                 deviceId = (string?)null,
@@ -106,14 +97,11 @@ public class ApiClient : IApiClient
                 durationSeconds = (int)log.Duration.TotalSeconds
             };
 
-            var json = JsonSerializer.Serialize(payload);
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            var content = HttpHelper.CreateJsonContent(payload);
 
-            // Add authorization header
-            _httpClient.DefaultRequestHeaders.Authorization = 
+            _httpClient.DefaultRequestHeaders.Authorization =
                 new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", jwt);
 
-            // Send request
             var response = await _httpClient.PostAsync(
                 $"{_baseUrl}{TimelogsEndpoint}",
                 content);
@@ -131,8 +119,8 @@ public class ApiClient : IApiClient
             }
             else
             {
-                var errorContent = await response.Content.ReadAsStringAsync();
-                Console.WriteLine($"  ❌ Failed: {log.AppName} - {response.StatusCode} - {errorContent}");
+                var errorMessage = await HttpHelper.ExtractErrorMessageAsync(response, $"Failed to send log for {log.AppName}");
+                Console.WriteLine($"  ❌ Failed: {log.AppName} - {response.StatusCode} - {errorMessage}");
                 return false;
             }
         }
@@ -157,15 +145,13 @@ public class ApiClient : IApiClient
             platform = "Windows"
         };
 
-        var json = JsonSerializer.Serialize(payload);
-        var content = new StringContent(json, Encoding.UTF8, "application/json");
-
+        var content = HttpHelper.CreateJsonContent(payload);
         var response = await _httpClient.PostAsync($"{_baseUrl}/api/devices/link", content);
 
         if (response.IsSuccessStatusCode)
         {
             var responseContent = await response.Content.ReadAsStringAsync();
-            var result = JsonSerializer.Deserialize<LinkDesktopResponse>(responseContent, _jsonOptions);
+            var result = JsonSerializer.Deserialize<LinkDesktopResponse>(responseContent, JsonDefaults.ReadOptions);
             if (result == null || string.IsNullOrWhiteSpace(result.DeviceJwt))
             {
                 throw new Exception("Invalid response from server: Device JWT is empty.");
@@ -174,27 +160,7 @@ public class ApiClient : IApiClient
         }
         else
         {
-            var errorContent = await response.Content.ReadAsStringAsync();
-            string errorMessage = "Failed to link device.";
-            try
-            {
-                using var doc = JsonDocument.Parse(errorContent);
-                if (doc.RootElement.TryGetProperty("message", out var msgProp))
-                {
-                    errorMessage = msgProp.GetString() ?? errorMessage;
-                }
-                else if (doc.RootElement.TryGetProperty("error", out var errProp))
-                {
-                    errorMessage = errProp.GetString() ?? errorMessage;
-                }
-            }
-            catch
-            {
-                if (!string.IsNullOrWhiteSpace(errorContent))
-                {
-                    errorMessage = errorContent;
-                }
-            }
+            var errorMessage = await HttpHelper.ExtractErrorMessageAsync(response, "Failed to link device.");
             throw new Exception(errorMessage);
         }
     }
