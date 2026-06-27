@@ -2,77 +2,34 @@
 
 ---
 
-## Development Update — Device Linking Integration
+## Current Project Status
 
-### Status: Completed
+All core features have been implemented and are functional.
 
-The desktop application is now successfully able to link with the backend using the desktop linking flow.
+### Completed
 
-### Completed Flow
-
-1. User generates a desktop linking token from the backend.
-2. User enters the linking token into the desktop application.
-3. Desktop application sends:
-
-   * Link Token
-   * Device Name
-   * Platform
-4. Backend validates the token.
-5. Backend creates a device record.
-6. Backend issues a Device JWT.
-7. Desktop application receives and stores the Device JWT.
-8. Linked device appears in the backend database.
-
-### Verification
-
-Confirmed:
-
-* Desktop linking token is accepted by the backend.
-* Device record is created successfully.
-* Device JWT is returned successfully.
-* Desktop application can complete the linking process without errors.
-
-### Current Project Status
-
-#### Completed
-
-* Foreground Window Detection
+* Foreground Window Detection (Win32 APIs)
 * App Change Detection
-* Session Tracking
-* Duration Calculation
-* SQLite Persistence
-* Lock / Unlock Handling
-* Windows Forms UI
-* Desktop Device Linking
-* Device JWT Acquisition
+* Session Tracking and Duration Calculation
+* SQLite Persistence (offline-first)
+* Lock / Unlock Handling (LockApp exclusion)
+* Windows Forms UI (status display, current app, pending logs)
+* System Tray Integration (minimize to tray, background tracking, context menu)
+* Desktop Device Linking (token-based pairing with backend)
+* Device JWT Acquisition and Persistence (`device.json`)
+* Backend Time Log Synchronization (`SyncService`, 30s interval)
+* Unauthorized Device Handling (auto-relink on 401)
+* Background Sync Service (`SyncService`)
+* Diagnostic and Debug Utilities (`SyncDebugHelper`)
+* Clear All Logs
 
-#### In Progress
+### Sync Pipeline
 
-* Device JWT Persistence
-* Backend Time Log Synchronization
-* Unauthorized Device Handling
-* Background Sync Service
-
-### Current Issue Under Investigation
-
-Time logs are successfully created and stored locally in SQLite with SyncStatus = Pending.
-
-However, logs are not yet appearing in the backend database.
-
-Current sync pipeline status:
-
-Tracker Engine → SQLite Storage → Pending Logs → Backend Sync ❌
-
-The next debugging task is to determine whether:
-
-* Sync requests are not being sent.
-* Device JWT is not attached correctly.
-* Backend is rejecting requests.
-* Time log endpoint validation is failing.
-
-### Next Milestone
-
-Implement and verify successful upload of pending time logs from SQLite to the backend API and update SyncStatus from Pending to Sent after successful synchronization.
+```
+Tracker Engine → SQLite Storage → Pending Logs → SyncService → ApiClient → Backend API
+                                                                    ↓
+                                                          Update SyncStatus (Sent / Failed)
+```
 
 ---
 
@@ -82,7 +39,7 @@ Created a new GitHub repository for the Windows desktop client of the CrossDevic
 
 **Repository Name:** `CrossDeviceTracker.Desktop`
 
-The desktop application will be responsible for tracking foreground application usage on Windows and sending usage logs to the backend API.
+The desktop application tracks foreground application usage on Windows and sends usage logs to the backend API.
 
 ---
 
@@ -90,43 +47,43 @@ The desktop application will be responsible for tracking foreground application 
 
 The project is a .NET Windows Forms application with a layered architecture.
 
-Current repository structure:
-
 ```
-CrossDeviceTracker.Desktop
-│
+CrossDeviceTracker.Desktop/
 ├── Core/
-│   └── AppTracker.cs              # Foreground app tracking engine
+│   └── AppTracker.cs                  # Foreground window polling engine (Win32)
 ├── Data/
-│   ├── ILogRepository.cs          # Persistence interface
-│   └── SqliteLogRepository.cs     # SQLite implementation
+│   ├── ILogRepository.cs              # Repository interface
+│   └── SqliteLogRepository.cs         # SQLite persistence implementation
 ├── Models/
-│   └── Log.cs                     # Session log model
+│   ├── Log.cs                         # Log model and SyncStatus enum
+│   └── LinkDesktopResponse.cs         # Device linking API response DTO
 ├── Services/
-│   ├── ApiClient.cs               # Backend API client
-│   ├── DeviceAuthService.cs       # Device JWT auth (planned)
-│   └── SyncService.cs             # Log sync service (planned)
-├── MainForm.cs                    # Windows Forms UI
-├── DeviceLinkingDialog.cs         # Device linking UI
-├── Program.cs                     # Application entry point
-├── appsettings.json               # Configuration
-├── DESIGN.md
-├── DOCUMENT.md
-├── IMPLEMENTATION.md
-├── README.md
-└── .gitignore
+│   ├── ApiClient.cs                   # Backend API client (sync, linking, auth)
+│   ├── DeviceAuthService.cs           # Device JWT management and persistence
+│   └── SyncService.cs                 # Background sync service (30s interval)
+├── MainForm.cs                        # Windows Forms UI and system tray lifecycle
+├── DeviceLinkingDialog.cs             # Device linking dialog UI
+├── SyncDebugHelper.cs                 # Diagnostic and debugging utilities
+├── Program.cs                         # Application entry point and DI setup
+├── appsettings.json                   # API base URL and configuration
+├── CrossDeviceTracker.Desktop.csproj  # Project file
+├── DESIGN.md                          # Architecture and design document
+├── DOCUMENT.md                        # This file
+├── IMPLEMENTATION.md                  # Implementation details
+└── README.md                          # Project overview
 ```
 
 ---
 
 ## 3. Role in the System
 
-The CrossDeviceTracker.Desktop application will act as the Windows client responsible for:
+The CrossDeviceTracker.Desktop application acts as the Windows client responsible for:
 
 - Detecting the currently active foreground application
 - Tracking usage duration of each application
-- Storing usage logs locally
+- Storing usage logs locally in SQLite
 - Synchronizing usage logs with the CrossDeviceTracker backend API
+- Managing device authentication and linking
 
 ---
 
@@ -140,37 +97,46 @@ Time spent on Windows lock screen (LockApp) is excluded from tracking and analyt
 
 ## 5. Development Plan
 
-The desktop client is being developed incrementally in the following phases:
+The desktop client was developed incrementally in the following phases:
 
 | Phase | Goal | Status |
 |-------|------|--------|
-| **Phase 1** | Detect the active foreground window on Windows | ✅ Complete |
-| **Phase 2** | Track time spent on each application and generate time blocks | ✅ Complete |
-| **Phase 3** | Store usage logs locally (SQLite) | ✅ Complete |
-| **Phase 4** | Lock/unlock session handling | ✅ Complete |
-| **Phase 5** | Device JWT authentication | ⏳ Planned |
-| **Phase 6** | Backend synchronization (send usage logs to API) | ⏳ Planned |
-| **Phase 7** | Background execution and system tray integration | ⏳ Planned |
+| **Phase 1** | Detect the active foreground window on Windows | Complete |
+| **Phase 2** | Track time spent on each application and generate time blocks | Complete |
+| **Phase 3** | Store usage logs locally (SQLite) | Complete |
+| **Phase 4** | Lock/unlock session handling | Complete |
+| **Phase 5** | Device JWT authentication and linking | Complete |
+| **Phase 6** | Backend synchronization (send usage logs to API) | Complete |
+| **Phase 7** | Background execution and system tray integration | Complete |
 
 ---
 
-## 6. First Development Goal
+## 6. Foreground Window Detection
 
-**Implement foreground window detection.** ✅ Done
-
-The application polls the active window every 2 seconds via `AppTracker`, detects app changes, and persists completed sessions to SQLite. The Windows Forms UI displays current app and recent activity.
+The application polls the active window every 2 seconds via `AppTracker`, detects app changes, and persists completed sessions to SQLite. The Windows Forms UI displays the current app and pending/failed activity logs.
 
 ---
 
 ## 7. Backend Integration
 
-The desktop client will communicate with the CrossDeviceTracker backend API.
+The desktop client communicates with the CrossDeviceTracker backend API hosted on Azure.
 
-Device authentication will use the device JWT generated during the desktop linking process.
+**Base URL:** Configured in `appsettings.json`
+
+### Endpoints Used
+
+| Endpoint | Method | Purpose |
+|----------|--------|---------|
+| `/api/devices/link` | POST | Link device using a one-time token |
+| `/api/timelogs` | POST | Submit individual time log entries |
+
+### Authentication
+
+Device authentication uses the device JWT generated during the desktop linking process. All API requests include the JWT in the `Authorization: Bearer <token>` header.
 
 ---
 
-## 8. Tracking Engine Design (Finalized)
+## 8. Tracking Engine Design
 
 ### Goal
 
@@ -179,15 +145,16 @@ Build a Windows desktop app that:
 - Tracks foreground app usage
 - Calculates time spent per app
 - Stores logs locally
-- Syncs later to backend
+- Syncs to backend
 
 ### Architecture
 
-- `Core` -> Logic (tracking engine)
-- `Data` -> Storage (SQLite)
-- `Core` = brain
-- `Data` = memory
-- `Sync` (future) = network
+| Layer | Role |
+|-------|------|
+| `Core` | Logic (tracking engine) |
+| `Data` | Storage (SQLite) |
+| `Services` | Network (sync, auth, API) |
+| `UI` | Display (WinForms, tray) |
 
 ### Core Logic (Tracking Engine)
 
@@ -206,23 +173,24 @@ Runs every 2 seconds using:
 #### State (Class Fields)
 
 - `previousApp`
-- `startTime`
+- `currentApp`
+- `sessionStartTime`
 - `isRunning`
-- `dataService`
 
 #### Loop Flow
 
 ```text
 while (isRunning)
-	currentApp = getCurrentApp()
+	rawApp = getCurrentApp()
+	trackableApp = ToTrackableApp(rawApp)   // null if LockApp
 	currentTime = now
 
-	if currentApp != previousApp
+	if trackableApp != previousApp
 		if previousApp exists
 			FinalizeSession(currentTime)
 
 		startTime = currentTime
-		previousApp = currentApp
+		previousApp = trackableApp
 
 	wait 2 seconds
 ```
@@ -257,9 +225,13 @@ SaveLogAsync(log)
 
 ### Data Layer
 
-Interface:
+Interface (`ILogRepository`):
 
 - `SaveLogAsync(Log log)`
+- `GetPendingLogsAsync()` — returns logs with Pending or Failed status
+- `UpdateSyncStatusAsync(Guid logId, SyncStatus status)`
+- `InitializeAsync()` — create database and tables
+- `DeleteAllLogsAsync()` — clear all logs
 
 Rules:
 
@@ -269,9 +241,9 @@ Rules:
 
 `SyncStatus` lifecycle:
 
-- `Pending` -> not sent
-- `Sent` -> success
-- `Failed` -> error (retry later)
+- `Pending` -> created locally, not yet synced
+- `Sent` -> successfully synced to backend
+- `Failed` -> sync attempt failed (retry on next cycle)
 
 ### Important Design Rules
 
@@ -290,9 +262,16 @@ Core should:
 ### Startup Logic
 
 ```text
-previousApp = getCurrentApp()
-startTime = currentTime
-isRunning = true
+Load device.json → restore DeviceJwt
+Check IsLinkedAsync()
+    Not linked → DeviceLinkingDialog
+    Linked → MainForm
+
+MainForm:
+    Initialize repository
+    Start AppTracker (background)
+    Start SyncService (background)
+    Start UI timer (2s)
 ```
 
 Start tracking from now.
@@ -300,15 +279,15 @@ Start tracking from now.
 ### Stop Logic
 
 ```text
-Stop()
-	FinalizeSession(currentTime)
-	isRunning = false
+ExitApplication()
+    AppTracker.StopAsync()
+        FinalizeSession(currentTime)
+        isRunning = false
+    SyncService.StopAsync()
+        Final sync attempt
+    Dispose tray icon
+    Application.Exit()
 ```
-
-Do NOT:
-
-- Wait for backend
-- Do network calls
 
 ### System Behavior
 
@@ -323,30 +302,35 @@ Not:
 
 | Case | Status |
 |------|--------|
-| App exit / shutdown | ✅ Finalizes last session on close |
-| App change | ✅ Finalizes session and saves to SQLite |
-| System lock / unlock | ✅ LockApp excluded; session finalized on lock, resumed on unlock |
+| App exit / shutdown | Finalizes last session on close |
+| App change | Finalizes session and saves to SQLite |
+| System lock / unlock | LockApp excluded; session finalized on lock, resumed on unlock |
+| Network unavailable | Logs stored locally, synced when connectivity returns |
+| 401 Unauthorized | DeviceUnauthorized event fires, user prompted to relink |
 
 Always finalize the last session on shutdown.
 
 ### Two Engines
 
-1. **Tracker Engine** ✅
+1. **Tracker Engine**
    - Detect usage
    - Create logs
    - Save locally
-2. **Sync Engine** ⏳
-   - Read pending logs
-   - Send to backend
-   - Update status
+2. **Sync Engine**
+   - Read pending/failed logs
+   - Send to backend via ApiClient
+   - Update SyncStatus (Sent / Failed)
+   - Handle 401 → trigger relink
 
-### Current Stage
+### Device Linking Flow
 
-Core tracking, session management, lock/unlock handling, Windows Forms UI, and SQLite persistence are complete. Next priorities:
-
-1. **Phase 5** — Device JWT authentication: link device and attach token to API requests.
-2. **Phase 6** — Backend synchronization: send pending logs via `SyncService`.
-3. **Phase 7** — Background execution and system tray: keep tracking when minimized; tray icon with show/exit.
+1. User generates a link token from the backend
+2. User enters token in `DeviceLinkingDialog`
+3. `DeviceAuthService.LinkDeviceAsync()` calls `ApiClient.LinkDeviceAsync()` → POST `/api/devices/link`
+4. Backend validates token, creates device, returns JWT
+5. JWT persisted in `device.json`
+6. `ApiClient.DeviceJwt` set for authenticated requests
+7. On startup, JWT is loaded from `device.json` automatically
 
 ### Future Consideration
 
