@@ -89,17 +89,13 @@ public class ApiClient : IApiClient
     {
         try
         {
-            Console.WriteLine("=== SEND LOG START ===");
             var jwt = DeviceJwt;
 
             if (string.IsNullOrEmpty(jwt))
             {
-                Console.WriteLine("JWT IS NULL");
                 Console.WriteLine("❌ Missing authentication credentials");
                 return false;
             }
-
-            Console.WriteLine($"JWT EXISTS: {jwt[..20]}...");
 
             // Build the request body
             var payload = new
@@ -109,10 +105,6 @@ public class ApiClient : IApiClient
                 startTime = log.StartTime.ToString("O"),
                 durationSeconds = (int)log.Duration.TotalSeconds
             };
-
-            Console.WriteLine("=== REQUEST ===");
-            Console.WriteLine(JsonSerializer.Serialize(payload));
-            Console.WriteLine(_baseUrl + "/api/timelogs");
 
             var json = JsonSerializer.Serialize(payload);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
@@ -126,15 +118,8 @@ public class ApiClient : IApiClient
                 $"{_baseUrl}{TimelogsEndpoint}",
                 content);
 
-            Console.WriteLine($"STATUS: {response.StatusCode}");
-
-            var body = await response.Content.ReadAsStringAsync();
-
-            Console.WriteLine(body);
-
             if (response.IsSuccessStatusCode)
             {
-                Console.WriteLine($"  ✓ Sent: {log.AppName} ({log.Duration.TotalSeconds:F0}s)");
                 return true;
             }
             else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
@@ -152,29 +137,31 @@ public class ApiClient : IApiClient
         }
         catch (Exception ex)
         {
-            Console.WriteLine(ex.ToString());
+            Console.WriteLine($"❌ Send log error: {ex.Message}");
             return false;
         }
     }
 
     public async Task<LinkDesktopResponse> LinkDeviceAsync(string linkToken)
     {
-        if (string.IsNullOrWhiteSpace(linkToken))
+        try
         {
-            throw new ArgumentException("Link token is required.", nameof(linkToken));
-        }
+            if (string.IsNullOrWhiteSpace(linkToken))
+            {
+                throw new ArgumentException("Link token is required.", nameof(linkToken));
+            }
 
-        var payload = new
-        {
-            linkToken = linkToken.Trim(),
-            deviceName = Environment.MachineName,
-            platform = "Windows"
-        };
+            var payload = new
+            {
+                linkToken = linkToken.Trim(),
+                deviceName = Environment.MachineName,
+                platform = "Windows"
+            };
 
-        var json = JsonSerializer.Serialize(payload);
-        var content = new StringContent(json, Encoding.UTF8, "application/json");
+            var json = JsonSerializer.Serialize(payload);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-        var response = await _httpClient.PostAsync($"{_baseUrl}/api/devices/link", content);
+            var response = await _httpClient.PostAsync($"{_baseUrl}/api/devices/link", content);
 
         if (response.IsSuccessStatusCode)
         {
@@ -210,6 +197,12 @@ public class ApiClient : IApiClient
                 }
             }
             throw new Exception(errorMessage);
+        }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"❌ Link device error: {ex.Message}");
+            throw;
         }
     }
 }

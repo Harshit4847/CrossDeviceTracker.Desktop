@@ -72,11 +72,20 @@ public class SqliteLogRepository : ILogRepository
                         {
                             Id = Guid.Parse(reader["Id"].ToString()!),
                             AppName = reader["AppName"].ToString()!,
-                            StartTime = DateTime.Parse(reader["StartTime"].ToString()!),
-                            EndTime = DateTime.Parse(reader["EndTime"].ToString()!),
+                            StartTime = DateTime.Parse(
+                                reader["StartTime"].ToString()!,
+                                null,
+                                System.Globalization.DateTimeStyles.RoundtripKind),
+                            EndTime = DateTime.Parse(
+                                reader["EndTime"].ToString()!,
+                                null,
+                                System.Globalization.DateTimeStyles.RoundtripKind),
                             Duration = TimeSpan.FromSeconds(double.Parse(reader["DurationSeconds"].ToString()!)),
                             SyncStatus = Enum.Parse<SyncStatus>(reader["SyncStatus"].ToString()!),
-                            CreatedAt = DateTime.Parse(reader["CreatedAt"].ToString()!)
+                            CreatedAt = DateTime.Parse(
+                                reader["CreatedAt"].ToString()!,
+                                null,
+                                System.Globalization.DateTimeStyles.RoundtripKind)
                         });
                     }
                 }

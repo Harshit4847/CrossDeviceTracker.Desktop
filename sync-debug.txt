@@ -1,0 +1,4448 @@
+[6/27/2026 11:20:38 PM] SyncPendingLogsAsync called
+[6/27/2026 11:20:38 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:20:42 PM] SendLogAsync called for powershell
+[6/27/2026 11:20:42 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:20:43 PM] SendLogAsync called for powershell
+[6/27/2026 11:20:43 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:20:44 PM] SendLogAsync called for powershell
+[6/27/2026 11:20:45 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:20:45 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:21:15 PM] SyncPendingLogsAsync called
+[6/27/2026 11:21:15 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:21:16 PM] SendLogAsync called for powershell
+[6/27/2026 11:21:17 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:21:48 PM] SyncPendingLogsAsync called
+[6/27/2026 11:21:48 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:21:49 PM] SendLogAsync called for powershell
+[6/27/2026 11:21:50 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:21:50 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:21:51 PM] SendLogAsync called for powershell
+[6/27/2026 11:21:52 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:22:23 PM] SyncPendingLogsAsync called
+[6/27/2026 11:22:23 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:22:24 PM] SendLogAsync called for powershell
+[6/27/2026 11:22:25 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:22:26 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:22:26 PM] SendLogAsync called for powershell
+[6/27/2026 11:22:27 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:22:28 PM] SendLogAsync called for Devin
+[6/27/2026 11:24:46 PM] SyncPendingLogsAsync called
+[6/27/2026 11:24:46 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:24:51 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:24:51 PM] SendLogAsync called for powershell
+[6/27/2026 11:24:52 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:24:52 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:24:54 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:24:54 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:24:55 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:24:55 PM] SendLogAsync called for powershell
+[6/27/2026 11:24:56 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:24:56 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:24:57 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:24:57 PM] SendLogAsync called for Devin
+[6/27/2026 11:24:58 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:24:58 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:24:59 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:25:29 PM] SyncPendingLogsAsync called
+[6/27/2026 11:25:29 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:25:32 PM] SendLogAsync called for powershell
+[6/27/2026 11:25:36 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:25:36 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:25:37 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:25:37 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:25:37 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:25:37 PM] SendLogAsync called for powershell
+[6/27/2026 11:25:38 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:25:38 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:25:39 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:25:39 PM] SendLogAsync called for Devin
+[6/27/2026 11:25:40 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:25:40 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:25:41 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:25:41 PM] SendLogAsync called for powershell
+[6/27/2026 11:25:41 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:25:41 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:25:43 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:25:43 PM] SendLogAsync called for Devin
+[6/27/2026 11:25:44 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:25:44 PM] SendLogAsync called for explorer
+[6/27/2026 11:25:45 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:25:45 PM] SendLogAsync called for OpenWith
+[6/27/2026 11:25:45 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:26:15 PM] SyncPendingLogsAsync called
+[6/27/2026 11:26:15 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:26:16 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:26:16 PM] SendLogAsync called for powershell
+[6/27/2026 11:26:17 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:26:17 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:26:18 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:26:18 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:26:19 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:26:19 PM] SendLogAsync called for powershell
+[6/27/2026 11:26:19 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:26:19 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:26:20 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:26:20 PM] SendLogAsync called for Devin
+[6/27/2026 11:26:21 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:26:21 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:26:22 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:26:22 PM] SendLogAsync called for powershell
+[6/27/2026 11:26:23 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:26:23 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:26:24 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:26:24 PM] SendLogAsync called for Devin
+[6/27/2026 11:26:24 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:26:24 PM] SendLogAsync called for explorer
+[6/27/2026 11:26:25 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:26:25 PM] SendLogAsync called for OpenWith
+[6/27/2026 11:26:26 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:26:26 PM] SendLogAsync called for notepad
+[6/27/2026 11:26:27 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:26:27 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:26:28 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:26:28 PM] SendLogAsync called for notepad
+[6/27/2026 11:26:29 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:26:59 PM] SyncPendingLogsAsync called
+[6/27/2026 11:26:59 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:26:59 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:26:59 PM] SendLogAsync called for powershell
+[6/27/2026 11:27:00 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:00 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:27:00 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:00 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:27:01 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:01 PM] SendLogAsync called for powershell
+[6/27/2026 11:27:01 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:01 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:27:02 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:02 PM] SendLogAsync called for Devin
+[6/27/2026 11:27:02 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:02 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:27:02 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:02 PM] SendLogAsync called for powershell
+[6/27/2026 11:27:03 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:03 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:27:03 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:03 PM] SendLogAsync called for Devin
+[6/27/2026 11:27:03 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:03 PM] SendLogAsync called for explorer
+[6/27/2026 11:27:04 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:04 PM] SendLogAsync called for OpenWith
+[6/27/2026 11:27:04 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:04 PM] SendLogAsync called for notepad
+[6/27/2026 11:27:04 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:04 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:27:04 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:04 PM] SendLogAsync called for notepad
+[6/27/2026 11:27:05 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:05 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:27:05 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:35 PM] SyncPendingLogsAsync called
+[6/27/2026 11:27:35 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:27:35 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:35 PM] SendLogAsync called for powershell
+[6/27/2026 11:27:35 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:35 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:27:35 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:35 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:27:36 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:36 PM] SendLogAsync called for powershell
+[6/27/2026 11:27:36 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:36 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:27:36 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:36 PM] SendLogAsync called for Devin
+[6/27/2026 11:27:36 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:36 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:27:37 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:37 PM] SendLogAsync called for powershell
+[6/27/2026 11:27:37 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:37 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:27:37 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:37 PM] SendLogAsync called for Devin
+[6/27/2026 11:27:37 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:37 PM] SendLogAsync called for explorer
+[6/27/2026 11:27:38 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:38 PM] SendLogAsync called for OpenWith
+[6/27/2026 11:27:38 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:38 PM] SendLogAsync called for notepad
+[6/27/2026 11:27:38 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:38 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:27:38 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:38 PM] SendLogAsync called for notepad
+[6/27/2026 11:27:39 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:27:39 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:27:39 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:09 PM] SyncPendingLogsAsync called
+[6/27/2026 11:28:09 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:28:09 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:09 PM] SendLogAsync called for powershell
+[6/27/2026 11:28:09 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:09 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:28:10 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:10 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:28:10 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:10 PM] SendLogAsync called for powershell
+[6/27/2026 11:28:10 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:10 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:28:10 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:10 PM] SendLogAsync called for Devin
+[6/27/2026 11:28:10 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:10 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:28:10 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:10 PM] SendLogAsync called for powershell
+[6/27/2026 11:28:11 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:11 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:28:11 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:11 PM] SendLogAsync called for Devin
+[6/27/2026 11:28:11 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:11 PM] SendLogAsync called for explorer
+[6/27/2026 11:28:11 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:11 PM] SendLogAsync called for OpenWith
+[6/27/2026 11:28:11 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:11 PM] SendLogAsync called for notepad
+[6/27/2026 11:28:11 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:11 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:28:11 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:11 PM] SendLogAsync called for notepad
+[6/27/2026 11:28:12 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:12 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:28:12 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:42 PM] SyncPendingLogsAsync called
+[6/27/2026 11:28:42 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:28:42 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:42 PM] SendLogAsync called for powershell
+[6/27/2026 11:28:42 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:42 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:28:43 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:43 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:28:43 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:43 PM] SendLogAsync called for powershell
+[6/27/2026 11:28:43 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:43 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:28:44 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:44 PM] SendLogAsync called for Devin
+[6/27/2026 11:28:44 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:44 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:28:44 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:44 PM] SendLogAsync called for powershell
+[6/27/2026 11:28:44 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:44 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:28:45 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:45 PM] SendLogAsync called for Devin
+[6/27/2026 11:28:45 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:45 PM] SendLogAsync called for explorer
+[6/27/2026 11:28:45 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:45 PM] SendLogAsync called for OpenWith
+[6/27/2026 11:28:46 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:46 PM] SendLogAsync called for notepad
+[6/27/2026 11:28:46 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:46 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:28:46 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:46 PM] SendLogAsync called for notepad
+[6/27/2026 11:28:47 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:28:47 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:28:47 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:29:17 PM] SyncPendingLogsAsync called
+[6/27/2026 11:29:17 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:29:17 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:29:17 PM] SendLogAsync called for powershell
+[6/27/2026 11:29:18 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:29:18 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:29:18 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:29:18 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:29:19 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:29:19 PM] SendLogAsync called for powershell
+[6/27/2026 11:29:19 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:29:19 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:29:20 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:29:20 PM] SendLogAsync called for Devin
+[6/27/2026 11:29:20 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:29:20 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:29:21 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:29:21 PM] SendLogAsync called for powershell
+[6/27/2026 11:29:21 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:29:21 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:29:22 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:29:22 PM] SendLogAsync called for Devin
+[6/27/2026 11:29:22 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:29:22 PM] SendLogAsync called for explorer
+[6/27/2026 11:29:23 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:29:23 PM] SendLogAsync called for OpenWith
+[6/27/2026 11:29:23 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:29:23 PM] SendLogAsync called for notepad
+[6/27/2026 11:29:24 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:29:24 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:29:24 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:29:24 PM] SendLogAsync called for notepad
+[6/27/2026 11:29:25 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:29:25 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:29:25 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:29:55 PM] SyncPendingLogsAsync called
+[6/27/2026 11:29:55 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:29:56 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:29:56 PM] SendLogAsync called for powershell
+[6/27/2026 11:29:56 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:29:56 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:29:57 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:29:57 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:29:57 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:29:57 PM] SendLogAsync called for powershell
+[6/27/2026 11:29:58 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:29:58 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:29:59 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:29:59 PM] SendLogAsync called for Devin
+[6/27/2026 11:29:59 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:29:59 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:30:00 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:00 PM] SendLogAsync called for powershell
+[6/27/2026 11:30:01 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:01 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:30:01 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:01 PM] SendLogAsync called for Devin
+[6/27/2026 11:30:02 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:02 PM] SendLogAsync called for explorer
+[6/27/2026 11:30:03 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:03 PM] SendLogAsync called for OpenWith
+[6/27/2026 11:30:03 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:03 PM] SendLogAsync called for notepad
+[6/27/2026 11:30:04 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:04 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:30:04 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:04 PM] SendLogAsync called for notepad
+[6/27/2026 11:30:04 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:04 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:30:05 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:05 PM] SendLogAsync called for brave
+[6/27/2026 11:30:05 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:05 PM] SendLogAsync called for CredentialUIBroker
+[6/27/2026 11:30:06 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:36 PM] SyncPendingLogsAsync called
+[6/27/2026 11:30:36 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:30:36 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:36 PM] SendLogAsync called for powershell
+[6/27/2026 11:30:37 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:37 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:30:37 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:37 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:30:38 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:38 PM] SendLogAsync called for powershell
+[6/27/2026 11:30:38 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:38 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:30:38 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:38 PM] SendLogAsync called for Devin
+[6/27/2026 11:30:39 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:39 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:30:39 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:39 PM] SendLogAsync called for powershell
+[6/27/2026 11:30:39 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:39 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:30:40 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:40 PM] SendLogAsync called for Devin
+[6/27/2026 11:30:40 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:40 PM] SendLogAsync called for explorer
+[6/27/2026 11:30:40 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:40 PM] SendLogAsync called for OpenWith
+[6/27/2026 11:30:41 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:41 PM] SendLogAsync called for notepad
+[6/27/2026 11:30:41 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:41 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:30:41 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:41 PM] SendLogAsync called for notepad
+[6/27/2026 11:30:42 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:42 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:30:42 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:42 PM] SendLogAsync called for brave
+[6/27/2026 11:30:43 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:30:43 PM] SendLogAsync called for CredentialUIBroker
+[6/27/2026 11:30:43 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:13 PM] SyncPendingLogsAsync called
+[6/27/2026 11:31:13 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:31:14 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:14 PM] SendLogAsync called for powershell
+[6/27/2026 11:31:14 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:14 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:31:14 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:14 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:31:15 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:15 PM] SendLogAsync called for powershell
+[6/27/2026 11:31:15 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:15 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:31:16 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:16 PM] SendLogAsync called for Devin
+[6/27/2026 11:31:16 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:16 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:31:17 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:17 PM] SendLogAsync called for powershell
+[6/27/2026 11:31:17 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:17 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:31:18 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:18 PM] SendLogAsync called for Devin
+[6/27/2026 11:31:19 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:19 PM] SendLogAsync called for explorer
+[6/27/2026 11:31:19 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:19 PM] SendLogAsync called for OpenWith
+[6/27/2026 11:31:20 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:20 PM] SendLogAsync called for notepad
+[6/27/2026 11:31:21 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:21 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:31:21 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:21 PM] SendLogAsync called for notepad
+[6/27/2026 11:31:22 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:22 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:31:23 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:23 PM] SendLogAsync called for brave
+[6/27/2026 11:31:23 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:23 PM] SendLogAsync called for CredentialUIBroker
+[6/27/2026 11:31:24 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:54 PM] SyncPendingLogsAsync called
+[6/27/2026 11:31:54 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:31:54 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:54 PM] SendLogAsync called for powershell
+[6/27/2026 11:31:55 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:55 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:31:56 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:56 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:31:56 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:56 PM] SendLogAsync called for powershell
+[6/27/2026 11:31:57 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:57 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:31:58 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:58 PM] SendLogAsync called for Devin
+[6/27/2026 11:31:58 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:58 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:31:59 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:59 PM] SendLogAsync called for powershell
+[6/27/2026 11:31:59 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:31:59 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:32:00 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:00 PM] SendLogAsync called for Devin
+[6/27/2026 11:32:01 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:01 PM] SendLogAsync called for explorer
+[6/27/2026 11:32:01 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:01 PM] SendLogAsync called for OpenWith
+[6/27/2026 11:32:02 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:02 PM] SendLogAsync called for notepad
+[6/27/2026 11:32:03 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:03 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:32:03 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:03 PM] SendLogAsync called for notepad
+[6/27/2026 11:32:04 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:04 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:32:05 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:05 PM] SendLogAsync called for brave
+[6/27/2026 11:32:05 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:05 PM] SendLogAsync called for CredentialUIBroker
+[6/27/2026 11:32:06 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:06 PM] SendLogAsync called for brave
+[6/27/2026 11:32:07 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:07 PM] SendLogAsync called for CredentialUIBroker
+[6/27/2026 11:32:08 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:38 PM] SyncPendingLogsAsync called
+[6/27/2026 11:32:38 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:32:38 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:38 PM] SendLogAsync called for powershell
+[6/27/2026 11:32:38 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:38 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:32:39 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:39 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:32:39 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:39 PM] SendLogAsync called for powershell
+[6/27/2026 11:32:40 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:40 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:32:40 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:40 PM] SendLogAsync called for Devin
+[6/27/2026 11:32:40 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:40 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:32:41 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:41 PM] SendLogAsync called for powershell
+[6/27/2026 11:32:41 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:41 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:32:41 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:41 PM] SendLogAsync called for Devin
+[6/27/2026 11:32:42 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:42 PM] SendLogAsync called for explorer
+[6/27/2026 11:32:42 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:42 PM] SendLogAsync called for OpenWith
+[6/27/2026 11:32:42 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:42 PM] SendLogAsync called for notepad
+[6/27/2026 11:32:43 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:43 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:32:43 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:43 PM] SendLogAsync called for notepad
+[6/27/2026 11:32:43 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:43 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:32:44 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:44 PM] SendLogAsync called for brave
+[6/27/2026 11:32:44 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:44 PM] SendLogAsync called for CredentialUIBroker
+[6/27/2026 11:32:45 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:45 PM] SendLogAsync called for brave
+[6/27/2026 11:32:45 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:32:45 PM] SendLogAsync called for CredentialUIBroker
+[6/27/2026 11:32:46 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:16 PM] SyncPendingLogsAsync called
+[6/27/2026 11:33:16 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:33:16 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:16 PM] SendLogAsync called for powershell
+[6/27/2026 11:33:16 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:16 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:33:17 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:17 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:33:17 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:17 PM] SendLogAsync called for powershell
+[6/27/2026 11:33:17 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:17 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:33:18 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:18 PM] SendLogAsync called for Devin
+[6/27/2026 11:33:18 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:18 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:33:19 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:19 PM] SendLogAsync called for powershell
+[6/27/2026 11:33:19 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:19 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:33:20 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:20 PM] SendLogAsync called for Devin
+[6/27/2026 11:33:20 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:20 PM] SendLogAsync called for explorer
+[6/27/2026 11:33:20 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:20 PM] SendLogAsync called for OpenWith
+[6/27/2026 11:33:21 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:21 PM] SendLogAsync called for notepad
+[6/27/2026 11:33:21 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:21 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:33:21 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:21 PM] SendLogAsync called for notepad
+[6/27/2026 11:33:22 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:22 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:33:22 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:22 PM] SendLogAsync called for brave
+[6/27/2026 11:33:23 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:23 PM] SendLogAsync called for CredentialUIBroker
+[6/27/2026 11:33:23 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:23 PM] SendLogAsync called for brave
+[6/27/2026 11:33:24 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:24 PM] SendLogAsync called for CredentialUIBroker
+[6/27/2026 11:33:24 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:54 PM] SyncPendingLogsAsync called
+[6/27/2026 11:33:54 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:33:55 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:55 PM] SendLogAsync called for powershell
+[6/27/2026 11:33:56 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:56 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:33:57 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:57 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:33:57 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:57 PM] SendLogAsync called for powershell
+[6/27/2026 11:33:58 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:58 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:33:59 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:59 PM] SendLogAsync called for Devin
+[6/27/2026 11:33:59 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:33:59 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:34:00 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:00 PM] SendLogAsync called for powershell
+[6/27/2026 11:34:00 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:00 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:34:00 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:00 PM] SendLogAsync called for Devin
+[6/27/2026 11:34:01 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:01 PM] SendLogAsync called for explorer
+[6/27/2026 11:34:01 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:01 PM] SendLogAsync called for OpenWith
+[6/27/2026 11:34:02 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:02 PM] SendLogAsync called for notepad
+[6/27/2026 11:34:02 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:02 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:34:03 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:03 PM] SendLogAsync called for notepad
+[6/27/2026 11:34:03 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:03 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:34:04 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:04 PM] SendLogAsync called for brave
+[6/27/2026 11:34:04 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:04 PM] SendLogAsync called for CredentialUIBroker
+[6/27/2026 11:34:05 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:05 PM] SendLogAsync called for brave
+[6/27/2026 11:34:06 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:06 PM] SendLogAsync called for CredentialUIBroker
+[6/27/2026 11:34:06 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:36 PM] SyncPendingLogsAsync called
+[6/27/2026 11:34:36 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:34:37 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:37 PM] SendLogAsync called for powershell
+[6/27/2026 11:34:37 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:37 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:34:38 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:38 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:34:38 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:38 PM] SendLogAsync called for powershell
+[6/27/2026 11:34:39 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:39 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:34:39 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:39 PM] SendLogAsync called for Devin
+[6/27/2026 11:34:39 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:39 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:34:40 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:40 PM] SendLogAsync called for powershell
+[6/27/2026 11:34:40 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:40 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:34:41 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:41 PM] SendLogAsync called for Devin
+[6/27/2026 11:34:41 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:41 PM] SendLogAsync called for explorer
+[6/27/2026 11:34:42 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:42 PM] SendLogAsync called for OpenWith
+[6/27/2026 11:34:42 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:42 PM] SendLogAsync called for notepad
+[6/27/2026 11:34:43 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:43 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:34:43 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:43 PM] SendLogAsync called for notepad
+[6/27/2026 11:34:43 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:43 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:34:44 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:44 PM] SendLogAsync called for brave
+[6/27/2026 11:34:44 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:44 PM] SendLogAsync called for CredentialUIBroker
+[6/27/2026 11:34:44 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:44 PM] SendLogAsync called for brave
+[6/27/2026 11:34:45 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:45 PM] SendLogAsync called for CredentialUIBroker
+[6/27/2026 11:34:45 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:45 PM] SendLogAsync called for brave
+[6/27/2026 11:34:45 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:34:45 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:34:46 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:35:16 PM] SyncPendingLogsAsync called
+[6/27/2026 11:35:16 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:35:16 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:35:16 PM] SendLogAsync called for powershell
+[6/27/2026 11:35:17 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:35:17 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:35:18 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:35:18 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:35:18 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:35:18 PM] SendLogAsync called for powershell
+[6/27/2026 11:35:19 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:35:19 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:35:20 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:35:20 PM] SendLogAsync called for Devin
+[6/27/2026 11:35:21 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:35:21 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:35:21 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:35:21 PM] SendLogAsync called for powershell
+[6/27/2026 11:35:22 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:35:22 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:35:23 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:35:23 PM] SendLogAsync called for Devin
+[6/27/2026 11:35:24 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:35:24 PM] SendLogAsync called for explorer
+[6/27/2026 11:35:24 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:35:24 PM] SendLogAsync called for OpenWith
+[6/27/2026 11:35:25 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:35:25 PM] SendLogAsync called for notepad
+[6/27/2026 11:35:26 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:35:26 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:35:27 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:35:27 PM] SendLogAsync called for notepad
+[6/27/2026 11:35:28 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:35:28 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:35:29 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:35:29 PM] SendLogAsync called for brave
+[6/27/2026 11:35:30 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:35:30 PM] SendLogAsync called for CredentialUIBroker
+[6/27/2026 11:35:31 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:35:31 PM] SendLogAsync called for brave
+[6/27/2026 11:35:32 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:35:32 PM] SendLogAsync called for CredentialUIBroker
+[6/27/2026 11:35:33 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:35:33 PM] SendLogAsync called for brave
+[6/27/2026 11:35:33 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:35:33 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:35:35 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:35:35 PM] SendLogAsync called for brave
+[6/27/2026 11:35:35 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:35:35 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:35:36 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:06 PM] SyncPendingLogsAsync called
+[6/27/2026 11:36:06 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:36:07 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:07 PM] SendLogAsync called for powershell
+[6/27/2026 11:36:07 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:07 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:36:08 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:08 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:36:08 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:08 PM] SendLogAsync called for powershell
+[6/27/2026 11:36:08 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:08 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:36:08 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:08 PM] SendLogAsync called for Devin
+[6/27/2026 11:36:08 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:08 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:36:08 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:08 PM] SendLogAsync called for powershell
+[6/27/2026 11:36:09 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:09 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:36:09 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:09 PM] SendLogAsync called for Devin
+[6/27/2026 11:36:09 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:09 PM] SendLogAsync called for explorer
+[6/27/2026 11:36:09 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:09 PM] SendLogAsync called for OpenWith
+[6/27/2026 11:36:09 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:09 PM] SendLogAsync called for notepad
+[6/27/2026 11:36:09 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:09 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:36:09 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:09 PM] SendLogAsync called for notepad
+[6/27/2026 11:36:10 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:10 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:36:10 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:10 PM] SendLogAsync called for brave
+[6/27/2026 11:36:10 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:10 PM] SendLogAsync called for CredentialUIBroker
+[6/27/2026 11:36:10 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:10 PM] SendLogAsync called for brave
+[6/27/2026 11:36:10 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:10 PM] SendLogAsync called for CredentialUIBroker
+[6/27/2026 11:36:10 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:10 PM] SendLogAsync called for brave
+[6/27/2026 11:36:11 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:11 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:36:11 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:11 PM] SendLogAsync called for brave
+[6/27/2026 11:36:11 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:11 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:36:11 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:41 PM] SyncPendingLogsAsync called
+[6/27/2026 11:36:41 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:36:41 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:41 PM] SendLogAsync called for powershell
+[6/27/2026 11:36:42 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:42 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:36:42 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:42 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:36:42 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:42 PM] SendLogAsync called for powershell
+[6/27/2026 11:36:42 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:42 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:36:42 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:42 PM] SendLogAsync called for Devin
+[6/27/2026 11:36:43 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:43 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:36:43 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:43 PM] SendLogAsync called for powershell
+[6/27/2026 11:36:43 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:43 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:36:43 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:43 PM] SendLogAsync called for Devin
+[6/27/2026 11:36:44 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:44 PM] SendLogAsync called for explorer
+[6/27/2026 11:36:44 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:44 PM] SendLogAsync called for OpenWith
+[6/27/2026 11:36:44 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:44 PM] SendLogAsync called for notepad
+[6/27/2026 11:36:44 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:44 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:36:44 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:44 PM] SendLogAsync called for notepad
+[6/27/2026 11:36:45 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:45 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:36:45 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:45 PM] SendLogAsync called for brave
+[6/27/2026 11:36:45 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:45 PM] SendLogAsync called for CredentialUIBroker
+[6/27/2026 11:36:45 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:45 PM] SendLogAsync called for brave
+[6/27/2026 11:36:45 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:45 PM] SendLogAsync called for CredentialUIBroker
+[6/27/2026 11:36:45 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:45 PM] SendLogAsync called for brave
+[6/27/2026 11:36:46 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:46 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:36:46 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:46 PM] SendLogAsync called for brave
+[6/27/2026 11:36:46 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:46 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:36:46 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:46 PM] SendLogAsync called for brave
+[6/27/2026 11:36:46 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:46 PM] SendLogAsync called for explorer
+[6/27/2026 11:36:47 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:36:47 PM] SendLogAsync called for brave
+[6/27/2026 11:36:47 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:17 PM] SyncPendingLogsAsync called
+[6/27/2026 11:37:17 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:37:17 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:17 PM] SendLogAsync called for powershell
+[6/27/2026 11:37:17 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:17 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:37:17 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:17 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:37:18 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:18 PM] SendLogAsync called for powershell
+[6/27/2026 11:37:18 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:18 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:37:19 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:19 PM] SendLogAsync called for Devin
+[6/27/2026 11:37:19 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:19 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:37:19 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:19 PM] SendLogAsync called for powershell
+[6/27/2026 11:37:19 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:19 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:37:20 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:20 PM] SendLogAsync called for Devin
+[6/27/2026 11:37:20 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:20 PM] SendLogAsync called for explorer
+[6/27/2026 11:37:20 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:20 PM] SendLogAsync called for OpenWith
+[6/27/2026 11:37:21 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:21 PM] SendLogAsync called for notepad
+[6/27/2026 11:37:21 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:21 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:37:22 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:22 PM] SendLogAsync called for notepad
+[6/27/2026 11:37:22 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:22 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:37:23 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:23 PM] SendLogAsync called for brave
+[6/27/2026 11:37:23 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:23 PM] SendLogAsync called for CredentialUIBroker
+[6/27/2026 11:37:23 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:23 PM] SendLogAsync called for brave
+[6/27/2026 11:37:24 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:24 PM] SendLogAsync called for CredentialUIBroker
+[6/27/2026 11:37:24 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:24 PM] SendLogAsync called for brave
+[6/27/2026 11:37:24 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:24 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:37:25 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:25 PM] SendLogAsync called for brave
+[6/27/2026 11:37:25 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:25 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:37:25 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:25 PM] SendLogAsync called for brave
+[6/27/2026 11:37:26 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:26 PM] SendLogAsync called for explorer
+[6/27/2026 11:37:26 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:26 PM] SendLogAsync called for brave
+[6/27/2026 11:37:26 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:56 PM] SyncPendingLogsAsync called
+[6/27/2026 11:37:56 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:37:57 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:57 PM] SendLogAsync called for powershell
+[6/27/2026 11:37:57 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:57 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:37:58 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:58 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:37:58 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:58 PM] SendLogAsync called for powershell
+[6/27/2026 11:37:59 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:59 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:37:59 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:37:59 PM] SendLogAsync called for Devin
+[6/27/2026 11:38:00 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:00 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:38:00 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:00 PM] SendLogAsync called for powershell
+[6/27/2026 11:38:01 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:01 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:38:01 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:01 PM] SendLogAsync called for Devin
+[6/27/2026 11:38:02 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:02 PM] SendLogAsync called for explorer
+[6/27/2026 11:38:02 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:02 PM] SendLogAsync called for OpenWith
+[6/27/2026 11:38:03 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:03 PM] SendLogAsync called for notepad
+[6/27/2026 11:38:03 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:03 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:38:04 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:04 PM] SendLogAsync called for notepad
+[6/27/2026 11:38:04 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:04 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:38:05 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:05 PM] SendLogAsync called for brave
+[6/27/2026 11:38:05 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:05 PM] SendLogAsync called for CredentialUIBroker
+[6/27/2026 11:38:05 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:05 PM] SendLogAsync called for brave
+[6/27/2026 11:38:06 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:06 PM] SendLogAsync called for CredentialUIBroker
+[6/27/2026 11:38:06 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:06 PM] SendLogAsync called for brave
+[6/27/2026 11:38:07 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:07 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:38:08 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:08 PM] SendLogAsync called for brave
+[6/27/2026 11:38:08 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:08 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:38:09 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:09 PM] SendLogAsync called for brave
+[6/27/2026 11:38:10 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:10 PM] SendLogAsync called for explorer
+[6/27/2026 11:38:11 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:11 PM] SendLogAsync called for brave
+[6/27/2026 11:38:11 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:41 PM] SyncPendingLogsAsync called
+[6/27/2026 11:38:41 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:38:42 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:42 PM] SendLogAsync called for powershell
+[6/27/2026 11:38:43 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:43 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:38:43 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:43 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:38:44 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:44 PM] SendLogAsync called for powershell
+[6/27/2026 11:38:44 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:44 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:38:45 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:45 PM] SendLogAsync called for Devin
+[6/27/2026 11:38:46 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:46 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:38:46 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:46 PM] SendLogAsync called for powershell
+[6/27/2026 11:38:47 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:47 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:38:47 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:47 PM] SendLogAsync called for Devin
+[6/27/2026 11:38:48 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:48 PM] SendLogAsync called for explorer
+[6/27/2026 11:38:48 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:48 PM] SendLogAsync called for OpenWith
+[6/27/2026 11:38:49 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:49 PM] SendLogAsync called for notepad
+[6/27/2026 11:38:49 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:49 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:38:50 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:50 PM] SendLogAsync called for notepad
+[6/27/2026 11:38:50 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:50 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:38:51 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:51 PM] SendLogAsync called for brave
+[6/27/2026 11:38:51 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:51 PM] SendLogAsync called for CredentialUIBroker
+[6/27/2026 11:38:52 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:52 PM] SendLogAsync called for brave
+[6/27/2026 11:38:52 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:52 PM] SendLogAsync called for CredentialUIBroker
+[6/27/2026 11:38:53 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:53 PM] SendLogAsync called for brave
+[6/27/2026 11:38:53 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:53 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:38:53 PM] SyncPendingLogsAsync called
+[6/27/2026 11:38:53 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:38:54 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:54 PM] SendLogAsync called for brave
+[6/27/2026 11:38:54 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:54 PM] SendLogAsync called for powershell
+[6/27/2026 11:38:55 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:55 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:38:55 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:55 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:38:55 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:55 PM] SendLogAsync called for brave
+[6/27/2026 11:38:56 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:56 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:38:56 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:56 PM] SendLogAsync called for explorer
+[6/27/2026 11:38:56 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:56 PM] SendLogAsync called for powershell
+[6/27/2026 11:38:57 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:57 PM] SendLogAsync called for brave
+[6/27/2026 11:38:57 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:57 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:38:57 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:57 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:38:57 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:57 PM] SendLogAsync called for Devin
+[6/27/2026 11:38:57 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:58 PM] SendLogAsync called for Devin
+[6/27/2026 11:38:58 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:58 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:38:58 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:58 PM] SendLogAsync called for explorer
+[6/27/2026 11:38:58 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:58 PM] SendLogAsync called for powershell
+[6/27/2026 11:38:59 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:59 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:38:59 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:39:00 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:00 PM] SendLogAsync called for Devin
+[6/27/2026 11:39:00 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:00 PM] SendLogAsync called for explorer
+[6/27/2026 11:39:01 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:01 PM] SendLogAsync called for OpenWith
+[6/27/2026 11:39:01 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:01 PM] SendLogAsync called for notepad
+[6/27/2026 11:39:02 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:02 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:39:03 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:03 PM] SendLogAsync called for notepad
+[6/27/2026 11:39:03 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:03 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:39:04 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:04 PM] SendLogAsync called for brave
+[6/27/2026 11:39:04 PM] SyncPendingLogsAsync called
+[6/27/2026 11:39:04 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:39:04 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:04 PM] SendLogAsync called for CredentialUIBroker
+[6/27/2026 11:39:05 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:05 PM] SendLogAsync called for powershell
+[6/27/2026 11:39:05 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:05 PM] SendLogAsync called for brave
+[6/27/2026 11:39:05 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:05 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:39:05 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:05 PM] SendLogAsync called for CredentialUIBroker
+[6/27/2026 11:39:06 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:06 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:39:06 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:06 PM] SendLogAsync called for brave
+[6/27/2026 11:39:06 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:06 PM] SendLogAsync called for powershell
+[6/27/2026 11:39:06 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:06 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:39:07 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:07 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:39:07 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:07 PM] SendLogAsync called for brave
+[6/27/2026 11:39:07 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:07 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:39:07 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:07 PM] SendLogAsync called for Devin
+[6/27/2026 11:39:08 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:08 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:39:08 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:08 PM] SendLogAsync called for brave
+[6/27/2026 11:39:08 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:08 PM] SendLogAsync called for powershell
+[6/27/2026 11:39:08 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:08 PM] SendLogAsync called for explorer
+[6/27/2026 11:39:09 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:09 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:39:09 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:09 PM] SendLogAsync called for brave
+[6/27/2026 11:39:09 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:09 PM] SendLogAsync called for Devin
+[6/27/2026 11:39:09 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:09 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:39:10 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:10 PM] SendLogAsync called for explorer
+[6/27/2026 11:39:10 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:10 PM] SendLogAsync called for Devin
+[6/27/2026 11:39:10 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:10 PM] SendLogAsync called for OpenWith
+[6/27/2026 11:39:10 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:10 PM] SendLogAsync called for explorer
+[6/27/2026 11:39:11 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:11 PM] SendLogAsync called for ChatGPT
+[6/27/2026 11:39:11 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:11 PM] SendLogAsync called for notepad
+[6/27/2026 11:39:11 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:11 PM] SendLogAsync called for powershell
+[6/27/2026 11:39:11 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:11 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+[6/27/2026 11:39:12 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:12 PM] SendLogAsync called for notepad
+[6/27/2026 11:39:12 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:40 PM] SyncPendingLogsAsync called
+[6/27/2026 11:39:40 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:20:40 PM Kind=Local
+[6/27/2026 11:39:42 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:42 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:20:48 PM Kind=Local
+[6/27/2026 11:39:42 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:42 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:20:50 PM Kind=Local
+[6/27/2026 11:39:43 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:43 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:20:52 PM Kind=Local
+[6/27/2026 11:39:43 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:43 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:21:28 PM Kind=Local
+[6/27/2026 11:39:43 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:43 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:21:30 PM Kind=Local
+[6/27/2026 11:39:44 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:44 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:21:38 PM Kind=Local
+[6/27/2026 11:39:44 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:44 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:22:10 PM Kind=Local
+[6/27/2026 11:39:44 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:44 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:24:46 PM Kind=Local
+[6/27/2026 11:39:45 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:45 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:24:48 PM Kind=Local
+[6/27/2026 11:39:45 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:45 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:24:58 PM Kind=Local
+[6/27/2026 11:39:45 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:45 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:25:00 PM Kind=Local
+[6/27/2026 11:39:46 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:46 PM] SendLogAsync called for OpenWith
+Start=6/27/2026 11:25:02 PM Kind=Local
+[6/27/2026 11:39:46 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:46 PM] SendLogAsync called for notepad
+Start=6/27/2026 11:25:04 PM Kind=Local
+[6/27/2026 11:39:47 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:47 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:25:30 PM Kind=Local
+[6/27/2026 11:39:47 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:47 PM] SendLogAsync called for notepad
+Start=6/27/2026 11:25:34 PM Kind=Local
+[6/27/2026 11:39:48 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:48 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:25:52 PM Kind=Local
+[6/27/2026 11:39:48 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:48 PM] SendLogAsync called for brave
+Start=6/27/2026 11:26:45 PM Kind=Local
+[6/27/2026 11:39:49 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:49 PM] SendLogAsync called for CredentialUIBroker
+Start=6/27/2026 11:29:33 PM Kind=Local
+[6/27/2026 11:39:50 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:50 PM] SendLogAsync called for brave
+Start=6/27/2026 11:29:39 PM Kind=Local
+[6/27/2026 11:39:50 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:50 PM] SendLogAsync called for CredentialUIBroker
+Start=6/27/2026 11:31:14 PM Kind=Local
+[6/27/2026 11:39:51 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:51 PM] SendLogAsync called for brave
+Start=6/27/2026 11:31:18 PM Kind=Local
+[6/27/2026 11:39:52 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:52 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:34:05 PM Kind=Local
+[6/27/2026 11:39:52 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:52 PM] SendLogAsync called for brave
+Start=6/27/2026 11:34:13 PM Kind=Local
+[6/27/2026 11:39:52 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:52 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:34:51 PM Kind=Local
+[6/27/2026 11:39:53 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:53 PM] SendLogAsync called for brave
+Start=6/27/2026 11:34:57 PM Kind=Local
+[6/27/2026 11:39:53 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:53 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:36:15 PM Kind=Local
+[6/27/2026 11:39:54 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:54 PM] SendLogAsync called for brave
+Start=6/27/2026 11:36:27 PM Kind=Local
+[6/27/2026 11:39:54 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:54 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:36:33 PM Kind=Local
+[6/27/2026 11:39:55 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:55 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:37:58 PM Kind=Local
+[6/27/2026 11:39:55 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:55 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:38:38 PM Kind=Local
+[6/27/2026 11:39:56 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:56 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:38:40 PM Kind=Local
+[6/27/2026 11:39:56 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:56 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:38:42 PM Kind=Local
+[6/27/2026 11:39:56 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:39:56 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:38:42 PM Kind=Local
+[6/27/2026 11:39:57 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:27 PM] SyncPendingLogsAsync called
+[6/27/2026 11:40:27 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:20:40 PM Kind=Local
+[6/27/2026 11:40:27 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:27 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:20:48 PM Kind=Local
+[6/27/2026 11:40:28 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:28 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:20:50 PM Kind=Local
+[6/27/2026 11:40:28 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:28 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:20:52 PM Kind=Local
+[6/27/2026 11:40:29 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:29 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:21:28 PM Kind=Local
+[6/27/2026 11:40:29 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:29 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:21:30 PM Kind=Local
+[6/27/2026 11:40:29 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:29 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:21:38 PM Kind=Local
+[6/27/2026 11:40:30 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:30 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:22:10 PM Kind=Local
+[6/27/2026 11:40:30 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:30 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:24:46 PM Kind=Local
+[6/27/2026 11:40:30 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:30 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:24:48 PM Kind=Local
+[6/27/2026 11:40:30 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:30 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:24:58 PM Kind=Local
+[6/27/2026 11:40:31 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:31 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:25:00 PM Kind=Local
+[6/27/2026 11:40:31 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:31 PM] SendLogAsync called for OpenWith
+Start=6/27/2026 11:25:02 PM Kind=Local
+[6/27/2026 11:40:31 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:31 PM] SendLogAsync called for notepad
+Start=6/27/2026 11:25:04 PM Kind=Local
+[6/27/2026 11:40:31 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:31 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:25:30 PM Kind=Local
+[6/27/2026 11:40:32 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:32 PM] SendLogAsync called for notepad
+Start=6/27/2026 11:25:34 PM Kind=Local
+[6/27/2026 11:40:32 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:32 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:25:52 PM Kind=Local
+[6/27/2026 11:40:32 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:32 PM] SendLogAsync called for brave
+Start=6/27/2026 11:26:45 PM Kind=Local
+[6/27/2026 11:40:33 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:33 PM] SendLogAsync called for CredentialUIBroker
+Start=6/27/2026 11:29:33 PM Kind=Local
+[6/27/2026 11:40:33 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:33 PM] SendLogAsync called for brave
+Start=6/27/2026 11:29:39 PM Kind=Local
+[6/27/2026 11:40:33 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:33 PM] SendLogAsync called for CredentialUIBroker
+Start=6/27/2026 11:31:14 PM Kind=Local
+[6/27/2026 11:40:34 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:34 PM] SendLogAsync called for brave
+Start=6/27/2026 11:31:18 PM Kind=Local
+[6/27/2026 11:40:34 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:34 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:34:05 PM Kind=Local
+[6/27/2026 11:40:34 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:34 PM] SendLogAsync called for brave
+Start=6/27/2026 11:34:13 PM Kind=Local
+[6/27/2026 11:40:35 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:35 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:34:51 PM Kind=Local
+[6/27/2026 11:40:35 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:35 PM] SendLogAsync called for brave
+Start=6/27/2026 11:34:57 PM Kind=Local
+[6/27/2026 11:40:35 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:35 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:36:15 PM Kind=Local
+[6/27/2026 11:40:36 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:36 PM] SendLogAsync called for brave
+Start=6/27/2026 11:36:27 PM Kind=Local
+[6/27/2026 11:40:36 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:36 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:36:33 PM Kind=Local
+[6/27/2026 11:40:36 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:36 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:37:58 PM Kind=Local
+[6/27/2026 11:40:37 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:37 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:38:38 PM Kind=Local
+[6/27/2026 11:40:37 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:37 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:38:40 PM Kind=Local
+[6/27/2026 11:40:38 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:38 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:38:42 PM Kind=Local
+[6/27/2026 11:40:38 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:38 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:38:42 PM Kind=Local
+[6/27/2026 11:40:38 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:38 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:39:40 PM Kind=Local
+[6/27/2026 11:40:39 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:39 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:39:42 PM Kind=Local
+[6/27/2026 11:40:39 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:40:42 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:39:50 PM Kind=Local
+[6/27/2026 11:40:43 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:13 PM] SyncPendingLogsAsync called
+[6/27/2026 11:41:13 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:20:40 PM Kind=Local
+[6/27/2026 11:41:14 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:14 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:20:48 PM Kind=Local
+[6/27/2026 11:41:14 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:14 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:20:50 PM Kind=Local
+[6/27/2026 11:41:15 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:15 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:20:52 PM Kind=Local
+[6/27/2026 11:41:16 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:16 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:21:28 PM Kind=Local
+[6/27/2026 11:41:16 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:16 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:21:30 PM Kind=Local
+[6/27/2026 11:41:17 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:17 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:21:38 PM Kind=Local
+[6/27/2026 11:41:18 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:18 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:22:10 PM Kind=Local
+[6/27/2026 11:41:18 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:18 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:24:46 PM Kind=Local
+[6/27/2026 11:41:19 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:19 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:24:48 PM Kind=Local
+[6/27/2026 11:41:20 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:20 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:24:58 PM Kind=Local
+[6/27/2026 11:41:20 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:20 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:25:00 PM Kind=Local
+[6/27/2026 11:41:21 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:21 PM] SendLogAsync called for OpenWith
+Start=6/27/2026 11:25:02 PM Kind=Local
+[6/27/2026 11:41:22 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:22 PM] SendLogAsync called for notepad
+Start=6/27/2026 11:25:04 PM Kind=Local
+[6/27/2026 11:41:22 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:22 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:25:30 PM Kind=Local
+[6/27/2026 11:41:23 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:23 PM] SendLogAsync called for notepad
+Start=6/27/2026 11:25:34 PM Kind=Local
+[6/27/2026 11:41:23 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:23 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:25:52 PM Kind=Local
+[6/27/2026 11:41:24 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:24 PM] SendLogAsync called for brave
+Start=6/27/2026 11:26:45 PM Kind=Local
+[6/27/2026 11:41:24 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:24 PM] SendLogAsync called for CredentialUIBroker
+Start=6/27/2026 11:29:33 PM Kind=Local
+[6/27/2026 11:41:25 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:25 PM] SendLogAsync called for brave
+Start=6/27/2026 11:29:39 PM Kind=Local
+[6/27/2026 11:41:25 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:25 PM] SendLogAsync called for CredentialUIBroker
+Start=6/27/2026 11:31:14 PM Kind=Local
+[6/27/2026 11:41:26 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:26 PM] SendLogAsync called for brave
+Start=6/27/2026 11:31:18 PM Kind=Local
+[6/27/2026 11:41:26 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:26 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:34:05 PM Kind=Local
+[6/27/2026 11:41:26 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:26 PM] SendLogAsync called for brave
+Start=6/27/2026 11:34:13 PM Kind=Local
+[6/27/2026 11:41:27 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:27 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:34:51 PM Kind=Local
+[6/27/2026 11:41:27 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:27 PM] SendLogAsync called for brave
+Start=6/27/2026 11:34:57 PM Kind=Local
+[6/27/2026 11:41:28 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:28 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:36:15 PM Kind=Local
+[6/27/2026 11:41:28 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:28 PM] SendLogAsync called for brave
+Start=6/27/2026 11:36:27 PM Kind=Local
+[6/27/2026 11:41:29 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:29 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:36:33 PM Kind=Local
+[6/27/2026 11:41:29 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:29 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:37:58 PM Kind=Local
+[6/27/2026 11:41:29 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:29 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:38:38 PM Kind=Local
+[6/27/2026 11:41:30 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:30 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:38:40 PM Kind=Local
+[6/27/2026 11:41:30 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:30 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:38:42 PM Kind=Local
+[6/27/2026 11:41:30 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:30 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:38:42 PM Kind=Local
+[6/27/2026 11:41:31 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:31 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:39:40 PM Kind=Local
+[6/27/2026 11:41:31 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:31 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:39:42 PM Kind=Local
+[6/27/2026 11:41:31 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:31 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:39:50 PM Kind=Local
+[6/27/2026 11:41:32 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:32 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:40:18 PM Kind=Local
+[6/27/2026 11:41:32 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:41:32 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:40:47 PM Kind=Local
+[6/27/2026 11:41:33 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:03 PM] SyncPendingLogsAsync called
+[6/27/2026 11:42:03 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:20:40 PM Kind=Local
+[6/27/2026 11:42:03 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:03 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:20:48 PM Kind=Local
+[6/27/2026 11:42:03 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:03 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:20:50 PM Kind=Local
+[6/27/2026 11:42:03 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:03 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:20:52 PM Kind=Local
+[6/27/2026 11:42:03 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:03 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:21:28 PM Kind=Local
+[6/27/2026 11:42:03 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:03 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:21:30 PM Kind=Local
+[6/27/2026 11:42:04 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:04 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:21:38 PM Kind=Local
+[6/27/2026 11:42:04 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:04 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:22:10 PM Kind=Local
+[6/27/2026 11:42:04 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:04 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:24:46 PM Kind=Local
+[6/27/2026 11:42:04 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:04 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:24:48 PM Kind=Local
+[6/27/2026 11:42:04 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:04 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:24:58 PM Kind=Local
+[6/27/2026 11:42:05 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:05 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:25:00 PM Kind=Local
+[6/27/2026 11:42:05 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:05 PM] SendLogAsync called for OpenWith
+Start=6/27/2026 11:25:02 PM Kind=Local
+[6/27/2026 11:42:05 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:05 PM] SendLogAsync called for notepad
+Start=6/27/2026 11:25:04 PM Kind=Local
+[6/27/2026 11:42:05 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:05 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:25:30 PM Kind=Local
+[6/27/2026 11:42:05 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:05 PM] SendLogAsync called for notepad
+Start=6/27/2026 11:25:34 PM Kind=Local
+[6/27/2026 11:42:06 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:06 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:25:52 PM Kind=Local
+[6/27/2026 11:42:06 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:06 PM] SendLogAsync called for brave
+Start=6/27/2026 11:26:45 PM Kind=Local
+[6/27/2026 11:42:06 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:06 PM] SendLogAsync called for CredentialUIBroker
+Start=6/27/2026 11:29:33 PM Kind=Local
+[6/27/2026 11:42:07 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:07 PM] SendLogAsync called for brave
+Start=6/27/2026 11:29:39 PM Kind=Local
+[6/27/2026 11:42:07 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:07 PM] SendLogAsync called for CredentialUIBroker
+Start=6/27/2026 11:31:14 PM Kind=Local
+[6/27/2026 11:42:07 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:07 PM] SendLogAsync called for brave
+Start=6/27/2026 11:31:18 PM Kind=Local
+[6/27/2026 11:42:07 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:07 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:34:05 PM Kind=Local
+[6/27/2026 11:42:07 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:07 PM] SendLogAsync called for brave
+Start=6/27/2026 11:34:13 PM Kind=Local
+[6/27/2026 11:42:07 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:07 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:34:51 PM Kind=Local
+[6/27/2026 11:42:08 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:08 PM] SendLogAsync called for brave
+Start=6/27/2026 11:34:57 PM Kind=Local
+[6/27/2026 11:42:08 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:08 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:36:15 PM Kind=Local
+[6/27/2026 11:42:08 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:08 PM] SendLogAsync called for brave
+Start=6/27/2026 11:36:27 PM Kind=Local
+[6/27/2026 11:42:08 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:08 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:36:33 PM Kind=Local
+[6/27/2026 11:42:08 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:08 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:37:58 PM Kind=Local
+[6/27/2026 11:42:09 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:09 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:38:38 PM Kind=Local
+[6/27/2026 11:42:09 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:09 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:38:40 PM Kind=Local
+[6/27/2026 11:42:09 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:09 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:38:42 PM Kind=Local
+[6/27/2026 11:42:09 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:09 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:38:42 PM Kind=Local
+[6/27/2026 11:42:10 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:10 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:39:40 PM Kind=Local
+[6/27/2026 11:42:10 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:10 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:39:42 PM Kind=Local
+[6/27/2026 11:42:10 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:10 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:39:50 PM Kind=Local
+[6/27/2026 11:42:10 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:10 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:40:18 PM Kind=Local
+[6/27/2026 11:42:11 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:11 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:40:47 PM Kind=Local
+[6/27/2026 11:42:11 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:41 PM] SyncPendingLogsAsync called
+[6/27/2026 11:42:41 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:20:40 PM Kind=Local
+[6/27/2026 11:42:41 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:41 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:20:48 PM Kind=Local
+[6/27/2026 11:42:42 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:42 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:20:50 PM Kind=Local
+[6/27/2026 11:42:42 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:42 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:20:52 PM Kind=Local
+[6/27/2026 11:42:43 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:43 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:21:28 PM Kind=Local
+[6/27/2026 11:42:44 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:44 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:21:30 PM Kind=Local
+[6/27/2026 11:42:44 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:44 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:21:38 PM Kind=Local
+[6/27/2026 11:42:45 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:45 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:22:10 PM Kind=Local
+[6/27/2026 11:42:45 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:45 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:24:46 PM Kind=Local
+[6/27/2026 11:42:46 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:46 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:24:48 PM Kind=Local
+[6/27/2026 11:42:46 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:46 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:24:58 PM Kind=Local
+[6/27/2026 11:42:47 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:47 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:25:00 PM Kind=Local
+[6/27/2026 11:42:47 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:47 PM] SendLogAsync called for OpenWith
+Start=6/27/2026 11:25:02 PM Kind=Local
+[6/27/2026 11:42:48 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:48 PM] SendLogAsync called for notepad
+Start=6/27/2026 11:25:04 PM Kind=Local
+[6/27/2026 11:42:48 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:48 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:25:30 PM Kind=Local
+[6/27/2026 11:42:49 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:49 PM] SendLogAsync called for notepad
+Start=6/27/2026 11:25:34 PM Kind=Local
+[6/27/2026 11:42:50 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:50 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:25:52 PM Kind=Local
+[6/27/2026 11:42:51 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:51 PM] SendLogAsync called for brave
+Start=6/27/2026 11:26:45 PM Kind=Local
+[6/27/2026 11:42:51 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:51 PM] SendLogAsync called for CredentialUIBroker
+Start=6/27/2026 11:29:33 PM Kind=Local
+[6/27/2026 11:42:52 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:52 PM] SendLogAsync called for brave
+Start=6/27/2026 11:29:39 PM Kind=Local
+[6/27/2026 11:42:53 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:53 PM] SendLogAsync called for CredentialUIBroker
+Start=6/27/2026 11:31:14 PM Kind=Local
+[6/27/2026 11:42:53 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:53 PM] SendLogAsync called for brave
+Start=6/27/2026 11:31:18 PM Kind=Local
+[6/27/2026 11:42:54 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:54 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:34:05 PM Kind=Local
+[6/27/2026 11:42:55 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:55 PM] SendLogAsync called for brave
+Start=6/27/2026 11:34:13 PM Kind=Local
+[6/27/2026 11:42:55 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:55 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:34:51 PM Kind=Local
+[6/27/2026 11:42:56 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:56 PM] SendLogAsync called for brave
+Start=6/27/2026 11:34:57 PM Kind=Local
+[6/27/2026 11:42:57 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:57 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:36:15 PM Kind=Local
+[6/27/2026 11:42:57 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:57 PM] SendLogAsync called for brave
+Start=6/27/2026 11:36:27 PM Kind=Local
+[6/27/2026 11:42:57 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:57 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:36:33 PM Kind=Local
+[6/27/2026 11:42:58 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:58 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:37:58 PM Kind=Local
+[6/27/2026 11:42:58 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:58 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:38:38 PM Kind=Local
+[6/27/2026 11:42:59 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:59 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:38:40 PM Kind=Local
+[6/27/2026 11:42:59 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:42:59 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:38:42 PM Kind=Local
+[6/27/2026 11:43:00 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:00 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:38:42 PM Kind=Local
+[6/27/2026 11:43:00 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:00 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:39:40 PM Kind=Local
+[6/27/2026 11:43:01 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:01 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:39:42 PM Kind=Local
+[6/27/2026 11:43:01 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:01 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:39:50 PM Kind=Local
+[6/27/2026 11:43:02 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:02 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:40:18 PM Kind=Local
+[6/27/2026 11:43:02 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:02 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:40:47 PM Kind=Local
+[6/27/2026 11:43:03 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:03 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:40:57 PM Kind=Local
+[6/27/2026 11:43:03 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:33 PM] SyncPendingLogsAsync called
+[6/27/2026 11:43:33 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:20:40 PM Kind=Local
+[6/27/2026 11:43:34 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:34 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:20:48 PM Kind=Local
+[6/27/2026 11:43:34 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:34 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:20:50 PM Kind=Local
+[6/27/2026 11:43:35 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:35 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:20:52 PM Kind=Local
+[6/27/2026 11:43:36 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:36 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:21:28 PM Kind=Local
+[6/27/2026 11:43:37 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:37 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:21:30 PM Kind=Local
+[6/27/2026 11:43:37 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:37 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:21:38 PM Kind=Local
+[6/27/2026 11:43:38 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:38 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:22:10 PM Kind=Local
+[6/27/2026 11:43:39 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:39 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:24:46 PM Kind=Local
+[6/27/2026 11:43:40 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:40 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:24:48 PM Kind=Local
+[6/27/2026 11:43:40 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:40 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:24:58 PM Kind=Local
+[6/27/2026 11:43:41 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:41 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:25:00 PM Kind=Local
+[6/27/2026 11:43:42 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:42 PM] SendLogAsync called for OpenWith
+Start=6/27/2026 11:25:02 PM Kind=Local
+[6/27/2026 11:43:43 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:43 PM] SendLogAsync called for notepad
+Start=6/27/2026 11:25:04 PM Kind=Local
+[6/27/2026 11:43:44 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:44 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:25:30 PM Kind=Local
+[6/27/2026 11:43:45 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:45 PM] SendLogAsync called for notepad
+Start=6/27/2026 11:25:34 PM Kind=Local
+[6/27/2026 11:43:46 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:46 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:25:52 PM Kind=Local
+[6/27/2026 11:43:47 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:47 PM] SendLogAsync called for brave
+Start=6/27/2026 11:26:45 PM Kind=Local
+[6/27/2026 11:43:48 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:48 PM] SendLogAsync called for CredentialUIBroker
+Start=6/27/2026 11:29:33 PM Kind=Local
+[6/27/2026 11:43:49 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:49 PM] SendLogAsync called for brave
+Start=6/27/2026 11:29:39 PM Kind=Local
+[6/27/2026 11:43:50 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:50 PM] SendLogAsync called for CredentialUIBroker
+Start=6/27/2026 11:31:14 PM Kind=Local
+[6/27/2026 11:43:50 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:50 PM] SendLogAsync called for brave
+Start=6/27/2026 11:31:18 PM Kind=Local
+[6/27/2026 11:43:52 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:52 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:34:05 PM Kind=Local
+[6/27/2026 11:43:53 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:53 PM] SendLogAsync called for brave
+Start=6/27/2026 11:34:13 PM Kind=Local
+[6/27/2026 11:43:54 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:54 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:34:51 PM Kind=Local
+[6/27/2026 11:43:55 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:55 PM] SendLogAsync called for brave
+Start=6/27/2026 11:34:57 PM Kind=Local
+[6/27/2026 11:43:56 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:56 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:36:15 PM Kind=Local
+[6/27/2026 11:43:57 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:57 PM] SendLogAsync called for brave
+Start=6/27/2026 11:36:27 PM Kind=Local
+[6/27/2026 11:43:58 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:58 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:36:33 PM Kind=Local
+[6/27/2026 11:43:59 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:43:59 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:37:58 PM Kind=Local
+[6/27/2026 11:44:00 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:44:00 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:38:38 PM Kind=Local
+[6/27/2026 11:44:02 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:44:02 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:38:40 PM Kind=Local
+[6/27/2026 11:44:02 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:44:02 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:38:42 PM Kind=Local
+[6/27/2026 11:44:04 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:44:04 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:38:42 PM Kind=Local
+[6/27/2026 11:44:05 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:44:05 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:39:40 PM Kind=Local
+[6/27/2026 11:44:06 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:44:06 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:39:42 PM Kind=Local
+[6/27/2026 11:44:07 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:44:07 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:39:50 PM Kind=Local
+[6/27/2026 11:44:09 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:44:09 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:40:18 PM Kind=Local
+[6/27/2026 11:44:10 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:44:10 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:40:47 PM Kind=Local
+[6/27/2026 11:44:11 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:44:11 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:40:57 PM Kind=Local
+[6/27/2026 11:44:12 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:44:12 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:42:07 PM Kind=Local
+[6/27/2026 11:44:13 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:44:43 PM] SyncPendingLogsAsync called
+[6/27/2026 11:44:43 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:20:40 PM Kind=Local
+[6/27/2026 11:44:45 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:44:45 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:20:48 PM Kind=Local
+[6/27/2026 11:44:47 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:44:47 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:20:50 PM Kind=Local
+[6/27/2026 11:44:49 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:44:49 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:20:52 PM Kind=Local
+[6/27/2026 11:44:51 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:44:51 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:21:28 PM Kind=Local
+[6/27/2026 11:44:52 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:44:52 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:21:30 PM Kind=Local
+[6/27/2026 11:44:54 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:44:54 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:21:38 PM Kind=Local
+[6/27/2026 11:44:55 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:44:55 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:22:10 PM Kind=Local
+[6/27/2026 11:44:57 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:44:57 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:24:46 PM Kind=Local
+[6/27/2026 11:44:58 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:44:58 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:24:48 PM Kind=Local
+[6/27/2026 11:45:00 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:00 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:24:58 PM Kind=Local
+[6/27/2026 11:45:01 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:01 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:25:00 PM Kind=Local
+[6/27/2026 11:45:03 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:03 PM] SendLogAsync called for OpenWith
+Start=6/27/2026 11:25:02 PM Kind=Local
+[6/27/2026 11:45:04 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:04 PM] SendLogAsync called for notepad
+Start=6/27/2026 11:25:04 PM Kind=Local
+[6/27/2026 11:45:06 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:06 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:25:30 PM Kind=Local
+[6/27/2026 11:45:08 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:08 PM] SendLogAsync called for notepad
+Start=6/27/2026 11:25:34 PM Kind=Local
+[6/27/2026 11:45:09 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:09 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:25:52 PM Kind=Local
+[6/27/2026 11:45:10 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:10 PM] SendLogAsync called for brave
+Start=6/27/2026 11:26:45 PM Kind=Local
+[6/27/2026 11:45:11 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:11 PM] SendLogAsync called for CredentialUIBroker
+Start=6/27/2026 11:29:33 PM Kind=Local
+[6/27/2026 11:45:13 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:13 PM] SendLogAsync called for brave
+Start=6/27/2026 11:29:39 PM Kind=Local
+[6/27/2026 11:45:14 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:14 PM] SendLogAsync called for CredentialUIBroker
+Start=6/27/2026 11:31:14 PM Kind=Local
+[6/27/2026 11:45:16 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:16 PM] SendLogAsync called for brave
+Start=6/27/2026 11:31:18 PM Kind=Local
+[6/27/2026 11:45:17 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:17 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:34:05 PM Kind=Local
+[6/27/2026 11:45:18 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:18 PM] SendLogAsync called for brave
+Start=6/27/2026 11:34:13 PM Kind=Local
+[6/27/2026 11:45:20 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:20 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:34:51 PM Kind=Local
+[6/27/2026 11:45:22 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:22 PM] SendLogAsync called for brave
+Start=6/27/2026 11:34:57 PM Kind=Local
+[6/27/2026 11:45:23 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:23 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:36:15 PM Kind=Local
+[6/27/2026 11:45:24 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:24 PM] SendLogAsync called for brave
+Start=6/27/2026 11:36:27 PM Kind=Local
+[6/27/2026 11:45:26 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:26 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:36:33 PM Kind=Local
+[6/27/2026 11:45:27 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:27 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:37:58 PM Kind=Local
+[6/27/2026 11:45:28 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:28 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:38:38 PM Kind=Local
+[6/27/2026 11:45:30 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:30 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:38:40 PM Kind=Local
+[6/27/2026 11:45:30 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:30 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:38:42 PM Kind=Local
+[6/27/2026 11:45:32 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:32 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:38:42 PM Kind=Local
+[6/27/2026 11:45:33 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:33 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:39:40 PM Kind=Local
+[6/27/2026 11:45:34 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:34 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:39:42 PM Kind=Local
+[6/27/2026 11:45:35 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:35 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:39:50 PM Kind=Local
+[6/27/2026 11:45:36 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:36 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:40:18 PM Kind=Local
+[6/27/2026 11:45:37 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:37 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:40:47 PM Kind=Local
+[6/27/2026 11:45:38 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:38 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:40:57 PM Kind=Local
+[6/27/2026 11:45:39 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:39 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:42:07 PM Kind=Local
+[6/27/2026 11:45:40 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:40 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:42:47 PM Kind=Local
+[6/27/2026 11:45:42 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:45:42 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:43:38 PM Kind=Local
+[6/27/2026 11:45:43 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:13 PM] SyncPendingLogsAsync called
+[6/27/2026 11:46:13 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:20:40 PM Kind=Local
+[6/27/2026 11:46:14 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:14 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:20:48 PM Kind=Local
+[6/27/2026 11:46:15 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:15 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:20:50 PM Kind=Local
+[6/27/2026 11:46:16 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:16 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:20:52 PM Kind=Local
+[6/27/2026 11:46:17 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:17 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:21:28 PM Kind=Local
+[6/27/2026 11:46:18 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:18 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:21:30 PM Kind=Local
+[6/27/2026 11:46:20 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:20 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:21:38 PM Kind=Local
+[6/27/2026 11:46:21 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:21 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:22:10 PM Kind=Local
+[6/27/2026 11:46:22 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:22 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:24:46 PM Kind=Local
+[6/27/2026 11:46:23 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:23 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:24:48 PM Kind=Local
+[6/27/2026 11:46:24 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:24 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:24:58 PM Kind=Local
+[6/27/2026 11:46:25 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:25 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:25:00 PM Kind=Local
+[6/27/2026 11:46:26 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:26 PM] SendLogAsync called for OpenWith
+Start=6/27/2026 11:25:02 PM Kind=Local
+[6/27/2026 11:46:27 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:27 PM] SendLogAsync called for notepad
+Start=6/27/2026 11:25:04 PM Kind=Local
+[6/27/2026 11:46:28 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:28 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:25:30 PM Kind=Local
+[6/27/2026 11:46:29 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:29 PM] SendLogAsync called for notepad
+Start=6/27/2026 11:25:34 PM Kind=Local
+[6/27/2026 11:46:30 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:30 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:25:52 PM Kind=Local
+[6/27/2026 11:46:31 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:31 PM] SendLogAsync called for brave
+Start=6/27/2026 11:26:45 PM Kind=Local
+[6/27/2026 11:46:32 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:32 PM] SendLogAsync called for CredentialUIBroker
+Start=6/27/2026 11:29:33 PM Kind=Local
+[6/27/2026 11:46:33 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:33 PM] SendLogAsync called for brave
+Start=6/27/2026 11:29:39 PM Kind=Local
+[6/27/2026 11:46:33 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:33 PM] SendLogAsync called for CredentialUIBroker
+Start=6/27/2026 11:31:14 PM Kind=Local
+[6/27/2026 11:46:34 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:34 PM] SendLogAsync called for brave
+Start=6/27/2026 11:31:18 PM Kind=Local
+[6/27/2026 11:46:34 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:34 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:34:05 PM Kind=Local
+[6/27/2026 11:46:35 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:35 PM] SendLogAsync called for brave
+Start=6/27/2026 11:34:13 PM Kind=Local
+[6/27/2026 11:46:36 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:36 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:34:51 PM Kind=Local
+[6/27/2026 11:46:37 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:37 PM] SendLogAsync called for brave
+Start=6/27/2026 11:34:57 PM Kind=Local
+[6/27/2026 11:46:38 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:38 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:36:15 PM Kind=Local
+[6/27/2026 11:46:39 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:39 PM] SendLogAsync called for brave
+Start=6/27/2026 11:36:27 PM Kind=Local
+[6/27/2026 11:46:39 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:39 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:36:33 PM Kind=Local
+[6/27/2026 11:46:40 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:40 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:37:58 PM Kind=Local
+[6/27/2026 11:46:41 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:41 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:38:38 PM Kind=Local
+[6/27/2026 11:46:42 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:42 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:38:40 PM Kind=Local
+[6/27/2026 11:46:43 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:43 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:38:42 PM Kind=Local
+[6/27/2026 11:46:44 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:44 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:38:42 PM Kind=Local
+[6/27/2026 11:46:45 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:45 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:39:40 PM Kind=Local
+[6/27/2026 11:46:46 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:46 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:39:42 PM Kind=Local
+[6/27/2026 11:46:47 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:47 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:39:50 PM Kind=Local
+[6/27/2026 11:46:48 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:48 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:40:18 PM Kind=Local
+[6/27/2026 11:46:49 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:49 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:40:47 PM Kind=Local
+[6/27/2026 11:46:50 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:50 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:40:57 PM Kind=Local
+[6/27/2026 11:46:51 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:51 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:42:07 PM Kind=Local
+[6/27/2026 11:46:52 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:52 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:42:47 PM Kind=Local
+[6/27/2026 11:46:53 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:46:53 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:43:38 PM Kind=Local
+[6/27/2026 11:46:55 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:25 PM] SyncPendingLogsAsync called
+[6/27/2026 11:47:25 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:20:40 PM Kind=Local
+[6/27/2026 11:47:25 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:25 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:20:48 PM Kind=Local
+[6/27/2026 11:47:26 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:26 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:20:50 PM Kind=Local
+[6/27/2026 11:47:26 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:26 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:20:52 PM Kind=Local
+[6/27/2026 11:47:27 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:27 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:21:28 PM Kind=Local
+[6/27/2026 11:47:28 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:28 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:21:30 PM Kind=Local
+[6/27/2026 11:47:28 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:28 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:21:38 PM Kind=Local
+[6/27/2026 11:47:29 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:29 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:22:10 PM Kind=Local
+[6/27/2026 11:47:29 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:29 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:24:46 PM Kind=Local
+[6/27/2026 11:47:30 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:30 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:24:48 PM Kind=Local
+[6/27/2026 11:47:31 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:31 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:24:58 PM Kind=Local
+[6/27/2026 11:47:31 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:31 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:25:00 PM Kind=Local
+[6/27/2026 11:47:32 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:32 PM] SendLogAsync called for OpenWith
+Start=6/27/2026 11:25:02 PM Kind=Local
+[6/27/2026 11:47:33 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:33 PM] SendLogAsync called for notepad
+Start=6/27/2026 11:25:04 PM Kind=Local
+[6/27/2026 11:47:33 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:33 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:25:30 PM Kind=Local
+[6/27/2026 11:47:34 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:34 PM] SendLogAsync called for notepad
+Start=6/27/2026 11:25:34 PM Kind=Local
+[6/27/2026 11:47:35 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:35 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:25:52 PM Kind=Local
+[6/27/2026 11:47:35 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:35 PM] SendLogAsync called for brave
+Start=6/27/2026 11:26:45 PM Kind=Local
+[6/27/2026 11:47:36 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:36 PM] SendLogAsync called for CredentialUIBroker
+Start=6/27/2026 11:29:33 PM Kind=Local
+[6/27/2026 11:47:37 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:37 PM] SendLogAsync called for brave
+Start=6/27/2026 11:29:39 PM Kind=Local
+[6/27/2026 11:47:37 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:37 PM] SendLogAsync called for CredentialUIBroker
+Start=6/27/2026 11:31:14 PM Kind=Local
+[6/27/2026 11:47:38 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:38 PM] SendLogAsync called for brave
+Start=6/27/2026 11:31:18 PM Kind=Local
+[6/27/2026 11:47:39 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:39 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:34:05 PM Kind=Local
+[6/27/2026 11:47:39 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:39 PM] SendLogAsync called for brave
+Start=6/27/2026 11:34:13 PM Kind=Local
+[6/27/2026 11:47:40 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:40 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:34:51 PM Kind=Local
+[6/27/2026 11:47:40 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:40 PM] SendLogAsync called for brave
+Start=6/27/2026 11:34:57 PM Kind=Local
+[6/27/2026 11:47:41 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:41 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:36:15 PM Kind=Local
+[6/27/2026 11:47:42 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:42 PM] SendLogAsync called for brave
+Start=6/27/2026 11:36:27 PM Kind=Local
+[6/27/2026 11:47:42 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:42 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:36:33 PM Kind=Local
+[6/27/2026 11:47:43 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:43 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:37:58 PM Kind=Local
+[6/27/2026 11:47:44 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:44 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:38:38 PM Kind=Local
+[6/27/2026 11:47:44 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:44 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:38:40 PM Kind=Local
+[6/27/2026 11:47:45 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:45 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:38:42 PM Kind=Local
+[6/27/2026 11:47:45 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:45 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:38:42 PM Kind=Local
+[6/27/2026 11:47:46 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:46 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:39:40 PM Kind=Local
+[6/27/2026 11:47:46 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:46 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:39:42 PM Kind=Local
+[6/27/2026 11:47:47 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:47 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:39:50 PM Kind=Local
+[6/27/2026 11:47:48 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:48 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:40:18 PM Kind=Local
+[6/27/2026 11:47:48 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:48 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:40:47 PM Kind=Local
+[6/27/2026 11:47:49 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:49 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:40:57 PM Kind=Local
+[6/27/2026 11:47:49 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:49 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:42:07 PM Kind=Local
+[6/27/2026 11:47:50 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:50 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:42:47 PM Kind=Local
+[6/27/2026 11:47:51 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:51 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:43:38 PM Kind=Local
+[6/27/2026 11:47:52 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:52 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:44:06 PM Kind=Local
+[6/27/2026 11:47:53 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:53 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:46:17 PM Kind=Local
+[6/27/2026 11:47:54 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:54 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:46:43 PM Kind=Local
+[6/27/2026 11:47:54 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:47:54 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:47:13 PM Kind=Local
+[6/27/2026 11:47:55 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:25 PM] SyncPendingLogsAsync called
+[6/27/2026 11:48:25 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:20:40 PM Kind=Local
+[6/27/2026 11:48:25 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:25 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:20:48 PM Kind=Local
+[6/27/2026 11:48:25 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:25 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:20:50 PM Kind=Local
+[6/27/2026 11:48:26 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:26 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:20:52 PM Kind=Local
+[6/27/2026 11:48:26 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:26 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:21:28 PM Kind=Local
+[6/27/2026 11:48:26 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:26 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:21:30 PM Kind=Local
+[6/27/2026 11:48:26 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:26 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:21:38 PM Kind=Local
+[6/27/2026 11:48:27 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:27 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:22:10 PM Kind=Local
+[6/27/2026 11:48:27 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:27 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:24:46 PM Kind=Local
+[6/27/2026 11:48:27 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:27 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:24:48 PM Kind=Local
+[6/27/2026 11:48:27 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:27 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:24:58 PM Kind=Local
+[6/27/2026 11:48:28 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:28 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:25:00 PM Kind=Local
+[6/27/2026 11:48:28 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:28 PM] SendLogAsync called for OpenWith
+Start=6/27/2026 11:25:02 PM Kind=Local
+[6/27/2026 11:48:28 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:28 PM] SendLogAsync called for notepad
+Start=6/27/2026 11:25:04 PM Kind=Local
+[6/27/2026 11:48:28 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:28 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:25:30 PM Kind=Local
+[6/27/2026 11:48:28 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:28 PM] SendLogAsync called for notepad
+Start=6/27/2026 11:25:34 PM Kind=Local
+[6/27/2026 11:48:29 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:29 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:25:52 PM Kind=Local
+[6/27/2026 11:48:29 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:29 PM] SendLogAsync called for brave
+Start=6/27/2026 11:26:45 PM Kind=Local
+[6/27/2026 11:48:29 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:29 PM] SendLogAsync called for CredentialUIBroker
+Start=6/27/2026 11:29:33 PM Kind=Local
+[6/27/2026 11:48:29 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:29 PM] SendLogAsync called for brave
+Start=6/27/2026 11:29:39 PM Kind=Local
+[6/27/2026 11:48:29 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:29 PM] SendLogAsync called for CredentialUIBroker
+Start=6/27/2026 11:31:14 PM Kind=Local
+[6/27/2026 11:48:29 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:29 PM] SendLogAsync called for brave
+Start=6/27/2026 11:31:18 PM Kind=Local
+[6/27/2026 11:48:29 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:29 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:34:05 PM Kind=Local
+[6/27/2026 11:48:30 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:30 PM] SendLogAsync called for brave
+Start=6/27/2026 11:34:13 PM Kind=Local
+[6/27/2026 11:48:30 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:30 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:34:51 PM Kind=Local
+[6/27/2026 11:48:30 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:30 PM] SendLogAsync called for brave
+Start=6/27/2026 11:34:57 PM Kind=Local
+[6/27/2026 11:48:30 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:30 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:36:15 PM Kind=Local
+[6/27/2026 11:48:30 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:30 PM] SendLogAsync called for brave
+Start=6/27/2026 11:36:27 PM Kind=Local
+[6/27/2026 11:48:30 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:30 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:36:33 PM Kind=Local
+[6/27/2026 11:48:31 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:31 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:37:58 PM Kind=Local
+[6/27/2026 11:48:31 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:31 PM] SendLogAsync called for explorer
+Start=6/27/2026 11:38:38 PM Kind=Local
+[6/27/2026 11:48:31 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:31 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:38:40 PM Kind=Local
+[6/27/2026 11:48:31 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:31 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:38:42 PM Kind=Local
+[6/27/2026 11:48:32 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:32 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:38:42 PM Kind=Local
+[6/27/2026 11:48:32 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:32 PM] SendLogAsync called for powershell
+Start=6/27/2026 11:39:40 PM Kind=Local
+[6/27/2026 11:48:32 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:32 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 11:39:42 PM Kind=Local
+[6/27/2026 11:48:32 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:32 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:39:50 PM Kind=Local
+[6/27/2026 11:48:33 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:33 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:40:18 PM Kind=Local
+[6/27/2026 11:48:33 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:33 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:40:47 PM Kind=Local
+[6/27/2026 11:48:33 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:33 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:40:57 PM Kind=Local
+[6/27/2026 11:48:33 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:33 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:42:07 PM Kind=Local
+[6/27/2026 11:48:34 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:34 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:42:47 PM Kind=Local
+[6/27/2026 11:48:34 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:34 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:43:38 PM Kind=Local
+[6/27/2026 11:48:34 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:34 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:44:06 PM Kind=Local
+[6/27/2026 11:48:34 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:34 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:46:17 PM Kind=Local
+[6/27/2026 11:48:34 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:34 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 11:46:43 PM Kind=Local
+[6/27/2026 11:48:34 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:48:34 PM] SendLogAsync called for Devin
+Start=6/27/2026 11:47:13 PM Kind=Local
+[6/27/2026 11:48:35 PM] STATUS=InternalServerError
+BODY={"error":"An unexpected error occurred"}
+
+[6/27/2026 11:49:26 PM] SyncPendingLogsAsync called
+[6/27/2026 11:49:26 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 5:50:40 PM Kind=Utc
+[6/27/2026 11:49:30 PM] STATUS=OK
+BODY={"id":"c1ac03e0-588b-4650-8a7d-042e446719de","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"CrossDeviceTracker.Desktop","startTime":"2026-06-27T17:50:40.1461565Z","endTime":"2026-06-27T17:50:48.1461565Z","durationSeconds":8,"createdAt":"2026-06-27T18:19:29.9681956Z"}
+
+[6/27/2026 11:49:30 PM] SendLogAsync called for powershell
+Start=6/27/2026 5:50:48 PM Kind=Utc
+[6/27/2026 11:49:31 PM] STATUS=OK
+BODY={"id":"1e1fb98f-cc85-4593-89bf-9e4000c83533","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"powershell","startTime":"2026-06-27T17:50:48.2068119Z","endTime":"2026-06-27T17:50:50.2068119Z","durationSeconds":2,"createdAt":"2026-06-27T18:19:30.7468174Z"}
+
+[6/27/2026 11:49:31 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 5:50:50 PM Kind=Utc
+[6/27/2026 11:49:32 PM] STATUS=OK
+BODY={"id":"f62b8deb-3888-41c8-9bca-1a4bb80f26b8","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"ChatGPT","startTime":"2026-06-27T17:50:50.2372026Z","endTime":"2026-06-27T17:50:52.2372026Z","durationSeconds":2,"createdAt":"2026-06-27T18:19:31.3990386Z"}
+
+[6/27/2026 11:49:32 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 5:50:52 PM Kind=Utc
+[6/27/2026 11:49:32 PM] STATUS=OK
+BODY={"id":"d7caa88f-c6d4-4fa8-a0c6-88f4a391cae0","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"CrossDeviceTracker.Desktop","startTime":"2026-06-27T17:50:52.2684337Z","endTime":"2026-06-27T17:51:28.2684337Z","durationSeconds":36,"createdAt":"2026-06-27T18:19:32.2043856Z"}
+
+[6/27/2026 11:49:32 PM] SendLogAsync called for powershell
+Start=6/27/2026 5:51:28 PM Kind=Utc
+[6/27/2026 11:49:33 PM] STATUS=OK
+BODY={"id":"7ba7b6b6-eab1-4c4d-bf08-092b35e26ea3","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"powershell","startTime":"2026-06-27T17:51:28.4853868Z","endTime":"2026-06-27T17:51:30.4853868Z","durationSeconds":2,"createdAt":"2026-06-27T18:19:33.0047821Z"}
+
+[6/27/2026 11:49:33 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 5:51:30 PM Kind=Utc
+[6/27/2026 11:49:34 PM] STATUS=OK
+BODY={"id":"7a96d320-316a-45b7-9890-440ef8b9e335","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"ChatGPT","startTime":"2026-06-27T17:51:30.528029Z","endTime":"2026-06-27T17:51:38.528029Z","durationSeconds":8,"createdAt":"2026-06-27T18:19:33.8046573Z"}
+
+[6/27/2026 11:49:34 PM] SendLogAsync called for Devin
+Start=6/27/2026 5:51:38 PM Kind=Utc
+[6/27/2026 11:49:35 PM] STATUS=OK
+BODY={"id":"f50846bd-5af3-4045-babd-e9b2ca05605d","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"Devin","startTime":"2026-06-27T17:51:38.5977064Z","endTime":"2026-06-27T17:52:10.5977064Z","durationSeconds":32,"createdAt":"2026-06-27T18:19:34.6092748Z"}
+
+[6/27/2026 11:49:35 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 5:52:10 PM Kind=Utc
+[6/27/2026 11:49:35 PM] STATUS=OK
+BODY={"id":"c6543d54-6c6e-439b-b32f-e1982afdfd7e","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"ChatGPT","startTime":"2026-06-27T17:52:10.7905217Z","endTime":"2026-06-27T17:52:40.7905217Z","durationSeconds":30,"createdAt":"2026-06-27T18:19:35.084453Z"}
+
+[6/27/2026 11:49:35 PM] SendLogAsync called for powershell
+Start=6/27/2026 5:54:46 PM Kind=Utc
+[6/27/2026 11:49:36 PM] STATUS=OK
+BODY={"id":"67d6d8ed-66e8-4465-a507-7ad941f8ce4e","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"powershell","startTime":"2026-06-27T17:54:46.3106748Z","endTime":"2026-06-27T17:54:48.3106748Z","durationSeconds":2,"createdAt":"2026-06-27T18:19:35.565038Z"}
+
+[6/27/2026 11:49:36 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 5:54:48 PM Kind=Utc
+[6/27/2026 11:49:36 PM] STATUS=OK
+BODY={"id":"8b5c8ab9-37ed-4864-b4a5-b1cd1e6317c1","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"CrossDeviceTracker.Desktop","startTime":"2026-06-27T17:54:48.3324349Z","endTime":"2026-06-27T17:54:58.3324349Z","durationSeconds":10,"createdAt":"2026-06-27T18:19:36.204929Z"}
+
+[6/27/2026 11:49:36 PM] SendLogAsync called for Devin
+Start=6/27/2026 5:54:58 PM Kind=Utc
+[6/27/2026 11:49:37 PM] STATUS=OK
+BODY={"id":"e321c294-cbb6-4a80-8886-481c1ad444f9","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"Devin","startTime":"2026-06-27T17:54:58.3965455Z","endTime":"2026-06-27T17:55:00.3965455Z","durationSeconds":2,"createdAt":"2026-06-27T18:19:36.7493285Z"}
+
+[6/27/2026 11:49:37 PM] SendLogAsync called for explorer
+Start=6/27/2026 5:55:00 PM Kind=Utc
+[6/27/2026 11:49:38 PM] STATUS=OK
+BODY={"id":"1d7831b1-6c10-4178-a6bc-9478f532ae22","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"explorer","startTime":"2026-06-27T17:55:00.4323037Z","endTime":"2026-06-27T17:55:02.4323037Z","durationSeconds":2,"createdAt":"2026-06-27T18:19:37.484093Z"}
+
+[6/27/2026 11:49:38 PM] SendLogAsync called for OpenWith
+Start=6/27/2026 5:55:02 PM Kind=Utc
+[6/27/2026 11:49:38 PM] STATUS=OK
+BODY={"id":"f734a74e-d38c-4623-aa05-340123cc8376","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"OpenWith","startTime":"2026-06-27T17:55:02.4601399Z","endTime":"2026-06-27T17:55:04.4601399Z","durationSeconds":2,"createdAt":"2026-06-27T18:19:38.2641049Z"}
+
+[6/27/2026 11:49:38 PM] SendLogAsync called for notepad
+Start=6/27/2026 5:55:04 PM Kind=Utc
+[6/27/2026 11:49:39 PM] STATUS=OK
+BODY={"id":"b080bc43-dca1-4811-9b26-e465dd2a39c2","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"notepad","startTime":"2026-06-27T17:55:04.4908967Z","endTime":"2026-06-27T17:55:30.4908967Z","durationSeconds":26,"createdAt":"2026-06-27T18:19:39.0242202Z"}
+
+[6/27/2026 11:49:39 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 5:55:30 PM Kind=Utc
+[6/27/2026 11:49:40 PM] STATUS=OK
+BODY={"id":"7ad3e047-ac6f-4347-98e8-04ae44238f28","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"CrossDeviceTracker.Desktop","startTime":"2026-06-27T17:55:30.6531168Z","endTime":"2026-06-27T17:55:34.6531168Z","durationSeconds":4,"createdAt":"2026-06-27T18:19:39.7646587Z"}
+
+[6/27/2026 11:49:40 PM] SendLogAsync called for notepad
+Start=6/27/2026 5:55:34 PM Kind=Utc
+[6/27/2026 11:49:41 PM] STATUS=OK
+BODY={"id":"a325ce57-ab71-4961-bd1b-a4a16438d51d","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"notepad","startTime":"2026-06-27T17:55:34.6693621Z","endTime":"2026-06-27T17:55:52.6693621Z","durationSeconds":18,"createdAt":"2026-06-27T18:19:40.5250791Z"}
+
+[6/27/2026 11:49:41 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 5:55:52 PM Kind=Utc
+[6/27/2026 11:49:41 PM] STATUS=OK
+BODY={"id":"9f099751-5716-48c4-8764-3bb586ffab9a","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"ChatGPT","startTime":"2026-06-27T17:55:52.7712908Z","endTime":"2026-06-27T17:56:44.7712908Z","durationSeconds":52,"createdAt":"2026-06-27T18:19:41.1847271Z"}
+
+[6/27/2026 11:49:41 PM] SendLogAsync called for brave
+Start=6/27/2026 5:56:45 PM Kind=Utc
+[6/27/2026 11:49:42 PM] STATUS=OK
+BODY={"id":"a74309a9-bfac-4b46-b2c6-e810505ce7df","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"brave","startTime":"2026-06-27T17:56:45.044172Z","endTime":"2026-06-27T17:59:33.044172Z","durationSeconds":168,"createdAt":"2026-06-27T18:19:41.8750292Z"}
+
+[6/27/2026 11:49:42 PM] SendLogAsync called for CredentialUIBroker
+Start=6/27/2026 5:59:33 PM Kind=Utc
+[6/27/2026 11:49:43 PM] STATUS=OK
+BODY={"id":"03529404-90e9-480d-a9aa-8ba2259d3662","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"CredentialUIBroker","startTime":"2026-06-27T17:59:33.8751411Z","endTime":"2026-06-27T17:59:39.8751411Z","durationSeconds":6,"createdAt":"2026-06-27T18:19:42.643771Z"}
+
+[6/27/2026 11:49:43 PM] SendLogAsync called for brave
+Start=6/27/2026 5:59:39 PM Kind=Utc
+[6/27/2026 11:49:44 PM] STATUS=OK
+BODY={"id":"bc7cb3dc-bb87-4e19-8645-7e46536e5f5f","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"brave","startTime":"2026-06-27T17:59:39.9168686Z","endTime":"2026-06-27T18:01:13.9168686Z","durationSeconds":94,"createdAt":"2026-06-27T18:19:43.5639914Z"}
+
+[6/27/2026 11:49:44 PM] SendLogAsync called for CredentialUIBroker
+Start=6/27/2026 6:01:14 PM Kind=Utc
+[6/27/2026 11:49:45 PM] STATUS=OK
+BODY={"id":"0ee6e6e1-e556-4eb0-b00a-81c05fc07262","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"CredentialUIBroker","startTime":"2026-06-27T18:01:14.3754071Z","endTime":"2026-06-27T18:01:18.3754071Z","durationSeconds":4,"createdAt":"2026-06-27T18:19:44.5591247Z"}
+
+[6/27/2026 11:49:45 PM] SendLogAsync called for brave
+Start=6/27/2026 6:01:18 PM Kind=Utc
+[6/27/2026 11:49:46 PM] STATUS=OK
+BODY={"id":"f29fae1f-d16f-4d82-8226-a7e72a937171","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"brave","startTime":"2026-06-27T18:01:18.3884685Z","endTime":"2026-06-27T18:04:04.3884685Z","durationSeconds":166,"createdAt":"2026-06-27T18:19:45.6290374Z"}
+
+[6/27/2026 11:49:46 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 6:04:05 PM Kind=Utc
+[6/27/2026 11:49:47 PM] STATUS=OK
+BODY={"id":"e378c1b6-907c-4c0a-92f2-5817428bc514","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"ChatGPT","startTime":"2026-06-27T18:04:05.0702693Z","endTime":"2026-06-27T18:04:13.0702693Z","durationSeconds":8,"createdAt":"2026-06-27T18:19:46.5589781Z"}
+
+[6/27/2026 11:49:47 PM] SendLogAsync called for brave
+Start=6/27/2026 6:04:13 PM Kind=Utc
+[6/27/2026 11:49:48 PM] STATUS=OK
+BODY={"id":"5183f4f3-39c2-4826-8565-90047b3667d9","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"brave","startTime":"2026-06-27T18:04:13.1803269Z","endTime":"2026-06-27T18:04:51.1803269Z","durationSeconds":38,"createdAt":"2026-06-27T18:19:47.3889749Z"}
+
+[6/27/2026 11:49:48 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 6:04:51 PM Kind=Utc
+[6/27/2026 11:49:49 PM] STATUS=OK
+BODY={"id":"b957f9a8-1db6-4b41-9e87-74e02f0847a9","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"ChatGPT","startTime":"2026-06-27T18:04:51.3825167Z","endTime":"2026-06-27T18:04:57.3825167Z","durationSeconds":6,"createdAt":"2026-06-27T18:19:48.5275904Z"}
+
+[6/27/2026 11:49:49 PM] SendLogAsync called for brave
+Start=6/27/2026 6:04:57 PM Kind=Utc
+[6/27/2026 11:49:50 PM] STATUS=OK
+BODY={"id":"17ac2f42-b741-4951-bacf-4bfd698158d7","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"brave","startTime":"2026-06-27T18:04:57.415412Z","endTime":"2026-06-27T18:06:15.415412Z","durationSeconds":78,"createdAt":"2026-06-27T18:19:49.8039542Z"}
+
+[6/27/2026 11:49:50 PM] SendLogAsync called for explorer
+Start=6/27/2026 6:06:15 PM Kind=Utc
+[6/27/2026 11:49:52 PM] STATUS=OK
+BODY={"id":"92b38cca-1f3f-4fb1-928d-dfd9a66ac328","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"explorer","startTime":"2026-06-27T18:06:15.7698051Z","endTime":"2026-06-27T18:06:27.7698051Z","durationSeconds":12,"createdAt":"2026-06-27T18:19:50.8905004Z"}
+
+[6/27/2026 11:49:52 PM] SendLogAsync called for brave
+Start=6/27/2026 6:06:27 PM Kind=Utc
+[6/27/2026 11:49:53 PM] STATUS=OK
+BODY={"id":"ab6cdf26-61a8-4e06-8240-87dc1c402e06","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"brave","startTime":"2026-06-27T18:06:27.8011959Z","endTime":"2026-06-27T18:06:33.8011959Z","durationSeconds":6,"createdAt":"2026-06-27T18:19:52.0652628Z"}
+
+[6/27/2026 11:49:53 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 6:06:33 PM Kind=Utc
+[6/27/2026 11:49:54 PM] STATUS=OK
+BODY={"id":"26b7ce04-6215-4c7e-ac42-886054ee6545","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"ChatGPT","startTime":"2026-06-27T18:06:33.8339001Z","endTime":"2026-06-27T18:07:57.8339001Z","durationSeconds":84,"createdAt":"2026-06-27T18:19:53.3243806Z"}
+
+[6/27/2026 11:49:54 PM] SendLogAsync called for Devin
+Start=6/27/2026 6:07:58 PM Kind=Utc
+[6/27/2026 11:49:55 PM] STATUS=OK
+BODY={"id":"162eae7f-18d0-462f-8785-939c4c8a027e","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"Devin","startTime":"2026-06-27T18:07:58.3590627Z","endTime":"2026-06-27T18:08:38.3590627Z","durationSeconds":40,"createdAt":"2026-06-27T18:19:54.4139649Z"}
+
+[6/27/2026 11:49:55 PM] SendLogAsync called for explorer
+Start=6/27/2026 6:08:38 PM Kind=Utc
+[6/27/2026 11:49:56 PM] STATUS=OK
+BODY={"id":"4bf267e2-dc47-4407-9f9a-a229dc6f9e22","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"explorer","startTime":"2026-06-27T18:08:38.5862026Z","endTime":"2026-06-27T18:08:40.5862026Z","durationSeconds":2,"createdAt":"2026-06-27T18:19:55.4888633Z"}
+
+[6/27/2026 11:49:56 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 6:08:40 PM Kind=Utc
+[6/27/2026 11:49:56 PM] STATUS=OK
+BODY={"id":"48ffb6a1-1b59-4c6b-a594-051f56ae23db","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"ChatGPT","startTime":"2026-06-27T18:08:40.6079685Z","endTime":"2026-06-27T18:08:42.6079685Z","durationSeconds":2,"createdAt":"2026-06-27T18:19:56.3647052Z"}
+
+[6/27/2026 11:49:56 PM] SendLogAsync called for powershell
+Start=6/27/2026 6:08:42 PM Kind=Utc
+[6/27/2026 11:49:57 PM] STATUS=OK
+BODY={"id":"d64a5eab-5d8d-46df-8e1c-c8d5d9b328d9","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"powershell","startTime":"2026-06-27T18:08:42.6418229Z","endTime":"2026-06-27T18:08:53.6418229Z","durationSeconds":11,"createdAt":"2026-06-27T18:19:56.9590394Z"}
+
+[6/27/2026 11:49:57 PM] SendLogAsync called for powershell
+Start=6/27/2026 6:08:42 PM Kind=Utc
+[6/27/2026 11:49:58 PM] STATUS=OK
+BODY={"id":"be51c190-8fd3-403f-9abf-bfef32aaaff7","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"powershell","startTime":"2026-06-27T18:08:42.6418229Z","endTime":"2026-06-27T18:09:03.6418229Z","durationSeconds":21,"createdAt":"2026-06-27T18:19:57.5842396Z"}
+
+[6/27/2026 11:49:58 PM] SendLogAsync called for powershell
+Start=6/27/2026 6:09:40 PM Kind=Utc
+[6/27/2026 11:49:58 PM] STATUS=OK
+BODY={"id":"5f1050f0-4905-4b41-888f-092a43625e3e","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"powershell","startTime":"2026-06-27T18:09:40.4523533Z","endTime":"2026-06-27T18:09:42.4523533Z","durationSeconds":2,"createdAt":"2026-06-27T18:19:58.3841708Z"}
+
+[6/27/2026 11:49:58 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 6:09:42 PM Kind=Utc
+[6/27/2026 11:49:59 PM] STATUS=OK
+BODY={"id":"45cd9c2a-6205-452a-a4d3-8bbb3c247acf","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"CrossDeviceTracker.Desktop","startTime":"2026-06-27T18:09:42.458495Z","endTime":"2026-06-27T18:09:50.458495Z","durationSeconds":8,"createdAt":"2026-06-27T18:19:59.0197067Z"}
+
+[6/27/2026 11:49:59 PM] SendLogAsync called for Devin
+Start=6/27/2026 6:09:50 PM Kind=Utc
+[6/27/2026 11:49:59 PM] STATUS=OK
+BODY={"id":"706932b8-5adf-4b3c-8f9e-7b6aabdf50e7","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"Devin","startTime":"2026-06-27T18:09:50.5217957Z","endTime":"2026-06-27T18:10:18.5217957Z","durationSeconds":28,"createdAt":"2026-06-27T18:19:59.5088106Z"}
+
+[6/27/2026 11:49:59 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 6:10:18 PM Kind=Utc
+[6/27/2026 11:50:00 PM] STATUS=OK
+BODY={"id":"fd2f4626-1541-4cd3-b49e-3ce27555cc64","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"ChatGPT","startTime":"2026-06-27T18:10:18.9692074Z","endTime":"2026-06-27T18:10:46.9692074Z","durationSeconds":28,"createdAt":"2026-06-27T18:20:00.0439293Z"}
+
+[6/27/2026 11:50:00 PM] SendLogAsync called for Devin
+Start=6/27/2026 6:10:47 PM Kind=Utc
+[6/27/2026 11:50:01 PM] STATUS=OK
+BODY={"id":"6d91448f-8d07-48ff-9e79-21a83ddc5703","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"Devin","startTime":"2026-06-27T18:10:47.1175329Z","endTime":"2026-06-27T18:10:57.1175329Z","durationSeconds":10,"createdAt":"2026-06-27T18:20:00.8488511Z"}
+
+[6/27/2026 11:50:01 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 6:10:57 PM Kind=Utc
+[6/27/2026 11:50:02 PM] STATUS=OK
+BODY={"id":"bf26dbeb-a8a0-4412-96ab-bbaa77c62c69","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"ChatGPT","startTime":"2026-06-27T18:10:57.18189Z","endTime":"2026-06-27T18:12:07.18189Z","durationSeconds":70,"createdAt":"2026-06-27T18:20:01.4249068Z"}
+
+[6/27/2026 11:50:02 PM] SendLogAsync called for Devin
+Start=6/27/2026 6:12:07 PM Kind=Utc
+[6/27/2026 11:50:02 PM] STATUS=OK
+BODY={"id":"5c5ee5b4-4b9b-47a3-9c7e-b9992fb56263","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"Devin","startTime":"2026-06-27T18:12:07.5069784Z","endTime":"2026-06-27T18:12:47.5069784Z","durationSeconds":40,"createdAt":"2026-06-27T18:20:02.0591564Z"}
+
+[6/27/2026 11:50:02 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 6:12:47 PM Kind=Utc
+[6/27/2026 11:50:03 PM] STATUS=OK
+BODY={"id":"2f7f03c0-ea69-4421-ad4e-2bda0c926550","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"ChatGPT","startTime":"2026-06-27T18:12:47.80199Z","endTime":"2026-06-27T18:13:37.80199Z","durationSeconds":50,"createdAt":"2026-06-27T18:20:02.6292888Z"}
+
+[6/27/2026 11:50:03 PM] SendLogAsync called for Devin
+Start=6/27/2026 6:13:38 PM Kind=Utc
+[6/27/2026 11:50:03 PM] STATUS=OK
+BODY={"id":"1ef9ffb8-90f0-49a4-8d44-6cbbe3fe6e7b","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"Devin","startTime":"2026-06-27T18:13:38.1432436Z","endTime":"2026-06-27T18:14:06.1432436Z","durationSeconds":28,"createdAt":"2026-06-27T18:20:03.2097898Z"}
+
+[6/27/2026 11:50:03 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 6:14:06 PM Kind=Utc
+[6/27/2026 11:50:04 PM] STATUS=OK
+BODY={"id":"cf374109-ef5d-4a61-8f43-20b4725d903a","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"ChatGPT","startTime":"2026-06-27T18:14:06.3405545Z","endTime":"2026-06-27T18:16:16.3405545Z","durationSeconds":130,"createdAt":"2026-06-27T18:20:03.7956327Z"}
+
+[6/27/2026 11:50:04 PM] SendLogAsync called for Devin
+Start=6/27/2026 6:16:17 PM Kind=Utc
+[6/27/2026 11:50:04 PM] STATUS=OK
+BODY={"id":"7f8c411e-a7aa-4b5a-a4af-0f3c4abe2b50","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"Devin","startTime":"2026-06-27T18:16:17.0212529Z","endTime":"2026-06-27T18:16:43.0212529Z","durationSeconds":26,"createdAt":"2026-06-27T18:20:04.3550977Z"}
+
+[6/27/2026 11:50:04 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 6:16:43 PM Kind=Utc
+[6/27/2026 11:50:05 PM] STATUS=OK
+BODY={"id":"f0e0d94d-82e1-4486-b0b5-e86c15692ff4","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"ChatGPT","startTime":"2026-06-27T18:16:43.1847328Z","endTime":"2026-06-27T18:17:13.1847328Z","durationSeconds":30,"createdAt":"2026-06-27T18:20:04.9447827Z"}
+
+[6/27/2026 11:50:05 PM] SendLogAsync called for Devin
+Start=6/27/2026 6:17:13 PM Kind=Utc
+[6/27/2026 11:50:05 PM] STATUS=OK
+BODY={"id":"8f3d664b-8bcc-4107-8504-4c273f9cdcce","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"Devin","startTime":"2026-06-27T18:17:13.3372479Z","endTime":"2026-06-27T18:17:17.3372479Z","durationSeconds":4,"createdAt":"2026-06-27T18:20:05.3755845Z"}
+
+[6/27/2026 11:50:35 PM] SyncPendingLogsAsync called
+[6/27/2026 11:50:35 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 6:19:28 PM Kind=Utc
+[6/27/2026 11:50:36 PM] STATUS=OK
+BODY={"id":"dc75ec9a-c0d9-49a4-be0f-3a9b1a8183ad","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"CrossDeviceTracker.Desktop","startTime":"2026-06-27T18:19:28.4118799Z","endTime":"2026-06-27T18:19:32.4118799Z","durationSeconds":4,"createdAt":"2026-06-27T18:20:35.9049927Z"}
+
+[6/27/2026 11:50:36 PM] SendLogAsync called for powershell
+Start=6/27/2026 6:19:32 PM Kind=Utc
+[6/27/2026 11:50:37 PM] STATUS=OK
+BODY={"id":"46742d84-8a99-48bd-b0fe-a835ac3e4a44","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"powershell","startTime":"2026-06-27T18:19:32.4369821Z","endTime":"2026-06-27T18:19:34.4369821Z","durationSeconds":2,"createdAt":"2026-06-27T18:20:36.5492843Z"}
+
+[6/27/2026 11:50:37 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 6:19:34 PM Kind=Utc
+[6/27/2026 11:50:38 PM] STATUS=OK
+BODY={"id":"334a8093-3577-4ae6-9a14-5266bfb019fe","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"CrossDeviceTracker.Desktop","startTime":"2026-06-27T18:19:34.4598231Z","endTime":"2026-06-27T18:19:54.4598231Z","durationSeconds":20,"createdAt":"2026-06-27T18:20:37.326409Z"}
+
+[6/27/2026 11:50:38 PM] SendLogAsync called for Devin
+Start=6/27/2026 6:19:54 PM Kind=Utc
+[6/27/2026 11:50:38 PM] STATUS=OK
+BODY={"id":"48b9f57d-e400-4167-af13-002cd16578ec","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"Devin","startTime":"2026-06-27T18:19:54.5885504Z","endTime":"2026-06-27T18:20:04.5885504Z","durationSeconds":10,"createdAt":"2026-06-27T18:20:38.0947112Z"}
+
+[6/27/2026 11:50:39 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 6:20:06 PM Kind=Utc
+[6/27/2026 11:50:39 PM] STATUS=OK
+BODY={"id":"cf19b42d-0690-46ce-bac5-1262428d1ed2","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"CrossDeviceTracker.Desktop","startTime":"2026-06-27T18:20:06.776769Z","endTime":"2026-06-27T18:20:14.776769Z","durationSeconds":8,"createdAt":"2026-06-27T18:20:39.0694279Z"}
+
+[6/27/2026 11:50:39 PM] SendLogAsync called for Devin
+Start=6/27/2026 6:20:14 PM Kind=Utc
+[6/27/2026 11:50:40 PM] STATUS=OK
+BODY={"id":"e15b2b0e-ba10-49d1-8b2b-441f0271fc2d","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"Devin","startTime":"2026-06-27T18:20:14.8261295Z","endTime":"2026-06-27T18:20:16.8261295Z","durationSeconds":2,"createdAt":"2026-06-27T18:20:39.8337813Z"}
+
+[6/27/2026 11:50:40 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 6:20:16 PM Kind=Utc
+[6/27/2026 11:50:41 PM] STATUS=OK
+BODY={"id":"a0c7221a-807b-47a6-a2da-ae9477bcd09b","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"ChatGPT","startTime":"2026-06-27T18:20:16.8589416Z","endTime":"2026-06-27T18:20:26.8589416Z","durationSeconds":10,"createdAt":"2026-06-27T18:20:40.6458768Z"}
+
+[6/27/2026 11:51:11 PM] SyncPendingLogsAsync called
+[6/27/2026 11:51:11 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 6:20:26 PM Kind=Utc
+[6/27/2026 11:51:11 PM] STATUS=OK
+BODY={"id":"711de5d9-b986-4776-9a3a-64710481e268","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"CrossDeviceTracker.Desktop","startTime":"2026-06-27T18:20:26.8920091Z","endTime":"2026-06-27T18:20:46.8920091Z","durationSeconds":20,"createdAt":"2026-06-27T18:21:11.4048824Z"}
+
+[6/27/2026 11:51:11 PM] SendLogAsync called for brave
+Start=6/27/2026 6:20:46 PM Kind=Utc
+[6/27/2026 11:51:11 PM] STATUS=OK
+BODY={"id":"616d0a74-e0ce-436e-a901-b79771539d9d","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"brave","startTime":"2026-06-27T18:20:46.9891886Z","endTime":"2026-06-27T18:20:52.9891886Z","durationSeconds":6,"createdAt":"2026-06-27T18:21:11.5752662Z"}
+
+[6/27/2026 11:51:41 PM] SyncPendingLogsAsync called
+[6/27/2026 11:51:41 PM] SendLogAsync called for CrossDeviceTracker.Desktop
+Start=6/27/2026 6:20:53 PM Kind=Utc
+[6/27/2026 11:51:43 PM] STATUS=OK
+BODY={"id":"6a41826d-7eae-4095-85af-798da5a7c72e","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"CrossDeviceTracker.Desktop","startTime":"2026-06-27T18:20:53.0538798Z","endTime":"2026-06-27T18:21:19.0538798Z","durationSeconds":26,"createdAt":"2026-06-27T18:21:43.2184111Z"}
+
+[6/27/2026 11:51:43 PM] SendLogAsync called for brave
+Start=6/27/2026 6:21:19 PM Kind=Utc
+[6/27/2026 11:51:43 PM] STATUS=OK
+BODY={"id":"71aa613b-4be2-4744-b5a6-283a6e980d0b","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"brave","startTime":"2026-06-27T18:21:19.1722629Z","endTime":"2026-06-27T18:21:23.1722629Z","durationSeconds":4,"createdAt":"2026-06-27T18:21:43.4490424Z"}
+
+[6/27/2026 11:51:43 PM] SendLogAsync called for ScreenClippingHost
+Start=6/27/2026 6:21:23 PM Kind=Utc
+[6/27/2026 11:51:43 PM] STATUS=OK
+BODY={"id":"942de50a-8fc9-41e7-a9b4-40f0f6ea7d48","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"ScreenClippingHost","startTime":"2026-06-27T18:21:23.2032597Z","endTime":"2026-06-27T18:21:25.2032597Z","durationSeconds":2,"createdAt":"2026-06-27T18:21:43.6548086Z"}
+
+[6/27/2026 11:51:43 PM] SendLogAsync called for brave
+Start=6/27/2026 6:21:25 PM Kind=Utc
+[6/27/2026 11:51:44 PM] STATUS=OK
+BODY={"id":"b793577c-33b9-407c-a869-abb4d69ea240","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"brave","startTime":"2026-06-27T18:21:25.276746Z","endTime":"2026-06-27T18:21:27.276746Z","durationSeconds":2,"createdAt":"2026-06-27T18:21:43.8634751Z"}
+
+[6/27/2026 11:51:44 PM] SendLogAsync called for ScreenClippingHost
+Start=6/27/2026 6:21:27 PM Kind=Utc
+[6/27/2026 11:51:44 PM] STATUS=OK
+BODY={"id":"50141825-337b-47e5-af8a-e4df2089bb21","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"ScreenClippingHost","startTime":"2026-06-27T18:21:27.3099592Z","endTime":"2026-06-27T18:21:31.3099592Z","durationSeconds":4,"createdAt":"2026-06-27T18:21:44.1088237Z"}
+
+[6/27/2026 11:51:44 PM] SendLogAsync called for brave
+Start=6/27/2026 6:21:31 PM Kind=Utc
+[6/27/2026 11:51:44 PM] STATUS=OK
+BODY={"id":"c4b5ff1d-6194-491c-a6b0-add9c2b57d11","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"brave","startTime":"2026-06-27T18:21:31.3367372Z","endTime":"2026-06-27T18:21:37.3367372Z","durationSeconds":6,"createdAt":"2026-06-27T18:21:44.3141007Z"}
+
+[6/27/2026 11:52:14 PM] SyncPendingLogsAsync called
+[6/27/2026 11:52:44 PM] SyncPendingLogsAsync called
+[6/27/2026 11:52:44 PM] SendLogAsync called for ChatGPT
+Start=6/27/2026 6:21:37 PM Kind=Utc
+[6/27/2026 11:52:45 PM] STATUS=OK
+BODY={"id":"bf8f13f8-35d0-4245-8066-fb61943250fe","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"ChatGPT","startTime":"2026-06-27T18:21:37.3792444Z","endTime":"2026-06-27T18:22:31.3792444Z","durationSeconds":54,"createdAt":"2026-06-27T18:22:44.6078105Z"}
+
+[6/27/2026 11:52:45 PM] SendLogAsync called for Devin
+Start=6/27/2026 6:22:31 PM Kind=Utc
+[6/27/2026 11:52:45 PM] STATUS=OK
+BODY={"id":"e5aeb35b-05de-4c0b-bb08-a0f06b3cfe15","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"Devin","startTime":"2026-06-27T18:22:31.6419241Z","endTime":"2026-06-27T18:22:33.6419241Z","durationSeconds":2,"createdAt":"2026-06-27T18:22:45.1691407Z"}
+
+[6/27/2026 11:53:03 PM] SyncPendingLogsAsync called
+[6/27/2026 11:53:03 PM] SendLogAsync called for brave
+Start=6/27/2026 6:22:33 PM Kind=Utc
+[6/27/2026 11:53:03 PM] STATUS=OK
+BODY={"id":"eb8874d8-da7d-4263-9ddf-1576701f003f","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"brave","startTime":"2026-06-27T18:22:33.6454704Z","endTime":"2026-06-27T18:22:51.6454704Z","durationSeconds":18,"createdAt":"2026-06-27T18:23:03.1660777Z"}
+
+[6/27/2026 11:53:03 PM] SendLogAsync called for powershell
+Start=6/27/2026 6:22:51 PM Kind=Utc
+[6/27/2026 11:53:04 PM] STATUS=OK
+BODY={"id":"860f17f3-b169-42cc-87b2-d782ea16050b","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"powershell","startTime":"2026-06-27T18:22:51.7404712Z","endTime":"2026-06-27T18:23:01.7404712Z","durationSeconds":10,"createdAt":"2026-06-27T18:23:03.8091135Z"}
+
+[6/27/2026 11:53:04 PM] SendLogAsync called for explorer
+Start=6/27/2026 6:23:01 PM Kind=Utc
+[6/27/2026 11:53:05 PM] STATUS=OK
+BODY={"id":"eeee3d1b-f258-43d2-8c9b-b7491b48c843","userId":"bfdf4fab-7958-4e42-904c-247cd5a8a9ea","deviceId":"bc6e53fb-9f5e-4fb8-b82f-a5fbb1b927e5","appName":"explorer","startTime":"2026-06-27T18:23:01.7652583Z","endTime":"2026-06-27T18:23:02.7652583Z","durationSeconds":1,"createdAt":"2026-06-27T18:23:04.6872408Z"}
+
