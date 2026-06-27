@@ -89,13 +89,17 @@ public class ApiClient : IApiClient
     {
         try
         {
+            Console.WriteLine("=== SEND LOG START ===");
             var jwt = DeviceJwt;
 
             if (string.IsNullOrEmpty(jwt))
             {
+                Console.WriteLine("JWT IS NULL");
                 Console.WriteLine("❌ Missing authentication credentials");
                 return false;
             }
+
+            Console.WriteLine($"JWT EXISTS: {jwt[..20]}...");
 
             // Build the request body
             var payload = new
@@ -105,6 +109,10 @@ public class ApiClient : IApiClient
                 startTime = log.StartTime.ToString("O"),
                 durationSeconds = (int)log.Duration.TotalSeconds
             };
+
+            Console.WriteLine("=== REQUEST ===");
+            Console.WriteLine(JsonSerializer.Serialize(payload));
+            Console.WriteLine(_baseUrl + "/api/timelogs");
 
             var json = JsonSerializer.Serialize(payload);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
@@ -117,6 +125,12 @@ public class ApiClient : IApiClient
             var response = await _httpClient.PostAsync(
                 $"{_baseUrl}{TimelogsEndpoint}",
                 content);
+
+            Console.WriteLine($"STATUS: {response.StatusCode}");
+
+            var body = await response.Content.ReadAsStringAsync();
+
+            Console.WriteLine(body);
 
             if (response.IsSuccessStatusCode)
             {
@@ -138,7 +152,7 @@ public class ApiClient : IApiClient
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"  ❌ Error sending {log.AppName}: {ex.Message}");
+            Console.WriteLine(ex.ToString());
             return false;
         }
     }
