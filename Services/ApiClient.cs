@@ -100,11 +100,15 @@ public class ApiClient : IApiClient
             // Build the request body
             var payload = new
             {
-                deviceId = (string?)null,
                 appName = log.AppName,
                 startTime = log.StartTime.ToString("O"),
                 durationSeconds = (int)log.Duration.TotalSeconds
             };
+
+            // Debug: log request
+            Console.WriteLine("=== SYNC REQUEST ===");
+            Console.WriteLine(JsonSerializer.Serialize(payload));
+            Console.WriteLine($"JWT present: {!string.IsNullOrWhiteSpace(jwt)}");
 
             var json = JsonSerializer.Serialize(payload);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
@@ -118,6 +122,11 @@ public class ApiClient : IApiClient
                 $"{_baseUrl}{TimelogsEndpoint}",
                 content);
 
+            // Debug: log response
+            Console.WriteLine($"Status: {response.StatusCode}");
+            var body = await response.Content.ReadAsStringAsync();
+            Console.WriteLine(body);
+
             if (response.IsSuccessStatusCode)
             {
                 return true;
@@ -130,8 +139,7 @@ public class ApiClient : IApiClient
             }
             else
             {
-                var errorContent = await response.Content.ReadAsStringAsync();
-                Console.WriteLine($"  ❌ Failed: {log.AppName} - {response.StatusCode} - {errorContent}");
+                Console.WriteLine($"  ❌ Failed: {log.AppName} - {response.StatusCode} - {body}");
                 return false;
             }
         }
