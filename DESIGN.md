@@ -9,22 +9,37 @@ The `CrossDeviceTracker.Desktop` application is responsible for:
 - Tracking foreground application usage on Windows
 - Measuring active engagement time
 - Storing usage data locally (offline-first)
-- Preparing data for synchronization with backend API
+- Synchronizing data with the backend API
+- Managing device authentication via JWT
 
 The system follows a separation of concerns design:
 
 - Core (tracking logic)
 - Data (local persistence)
-- Sync (future implementation)
+- Services (authentication and synchronization)
+- UI (Windows Forms and system tray)
 
 ## 2. Architecture
 
 ```text
-Core (Tracking Engine)
+Program.cs (Entry Point / DI Setup)
         ↓
-Data Layer (SQLite Storage)
-        ↓
-Sync Layer (Future: Backend API)
+┌───────────────────────────────────────────────────┐
+│  UI Layer                                         │
+│    MainForm (WinForms + system tray)              │
+│    DeviceLinkingDialog (token entry dialog)        │
+├───────────────────────────────────────────────────┤
+│  Core Layer                                       │
+│    AppTracker (Win32 polling engine, 2s interval) │
+├───────────────────────────────────────────────────┤
+│  Services Layer                                   │
+│    SyncService (background sync, 30s interval)    │
+│    ApiClient (HTTP client, JWT auth, sync/link)   │
+│    DeviceAuthService (JWT persistence, linking)   │
+├───────────────────────────────────────────────────┤
+│  Data Layer                                       │
+│    ILogRepository → SqliteLogRepository (SQLite)  │
+└───────────────────────────────────────────────────┘
 ```
 
 Responsibilities:
@@ -32,8 +47,9 @@ Responsibilities:
 | Layer | Responsibility |
 |-------|----------------|
 | Core | Detect app usage, calculate time, create logs |
-| Data | Persist logs locally |
-| Sync | Send logs to backend (future) |
+| Data | Persist logs to SQLite, query by sync status |
+| Services | Device linking, JWT management, backend sync |
+| UI | Display tracking status, system tray lifecycle |
 
 ## 3. Tracking Strategy
 
@@ -72,6 +88,7 @@ A session ends when:
 The tracker maintains:
 
 - `previousApp` -> currently tracked app
+- `currentApp` -> raw current foreground app
 - `startTime` -> when the session started
 - `isRunning` -> loop control flag
 
@@ -80,16 +97,17 @@ The tracker maintains:
 ```text
 while (isRunning):
 
-    currentApp = getCurrentApp()
+    rawApp = getCurrentApp()
+    trackableApp = ToTrackableApp(rawApp)   // null if LockApp
     currentTime = now
 
-    if currentApp != previousApp:
+    if trackableApp != previousApp:
 
         if previousApp exists:
             FinalizeSession(currentTime)
 
         startTime = currentTime
-        previousApp = currentApp
+        previousApp = trackableApp
 
     wait 2 seconds
 ```
@@ -133,49 +151,69 @@ Represents a single app usage session.
 
 ## 6. Data Layer
 
-### 6.1 Interface
+### 6.1 Interface (`ILogRepository`)
 
-`SaveLogAsync(Log log)`
+- `SaveLogAsync(Log log)` - Persist a log session
+- `GetPendingLogsAsync()` - Query logs with Pending or Failed status
+- `UpdateSyncStatusAsync(Guid logId, SyncStatus status)` - Update sync state
+- `InitializeAsync()` - Create database and tables
+- `DeleteAllLogsAsync()` - Clear all logs
 
 ### 6.2 Responsibilities
 
-- Persist logs to SQLite
+- Persist logs to SQLite (`logs.db`)
 - Handle storage reliability
 - No business logic
 
 ## 7. Startup Behavior
 
 ```text
-previousApp = getCurrentApp()
-startTime = currentTime
-isRunning = true
+Load device.json → restore DeviceJwt if exists
+Check IsLinkedAsync()
+    If not linked → show DeviceLinkingDialog
+    If linked → proceed to MainForm
+
+MainForm:
+    Initialize repository
+    Start AppTracker (background task)
+    Start SyncService (background task)
+    Start UI update timer (2s interval)
+
+AppTracker:
+    previousApp = getCurrentApp()
+    startTime = currentTime
+    isRunning = true
 ```
 
-Tracking starts from current moment.
-
-Prevents fake sessions.
+Tracking starts from current moment. Prevents fake sessions.
 
 ## 8. Shutdown Behavior
 
 ```text
-Stop():
-    FinalizeSession(currentTime)
-    isRunning = false
+ExitApplication():
+    Stop AppTracker:
+        FinalizeSession(currentTime)
+        isRunning = false
+    Stop SyncService:
+        Final sync attempt
+        isRunning = false
+    Dispose tray icon
+    Application.Exit()
 ```
 
 Important rules:
 
 - Must finalize last session
 - Must save to DB
-- Must NOT block on network
+- Final sync attempt before exit
 
 ## 9. Event Handling
 
 Sessions are finalized on:
 
 - App change
-- System lock
-- Application shutdown
+- System lock (LockApp detected → previous session finalized, LockApp excluded)
+- Application shutdown (ExitApplication via tray menu)
 
 ## 10. Separation of Concerns
 
@@ -187,38 +225,89 @@ Core SHOULD:
 
 Core SHOULD NOT:
 
-- Access database directly
+- Access database directly (uses ILogRepository)
 - Send data to backend
+- Manage authentication
 
 ## 11. Offline-First Design
 
-- Logs are stored locally first
-- Sync happens later
+- Logs are stored locally first in SQLite
+- Sync happens asynchronously via SyncService
 
 Ensures:
 
 - No data loss
 - Works without internet
+- Logs accumulate locally and sync when connectivity is available
 
-## 12. Sync Strategy (Future)
+## 12. Sync Strategy
 
 ```text
-Fetch logs where SyncStatus = Pending
-        ↓
-Send to backend
-        ↓
-Update status (Sent / Failed)
+SyncService loop (every 30 seconds):
+    ↓
+ApiClient.SyncPendingLogsAsync():
+    ↓
+Fetch logs where SyncStatus IN (Pending, Failed)
+    ↓
+For each log → POST to /api/timelogs
+    ↓
+On success → UpdateSyncStatusAsync(logId, Sent)
+On failure → UpdateSyncStatusAsync(logId, Failed)
+On 401     → Fire DeviceUnauthorized event → prompt relink
 ```
 
-A separate Sync Service will implement this flow.
+### 12.1 Sync Payload
 
-## 13. Timing Considerations
+```json
+{
+  "appName": "chrome",
+  "startTime": "2026-06-10T12:45:00.0000000Z",
+  "durationSeconds": 30
+}
+```
+
+### 12.2 Authentication
+
+All sync requests include the device JWT:
+
+```
+Authorization: Bearer <device_jwt>
+```
+
+## 13. Device Authentication
+
+### 13.1 Linking Flow
+
+1. User generates a desktop link token from the backend/mobile app
+2. User enters the token in `DeviceLinkingDialog`
+3. `DeviceAuthService` calls `ApiClient.LinkDeviceAsync(linkToken)` which POSTs to `/api/devices/link` with:
+   - `linkToken`
+   - `deviceName` (machine name)
+   - `platform` ("Windows")
+4. Backend validates token, creates device record, returns device JWT
+5. JWT is persisted locally in `device.json`
+6. `ApiClient.DeviceJwt` is set for authenticated requests
+
+### 13.2 JWT Persistence
+
+- Stored in `device.json` alongside the application binary
+- Loaded on startup via `DeviceAuthService.LoadDeviceAsync()`
+- Contains: `DeviceJwt`, `DeviceName`, `LinkedAt`
+
+### 13.3 Unauthorized Handling
+
+- On HTTP 401 from sync requests, `ApiClient` fires `DeviceUnauthorized` event
+- `MainForm` handles the event: shows balloon tip, unlinks device, opens relink dialog
+- User can also manually relink via the tray context menu
+
+## 14. Timing Considerations
 
 - Polling interval: 2 seconds
-- Possible inaccuracy: +/- 2 seconds
+- Sync interval: 30 seconds
+- Possible tracking inaccuracy: +/- 2 seconds
 - Backend applies tolerance validation
 
-## 14. Key Design Decisions
+## 15. Key Design Decisions
 
 | Decision | Reason |
 |----------|--------|
@@ -226,18 +315,24 @@ A separate Sync Service will implement this flow.
 | GUID for IDs | Offline-safe uniqueness |
 | Store EndTime | Query performance and validation |
 | SyncStatus enum | Reliable retry logic |
-| Separate Core/Data | Clean architecture |
+| Separate Core/Data/Services | Clean architecture |
+| Offline-first storage | No data loss on network failure |
+| Device JWT in local file | Persistent auth across restarts |
+| 30-second sync interval | Balance between timeliness and efficiency |
+| LockApp exclusion | Only track active engagement |
 
-## 15. Summary
+## 16. Summary
 
 The desktop application is designed as a:
 
-- Tracking engine
-- Offline-first system
-- Cleanly separated architecture
+- Tracking engine (Win32 foreground detection)
+- Offline-first system (SQLite local storage)
+- Authenticated sync client (device JWT + background sync)
+- Background Windows application (system tray integration)
 
 It ensures:
 
 - Accurate session tracking
 - Reliable local storage
-- Future scalability for backend sync
+- Secure device authentication
+- Automatic backend synchronization
