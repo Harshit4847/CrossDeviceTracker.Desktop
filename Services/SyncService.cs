@@ -2,9 +2,12 @@ namespace CrossDeviceTracker.Desktop.Services;
 
 public interface ISyncService
 {
+    bool IsPaused { get; }
     Task StartAsync();
     Task StopAsync();
     Task SyncOnceAsync();
+    void Pause();
+    void Resume();
 }
 
 public class SyncService : ISyncService
@@ -12,6 +15,9 @@ public class SyncService : ISyncService
     private const int DefaultSyncIntervalMs = 30000; // 30 seconds
     private readonly IApiClient _apiClient;
     private bool _isRunning;
+    private bool _isPaused;
+
+    public bool IsPaused => _isPaused;
 
     public SyncService(IApiClient apiClient)
     {
@@ -27,7 +33,10 @@ public class SyncService : ISyncService
         {
             try
             {
-                await SyncOnceAsync();
+                if (!_isPaused)
+                {
+                    await SyncOnceAsync();
+                }
                 await Task.Delay(DefaultSyncIntervalMs);
             }
             catch (Exception ex)
@@ -54,6 +63,18 @@ public class SyncService : ISyncService
         }
 
         Console.WriteLine("✅ Sync Service stopped");
+    }
+
+    public void Pause()
+    {
+        _isPaused = true;
+        Console.WriteLine("⏸️  Sync Service paused (auth error)");
+    }
+
+    public void Resume()
+    {
+        _isPaused = false;
+        Console.WriteLine("▶️  Sync Service resumed");
     }
 
     public async Task SyncOnceAsync()
