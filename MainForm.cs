@@ -17,6 +17,7 @@ public class MainForm : Form
     private ListView? _logsListView;
     private bool _isExiting;
     private bool _isRelinkDialogOpen;
+    private bool _hasAuthError;
 
     public MainForm(IDeviceAuthService deviceAuthService, IApiClient apiClient, ILogRepository repository)
     {
@@ -118,6 +119,7 @@ public class MainForm : Form
         contextMenu.Items.Add("Show", null, (_, _) => RestoreFromTray());
         contextMenu.Items.Add(new ToolStripSeparator());
         contextMenu.Items.Add("Relink Device", null, (_, _) => _ = LinkDeviceAsync(forceRelink: true));
+        contextMenu.Items.Add("Unlink Device", null, (_, _) => _ = UnlinkDeviceAsync());
         contextMenu.Items.Add("Exit", null, (_, _) => ExitApplication());
 
         _notifyIcon.ContextMenuStrip = contextMenu;
@@ -176,8 +178,21 @@ public class MainForm : Form
         if (_statusLabel != null)
         {
             var isLinked = await _deviceAuthService.IsLinkedAsync();
-            _statusLabel.Text = isLinked ? "App Tracker - Running" : "App Tracker - Relink Required";
-            _statusLabel.ForeColor = isLinked ? Color.Green : Color.DarkOrange;
+            if (_hasAuthError)
+            {
+                _statusLabel.Text = "App Tracker - Auth Error (sync paused)";
+                _statusLabel.ForeColor = Color.Red;
+            }
+            else if (isLinked)
+            {
+                _statusLabel.Text = "App Tracker - Running";
+                _statusLabel.ForeColor = Color.Green;
+            }
+            else
+            {
+                _statusLabel.Text = "App Tracker - Relink Required";
+                _statusLabel.ForeColor = Color.DarkOrange;
+            }
         }
 
         try
@@ -279,6 +294,8 @@ public class MainForm : Form
 
             if (dialog.ShowDialog(this) == DialogResult.OK)
             {
+                _hasAuthError = false;
+                _syncService?.Resume();
                 MessageBox.Show(this, "Device linked successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 await _apiClient.SyncPendingLogsAsync();
             }
@@ -300,12 +317,34 @@ public class MainForm : Form
             return;
         }
 
-        BeginInvoke(async () =>
+        BeginInvoke(() =>
         {
-            _notifyIcon?.ShowBalloonTip(2500, "Relink required", "Your device token expired or was revoked.", ToolTipIcon.Warning);
-            await _deviceAuthService.UnlinkAsync();
-            _ = LinkDeviceAsync(forceRelink: true);
+            _hasAuthError = true;
+            _syncService?.Pause();
+            _notifyIcon?.ShowBalloonTip(3000, "Authentication Error",
+                "Server returned 401. Sync is paused. Use 'Relink Device' if your token expired.",
+                ToolTipIcon.Warning);
         });
+    }
+
+    private async Task UnlinkDeviceAsync()
+    {
+        var result = MessageBox.Show(
+            this,
+            "Are you sure you want to unlink this device? You will need a new link token to reconnect.",
+            "Unlink Device",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Warning);
+
+        if (result != DialogResult.Yes)
+        {
+            return;
+        }
+
+        _syncService?.Pause();
+        await _deviceAuthService.UnlinkAsync();
+        _hasAuthError = false;
+        _notifyIcon?.ShowBalloonTip(2000, "Device Unlinked", "Device has been unlinked. Use 'Relink Device' to reconnect.", ToolTipIcon.Info);
     }
 
     private void RestoreFromTray()
