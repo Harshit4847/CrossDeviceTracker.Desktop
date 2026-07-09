@@ -76,19 +76,18 @@ Windows Desktop Client  →  Backend API  →  Dashboard (Future)
 
 | Component | Technology |
 |-----------|------------|
-| Runtime | .NET 10 |
+| Runtime | .NET 10.0 |
 | Language | C# |
 | Project Type | Windows Forms GUI Application |
 | Target Platform | Windows |
 | Local Database | SQLite (`System.Data.SQLite.Core` 1.0.119) |
 | HTTP | `Microsoft.Extensions.Http` 10.0.0 |
-| Configuration | `Microsoft.Extensions.Configuration.Json` 10.0.0 |
 
 ---
 
 ## Prerequisites
 
-- [.NET 10 SDK](https://dotnet.microsoft.com/download) or later
+- [.NET 10.0 SDK](https://dotnet.microsoft.com/download) or later
 - Windows OS
 
 ---
@@ -130,7 +129,7 @@ CrossDeviceTracker.Desktop/
 ├── MainForm.cs                        # Windows Forms UI and system tray lifecycle
 ├── DeviceLinkingDialog.cs             # Device linking dialog UI
 ├── SyncDebugHelper.cs                 # Diagnostic and debugging utilities
-├── Program.cs                         # Application entry point and DI setup
+├── Program.cs                         # Application entry point
 ├── appsettings.json                   # API base URL and configuration
 ├── CrossDeviceTracker.Desktop.csproj  # Project file
 ├── DESIGN.md                          # Architecture and design document
@@ -167,6 +166,10 @@ API configuration is defined in `appsettings.json`:
     "BaseUrl": "https://crossdevicetracker-api-hy-erhyaffahwaufsba.southeastasia-01.azurewebsites.net",
     "TimeoutSeconds": 30,
     "SyncIntervalSeconds": 30
+  },
+  "Device": {
+    "Id": null,
+    "Jwt": null
   }
 }
 ```

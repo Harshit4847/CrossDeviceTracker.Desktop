@@ -64,7 +64,7 @@ CrossDeviceTracker.Desktop/
 ├── MainForm.cs                        # Windows Forms UI and system tray lifecycle
 ├── DeviceLinkingDialog.cs             # Device linking dialog UI
 ├── SyncDebugHelper.cs                 # Diagnostic and debugging utilities
-├── Program.cs                         # Application entry point and DI setup
+├── Program.cs                         # Application entry point
 ├── appsettings.json                   # API base URL and configuration
 ├── CrossDeviceTracker.Desktop.csproj  # Project file
 ├── DESIGN.md                          # Architecture and design document
@@ -274,6 +274,14 @@ MainForm:
     Start UI timer (2s)
 ```
 
+Program.cs uses manual instantiation:
+- Creates SqliteLogRepository
+- Creates ApiClient with repository
+- Creates DeviceAuthService with ApiClient
+- Loads device JWT and sets on ApiClient
+- Shows DeviceLinkingDialog if not linked
+- Launches MainForm with dependencies
+
 Start tracking from now.
 
 ### Stop Logic
@@ -328,12 +336,21 @@ Always finalize the last session on shutdown.
 2. User enters token in `DeviceLinkingDialog`
 3. `DeviceAuthService.LinkDeviceAsync()` calls `ApiClient.LinkDeviceAsync()` → POST `/api/devices/link`
 4. Backend validates token, creates device, returns JWT
-5. JWT persisted in `device.json`
+5. JWT persisted in `device.json` with DeviceAuthState (DeviceId, DeviceJwt, DeviceName, LinkedAt, Verify)
 6. `ApiClient.DeviceJwt` set for authenticated requests
 7. On startup, JWT is loaded from `device.json` automatically
+8. Relink dialog supports forced relinking scenario with custom message
 
 ### Future Consideration
 
 Crash recovery for unfinalized sessions is not currently implemented.
 
 Sessions are persisted when finalized (app change or application shutdown).
+
+### Diagnostic Utilities
+
+`SyncDebugHelper` provides:
+- `PrintDeviceStatusAsync()` - Device name, auth status, JWT preview
+- `PrintAllLogsAsync()` - Tabular display of all logs with sync status
+- `PrintSyncStatisticsAsync()` - Counts of Sent, Pending, Failed logs
+- `PrintDiagnosticReportAsync()` - Full diagnostic report combining all above

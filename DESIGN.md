@@ -22,7 +22,7 @@ The system follows a separation of concerns design:
 ## 2. Architecture
 
 ```text
-Program.cs (Entry Point / DI Setup)
+Program.cs (Entry Point / Manual Instantiation)
         ↓
 ┌───────────────────────────────────────────────────┐
 │  UI Layer                                         │
@@ -292,13 +292,14 @@ Authorization: Bearer <device_jwt>
 
 - Stored in `device.json` alongside the application binary
 - Loaded on startup via `DeviceAuthService.LoadDeviceAsync()`
-- Contains: `DeviceJwt`, `DeviceName`, `LinkedAt`
+- Contains: `DeviceId`, `DeviceJwt`, `DeviceName`, `LinkedAt`, `Verify`
 
 ### 13.3 Unauthorized Handling
 
 - On HTTP 401 from sync requests, `ApiClient` fires `DeviceUnauthorized` event
 - `MainForm` handles the event: shows balloon tip, unlinks device, opens relink dialog
 - User can also manually relink via the tray context menu
+- Relink dialog supports both initial linking and forced relinking scenarios
 
 ## 14. Timing Considerations
 
@@ -336,3 +337,4 @@ It ensures:
 - Reliable local storage
 - Secure device authentication
 - Automatic backend synchronization
+- Diagnostic capabilities via `SyncDebugHelper`

@@ -49,7 +49,7 @@
 - **IDeviceAuthService Interface**: `IsLinkedAsync()`, `LoadDeviceJwtAsync()`, `LoadDeviceAsync()`, `LinkDeviceAsync(string)`, `SaveDeviceJwtAsync(string)`, `UnlinkAsync()`
 - **DeviceAuthState**: Stores `DeviceId`, `DeviceJwt`, `DeviceName`, `LinkedAt`, `Verify`
 - **Persistence**: Saves/loads JWT and device metadata to/from `device.json` (JSON, next to application binary)
-- **Linking Flow**: Calls `ApiClient.LinkDeviceAsync()`, persists returned JWT, sets `ApiClient.DeviceJwt`
+- **Linking Flow**: Calls `ApiClient.LinkDeviceAsync()`, persists returned JWT with DeviceAuthState, sets `ApiClient.DeviceJwt`
 - **Unlinking**: Deletes `device.json`, clears `ApiClient.DeviceJwt`
 
 ### 8. **Services/SyncService.cs** — Background Sync Service
@@ -72,6 +72,7 @@
 - Modal dialog for entering a device link token
 - Multiline text box for pasting tokens
 - Status label for feedback (linking progress, errors)
+- Optional custom message parameter for forced relinking scenarios
 - Calls `DeviceAuthService.LinkDeviceAsync()` on submit
 - Returns `DialogResult.OK` on successful link
 
@@ -82,25 +83,37 @@
 - `PrintDiagnosticReportAsync()` — Full diagnostic report combining all above
 
 ### 12. **Program.cs** — Application Entry Point
-- Initializes `SqliteLogRepository`, `ApiClient`, `DeviceAuthService`
+- Uses manual instantiation (no DI container)
+- Creates `SqliteLogRepository`
+- Creates `ApiClient` with repository
+- Creates `DeviceAuthService` with ApiClient
 - Loads saved device JWT on startup via `DeviceAuthService.LoadDeviceAsync()`
+- Sets `ApiClient.DeviceJwt` from loaded device
 - If not linked, shows `DeviceLinkingDialog` (exits if cancelled)
-- Launches `MainForm` with dependency injection
+- Launches `MainForm` with dependencies
 
 ---
 
 ## Architecture
 
 ```
-Program.cs (Entry Point)
+Program.cs (Entry Point - Manual Instantiation)
+    ↓
+Create SqliteLogRepository
+    ↓
+Create ApiClient(repository)
+    ↓
+Create DeviceAuthService(apiClient)
     ↓
 DeviceAuthService.LoadDeviceAsync() → restore JWT from device.json
+    ↓
+Set ApiClient.DeviceJwt
     ↓
 IsLinkedAsync()? → No → DeviceLinkingDialog → LinkDeviceAsync()
     ↓                                              ↓
     Yes                                    ApiClient.LinkDeviceAsync()
     ↓                                              ↓
-MainForm                                   Save JWT → device.json
+MainForm                                   Save DeviceAuthState → device.json
     ├── AppTracker.StartAsync()            Set ApiClient.DeviceJwt
     │     ↓
     │   Polling Loop (2s)
@@ -203,7 +216,6 @@ Token Expiry / Revocation:
 | Package | Version | Purpose |
 |---------|---------|---------|
 | `System.Data.SQLite.Core` | 1.0.119 | SQLite database access |
-| `Microsoft.Extensions.Configuration.Json` | 10.0.0 | JSON configuration file support |
 | `Microsoft.Extensions.Http` | 10.0.0 | HTTP client infrastructure |
 
 ---
@@ -211,24 +223,24 @@ Token Expiry / Revocation:
 ## Example Output
 
 ```
-App Tracker started
+🎯 App Tracker started
 Initial app: explorer
 Polling every 2 seconds...
 
 → App changed to: code
-Logged: code: 2026-06-10 12:45:00 → 2026-06-10 12:45:30 (30s)
+✓ Logged: code: 2024-01-15 12:45:00 → 2024-01-15 12:45:30 (30s)
 → App changed to: chrome
-Logged: chrome: 2026-06-10 12:45:30 → 2026-06-10 12:46:00 (30s)
+✓ Logged: chrome: 2024-01-15 12:45:30 → 2024-01-15 12:46:00 (30s)
 
-Sync Service started (interval: 30s)
-Sync Service: Syncing 2 log(s)...
+🔄 Sync Service started (interval: 30s)
+🔄 Sync Service: Syncing 2 log(s)...
   Sent: code (30s)
   Sent: chrome (30s)
-Sync complete: 2 succeeded, 0 failed
+✅ Sync complete: 2 succeeded, 0 failed
 
-Stopping tracker...
-Logged: chrome: 2026-06-10 12:46:00 → 2026-06-10 12:46:10 (10s)
-Tracker stopped
+⏹️  Stopping tracker...
+✓ Logged: chrome: 2024-01-15 12:46:00 → 2024-01-15 12:46:10 (10s)
+✅ Tracker stopped
 ```
 
 ---
@@ -237,10 +249,12 @@ Tracker stopped
 
 - **Polling Strategy**: 2-second interval as specified
 - **Separation of Concerns**: Core (tracking) → Data (persistence) → Services (sync, auth) → UI (display)
+- **Manual Instantiation**: Program.cs uses manual dependency creation instead of DI container
 - **Offline-First**: All logs saved locally before sync
 - **Clean Shutdown**: Finalizes last session, performs final sync attempt
 - **GUID for IDs**: Ensures offline-safe uniqueness
 - **SyncStatus Tracking**: Full lifecycle with retry logic for failed logs
-- **Device Authentication**: JWT-based auth with persistence and auto-relink
+- **Device Authentication**: JWT-based auth with DeviceAuthState persistence and auto-relink
 - **Background Sync**: 30-second interval with graceful shutdown
 - **System Tray**: Minimize-to-tray with context menu (Show, Relink, Exit)
+- **Diagnostic Tools**: SyncDebugHelper provides device status, log inspection, and sync statistics
