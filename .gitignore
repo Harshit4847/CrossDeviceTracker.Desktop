@@ -55,3 +55,9 @@ Desktop.ini
 ## User-specific files
 *.env
 *.local
+
+# Release archives
+CrossDeviceTracker.Desktop-*.zip
+
+# Local database
+logs.db
