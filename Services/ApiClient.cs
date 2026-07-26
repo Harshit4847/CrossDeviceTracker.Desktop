@@ -1,5 +1,7 @@
+using System.Diagnostics;
 using System.Text;
 using System.Text.Json;
+using System.Windows.Forms;
 using CrossDeviceTracker.Desktop.Data;
 using CrossDeviceTracker.Desktop.Models;
 
@@ -39,17 +41,19 @@ public class ApiClient : IApiClient
         try
         {
             // Check if device is authenticated
+            Console.WriteLine($"Device JWT exists: {!string.IsNullOrWhiteSpace(DeviceJwt)}");
             if (string.IsNullOrWhiteSpace(DeviceJwt))
             {
-                Console.WriteLine("⚠️  Device not authenticated. Sync skipped. Please link device first.");
+                Console.WriteLine("⚠️ Device not authenticated. Sync skipped.");
                 return false;
             }
 
             // Get pending logs
             var logs = await _repository.GetPendingLogsAsync();
+            Console.WriteLine($"Pending logs: {logs.Count}");
             if (logs.Count == 0)
             {
-                // Silent - don't spam console every 30 seconds with no logs
+                Console.WriteLine("No pending logs.");
                 return true;
             }
 
@@ -87,6 +91,8 @@ public class ApiClient : IApiClient
 
     public async Task<bool> SendLogAsync(Log log)
     {
+        Debug.WriteLine($">>> SendLogAsync: {log.AppName}");
+
         try
         {
             var jwt = DeviceJwt;
@@ -101,14 +107,16 @@ public class ApiClient : IApiClient
             var payload = new
             {
                 appName = log.AppName,
-                startTime = log.StartTime.ToString("O"),
-                durationSeconds = (int)log.Duration.TotalSeconds
+                startTimeUtc = log.StartTime,
+                endTimeUtc = log.StartTime.Add(log.Duration),
+                durationSeconds = (int)log.Duration.TotalSeconds,
+                createdAtUtc = log.CreatedAt
             };
 
             // Debug: log request
-            Console.WriteLine("=== SYNC REQUEST ===");
-            Console.WriteLine(JsonSerializer.Serialize(payload));
-            Console.WriteLine($"JWT present: {!string.IsNullOrWhiteSpace(jwt)}");
+            Debug.WriteLine("=== SYNC REQUEST ===");
+            Debug.WriteLine(JsonSerializer.Serialize(payload));
+            Debug.WriteLine($"JWT present: {!string.IsNullOrWhiteSpace(jwt)}");
 
             var json = JsonSerializer.Serialize(payload);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
@@ -123,9 +131,9 @@ public class ApiClient : IApiClient
                 content);
 
             // Debug: log response
-            Console.WriteLine($"Status: {response.StatusCode}");
+            Debug.WriteLine($"Status: {response.StatusCode}");
             var body = await response.Content.ReadAsStringAsync();
-            Console.WriteLine(body);
+            Debug.WriteLine(body);
 
             if (response.IsSuccessStatusCode)
             {
@@ -139,7 +147,8 @@ public class ApiClient : IApiClient
             }
             else
             {
-                Console.WriteLine($"  ❌ Failed: {log.AppName} - {response.StatusCode} - {body}");
+                Debug.WriteLine($"❌ Failed: {log.AppName} - {response.StatusCode}");
+                Debug.WriteLine(body);
                 return false;
             }
         }
@@ -174,6 +183,9 @@ public class ApiClient : IApiClient
         if (response.IsSuccessStatusCode)
         {
             var responseContent = await response.Content.ReadAsStringAsync();
+            Console.WriteLine("=== LINK RESPONSE ===");
+            Console.WriteLine(responseContent);
+            MessageBox.Show(responseContent, "Raw Server Response");
             var result = JsonSerializer.Deserialize<LinkDesktopResponse>(responseContent, _jsonOptions);
             if (result == null || string.IsNullOrWhiteSpace(result.DeviceJwt))
             {

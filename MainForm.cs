@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using CrossDeviceTracker.Desktop.Core;
 using CrossDeviceTracker.Desktop.Data;
 using CrossDeviceTracker.Desktop.Services;
@@ -146,8 +147,10 @@ public class MainForm : Form
         });
 
         _syncService = new SyncService(_apiClient);
+        Debug.WriteLine("2. SyncService created");
         _ = Task.Run(async () =>
         {
+            Debug.WriteLine("3. Task started");
             try
             {
                 await _syncService.StartAsync();

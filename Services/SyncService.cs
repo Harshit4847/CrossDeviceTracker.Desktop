@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace CrossDeviceTracker.Desktop.Services;
 
 public interface ISyncService
@@ -21,13 +23,19 @@ public class SyncService : ISyncService
     public async Task StartAsync()
     {
         _isRunning = true;
-        Console.WriteLine("🔄 Sync Service started (interval: 30s)");
+        Debug.WriteLine("4. StartAsync entered");
+        Debug.WriteLine("🔄 Sync Service started (interval: 30s)");
 
         while (_isRunning)
         {
             try
             {
+                Debug.WriteLine(">>> Before SyncOnceAsync");
+
                 await SyncOnceAsync();
+
+                Debug.WriteLine(">>> After SyncOnceAsync");
+
                 await Task.Delay(DefaultSyncIntervalMs);
             }
             catch (Exception ex)
@@ -58,13 +66,19 @@ public class SyncService : ISyncService
 
     public async Task SyncOnceAsync()
     {
+        Debug.WriteLine(">>> Entered SyncOnceAsync");
+
         try
         {
+            Debug.WriteLine(">>> Before SyncPendingLogsAsync");
+
             await _apiClient.SyncPendingLogsAsync();
+
+            Debug.WriteLine(">>> After SyncPendingLogsAsync");
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Error during sync: {ex.Message}");
+            Debug.WriteLine($"❌ SyncOnceAsync Exception: {ex}");
         }
     }
 }
