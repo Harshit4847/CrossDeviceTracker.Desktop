@@ -22,10 +22,7 @@ public class ApiClient : IApiClient
     private readonly HttpClient _httpClient;
     private readonly ILogRepository _repository;
     private string _baseUrl = "https://crossdevicetracker-api-hy-erhyaffahwaufsba.southeastasia-01.azurewebsites.net";
-    private readonly JsonSerializerOptions _jsonOptions = new()
-    {
-        PropertyNameCaseInsensitive = true
-    };
+    private readonly JsonSerializerOptions _jsonOptions = new() { PropertyNameCaseInsensitive = true };
 
     public event EventHandler? DeviceUnauthorized;
     public string? DeviceJwt { get; set; }
@@ -40,34 +37,20 @@ public class ApiClient : IApiClient
     {
         try
         {
-            // Check if device is authenticated
-            Console.WriteLine($"Device JWT exists: {!string.IsNullOrWhiteSpace(DeviceJwt)}");
             if (string.IsNullOrWhiteSpace(DeviceJwt))
             {
                 Console.WriteLine("⚠️ Device not authenticated. Sync skipped.");
                 return false;
             }
 
-            // Get pending logs
             var logs = await _repository.GetPendingLogsAsync();
-            Console.WriteLine($"Pending logs: {logs.Count}");
-            if (logs.Count == 0)
-            {
-                Console.WriteLine("No pending logs.");
-                return true;
-            }
-
-            Console.WriteLine($"\n🔄 Sync Service: Syncing {logs.Count} log(s)...");
-            Console.WriteLine($"   Base URL: {_baseUrl}{TimelogsEndpoint}");
+            if (logs.Count == 0) return true;
 
             int successCount = 0;
             int failureCount = 0;
-
-            // Send each log individually (batch endpoint not yet available)
             foreach (var log in logs)
             {
-                var success = await SendLogAsync(log);
-                if (success)
+                if (await SendLogAsync(log))
                 {
                     successCount++;
                     await _repository.UpdateSyncStatusAsync(log.Id, SyncStatus.Sent);
@@ -79,12 +62,12 @@ public class ApiClient : IApiClient
                 }
             }
 
-            Console.WriteLine($"✅ Sync complete: {successCount} succeeded, {failureCount} failed\n");
+            Console.WriteLine($"✅ Sync complete: {successCount} succeeded, {failureCount} failed");
             return failureCount == 0;
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"❌ Sync error: {ex.Message}\n");
+            Console.WriteLine($"❌ Sync error: {ex.Message}");
             return false;
         }
     }
@@ -96,61 +79,41 @@ public class ApiClient : IApiClient
         try
         {
             var jwt = DeviceJwt;
+            if (string.IsNullOrEmpty(jwt)) return false;
 
-            if (string.IsNullOrEmpty(jwt))
-            {
-                Console.WriteLine("❌ Missing authentication credentials");
-                return false;
-            }
-
-            // Build the request body
+            // Log.Id is the stable local identifier. It becomes ClientSessionId on the API.
             var payload = new
             {
+                clientSessionId = log.Id.ToString(),
                 appName = log.AppName,
                 startTimeUtc = log.StartTime,
-                endTimeUtc = log.StartTime.Add(log.Duration),
+                endTimeUtc = log.EndTime,
                 durationSeconds = (int)log.Duration.TotalSeconds,
                 createdAtUtc = log.CreatedAt
             };
 
-            // Debug: log request
             Debug.WriteLine("=== SYNC REQUEST ===");
             Debug.WriteLine(JsonSerializer.Serialize(payload));
-            Debug.WriteLine($"JWT present: {!string.IsNullOrWhiteSpace(jwt)}");
 
             var json = JsonSerializer.Serialize(payload);
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
-
-            // Add authorization header
-            _httpClient.DefaultRequestHeaders.Authorization = 
+            using var content = new StringContent(json, Encoding.UTF8, "application/json");
+            _httpClient.DefaultRequestHeaders.Authorization =
                 new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", jwt);
 
-            // Send request
-            var response = await _httpClient.PostAsync(
-                $"{_baseUrl}{TimelogsEndpoint}",
-                content);
-
-            // Debug: log response
-            Debug.WriteLine($"Status: {response.StatusCode}");
+            using var response = await _httpClient.PostAsync($"{_baseUrl}{TimelogsEndpoint}", content);
             var body = await response.Content.ReadAsStringAsync();
+            Debug.WriteLine($"Status: {response.StatusCode}");
             Debug.WriteLine(body);
 
-            if (response.IsSuccessStatusCode)
-            {
-                return true;
-            }
-            else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            if (response.IsSuccessStatusCode) return true;
+
+            if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
             {
                 DeviceUnauthorized?.Invoke(this, EventArgs.Empty);
-                Console.WriteLine("  Device authorization expired. Relink required.");
-                return false;
+                Console.WriteLine("Device authorization expired. Relink required.");
             }
-            else
-            {
-                Debug.WriteLine($"❌ Failed: {log.AppName} - {response.StatusCode}");
-                Debug.WriteLine(body);
-                return false;
-            }
+
+            return false;
         }
         catch (Exception ex)
         {
@@ -164,9 +127,7 @@ public class ApiClient : IApiClient
         try
         {
             if (string.IsNullOrWhiteSpace(linkToken))
-            {
                 throw new ArgumentException("Link token is required.", nameof(linkToken));
-            }
 
             var payload = new
             {
@@ -176,48 +137,20 @@ public class ApiClient : IApiClient
             };
 
             var json = JsonSerializer.Serialize(payload);
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
-
+            using var content = new StringContent(json, Encoding.UTF8, "application/json");
             var response = await _httpClient.PostAsync($"{_baseUrl}/api/devices/link", content);
 
-        if (response.IsSuccessStatusCode)
-        {
-            var responseContent = await response.Content.ReadAsStringAsync();
-            Console.WriteLine("=== LINK RESPONSE ===");
-            Console.WriteLine(responseContent);
-            MessageBox.Show(responseContent, "Raw Server Response");
-            var result = JsonSerializer.Deserialize<LinkDesktopResponse>(responseContent, _jsonOptions);
-            if (result == null || string.IsNullOrWhiteSpace(result.DeviceJwt))
+            if (response.IsSuccessStatusCode)
             {
-                throw new Exception("Invalid response from server: Device JWT is empty.");
+                var responseContent = await response.Content.ReadAsStringAsync();
+                var result = JsonSerializer.Deserialize<LinkDesktopResponse>(responseContent, _jsonOptions);
+                if (result == null || string.IsNullOrWhiteSpace(result.DeviceJwt))
+                    throw new Exception("Invalid response from server: Device JWT is empty.");
+                return result;
             }
-            return result;
-        }
-        else
-        {
+
             var errorContent = await response.Content.ReadAsStringAsync();
-            string errorMessage = "Failed to link device.";
-            try
-            {
-                using var doc = JsonDocument.Parse(errorContent);
-                if (doc.RootElement.TryGetProperty("message", out var msgProp))
-                {
-                    errorMessage = msgProp.GetString() ?? errorMessage;
-                }
-                else if (doc.RootElement.TryGetProperty("error", out var errProp))
-                {
-                    errorMessage = errProp.GetString() ?? errorMessage;
-                }
-            }
-            catch
-            {
-                if (!string.IsNullOrWhiteSpace(errorContent))
-                {
-                    errorMessage = errorContent;
-                }
-            }
-            throw new Exception(errorMessage);
-        }
+            throw new Exception(string.IsNullOrWhiteSpace(errorContent) ? "Failed to link device." : errorContent);
         }
         catch (Exception ex)
         {
