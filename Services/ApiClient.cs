@@ -103,10 +103,14 @@ public class ApiClient : IApiClient
                 return false;
             }
 
-            // Build the request body
+            // Build the request body. The API's DTO marks packageName and clientSessionId
+            // as required, so both must always be sent. A desktop tracker has no OS package
+            // name; the API only uses packageName as a display-name fallback, so the app
+            // name is used.
             var payload = new
             {
                 clientSessionId = ResolveClientSessionId(log),
+                packageName = log.AppName,
                 appName = log.AppName,
                 startTimeUtc = log.StartTime,
                 endTimeUtc = log.StartTime.Add(log.Duration),
