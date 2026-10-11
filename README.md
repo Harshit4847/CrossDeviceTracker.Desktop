@@ -47,6 +47,7 @@ Windows Desktop Client  →  Backend API  →  Dashboard (Future)
 - **Background Sync** — `SyncService` pushes pending logs to the backend API every 30 seconds
 - **Offline-First** — Logs are stored locally in SQLite before network transmission
 - **Retry Logic** — Failed logs are retried on subsequent sync cycles
+- **Idempotent Sync** — Every log carries a persisted `clientSessionId`; the backend deduplicates on `(DeviceId, ClientSessionId)`, so retried logs are never stored twice
 
 ### System Tray Integration
 - **Minimize to Tray** — Click the close button to minimize the app to the system tray instead of closing it
@@ -68,7 +69,7 @@ Windows Desktop Client  →  Backend API  →  Dashboard (Future)
 2. **Time Block Tracking** — When the foreground application changes, the previous usage block is finalized with a start time, end time, and duration.
 3. **Local Storage** — Usage logs are persisted locally in SQLite (`logs.db`) for offline resilience.
 4. **Device Linking** — On first launch, the user enters a device token to link the client to their account. The backend issues a device JWT.
-5. **API Sync** — `SyncService` runs in the background, pushing pending logs to the backend API every 30 seconds, authenticated with the device JWT in the `Authorization: Bearer <token>` header.
+5. **API Sync** — `SyncService` runs in the background, pushing pending logs to the backend API every 30 seconds, authenticated with the device JWT in the `Authorization: Bearer <token>` header. Each log is sent with its `clientSessionId`, so retried logs are deduplicated server-side.
 
 ---
 

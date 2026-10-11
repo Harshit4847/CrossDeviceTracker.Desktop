@@ -134,6 +134,7 @@ Represents a single app usage session.
 - `Duration`
 - `SyncStatus`
 - `CreatedAt`
+- `ClientSessionId` — idempotency key for backend sync (see 12.1)
 
 ### 5.1 SyncStatus
 
@@ -260,11 +261,19 @@ On 401     → Fire DeviceUnauthorized event → prompt relink
 
 ```json
 {
+  "clientSessionId": "8f14e45f-ceea-467a-9b3c-6ab8d1f0c2a1",
   "appName": "chrome",
-  "startTime": "2026-06-10T12:45:00.0000000Z",
-  "durationSeconds": 30
+  "startTimeUtc": "2026-06-10T12:45:00.0000000Z",
+  "endTimeUtc": "2026-06-10T12:45:30.0000000Z",
+  "durationSeconds": 30,
+  "createdAtUtc": "2026-06-10T12:45:30.0000000Z"
 }
 ```
+
+`clientSessionId` is a client-generated, persisted identifier for the session. The backend treats
+`(DeviceId, ClientSessionId)` as unique, which makes sync **idempotent**: a log that fails to sync
+and is retried carries the same id, so the backend ignores the duplicate instead of inserting a
+second row. The value is generated when the session is finalized and never changes.
 
 ### 12.2 Authentication
 
@@ -316,6 +325,7 @@ Authorization: Bearer <device_jwt>
 | GUID for IDs | Offline-safe uniqueness |
 | Store EndTime | Query performance and validation |
 | SyncStatus enum | Reliable retry logic |
+| ClientSessionId per session | Idempotent sync — retries never duplicate rows |
 | Separate Core/Data/Services | Clean architecture |
 | Offline-first storage | No data loss on network failure |
 | Device JWT in local file | Persistent auth across restarts |

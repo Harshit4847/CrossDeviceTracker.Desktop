@@ -23,10 +23,58 @@ public class SqliteLogRepository : ILogRepository
                         EndTime TEXT NOT NULL,
                         DurationSeconds REAL NOT NULL,
                         SyncStatus TEXT NOT NULL,
-                        CreatedAt TEXT NOT NULL
+                        CreatedAt TEXT NOT NULL,
+                        ClientSessionId TEXT NOT NULL
                     )";
                 await command.ExecuteNonQueryAsync();
             }
+
+            await EnsureClientSessionIdColumnAsync(connection);
+        }
+    }
+
+    /// <summary>
+    /// Migrates databases created before ClientSessionId existed: adds the column and backfills
+    /// a unique value for every existing row, so old logs can still be synced. Safe to run on
+    /// every startup — the column check is a no-op once the column is present.
+    /// </summary>
+    private static async Task EnsureClientSessionIdColumnAsync(SQLiteConnection connection)
+    {
+        var columnExists = false;
+
+        using (var pragma = connection.CreateCommand())
+        {
+            pragma.CommandText = "PRAGMA table_info(Logs)";
+            using (var reader = await pragma.ExecuteReaderAsync())
+            {
+                while (await reader.ReadAsync())
+                {
+                    if (string.Equals(reader["name"].ToString(), nameof(Log.ClientSessionId), StringComparison.OrdinalIgnoreCase))
+                    {
+                        columnExists = true;
+                        break;
+                    }
+                }
+            }
+        }
+
+        if (!columnExists)
+        {
+            using (var alter = connection.CreateCommand())
+            {
+                alter.CommandText = "ALTER TABLE Logs ADD COLUMN ClientSessionId TEXT NOT NULL DEFAULT ''";
+                await alter.ExecuteNonQueryAsync();
+            }
+        }
+
+        // Backfill blank values (pre-existing rows) with a unique id so every log carries one.
+        using (var backfill = connection.CreateCommand())
+        {
+            backfill.CommandText = @"
+                UPDATE Logs
+                SET ClientSessionId = lower(hex(randomblob(16)))
+                WHERE ClientSessionId IS NULL OR ClientSessionId = ''";
+            await backfill.ExecuteNonQueryAsync();
         }
     }
 
@@ -38,8 +86,8 @@ public class SqliteLogRepository : ILogRepository
             using (var command = connection.CreateCommand())
             {
                 command.CommandText = @"
-                    INSERT INTO Logs (Id, AppName, StartTime, EndTime, DurationSeconds, SyncStatus, CreatedAt)
-                    VALUES (@id, @appName, @startTime, @endTime, @duration, @syncStatus, @createdAt)";
+                    INSERT INTO Logs (Id, AppName, StartTime, EndTime, DurationSeconds, SyncStatus, CreatedAt, ClientSessionId)
+                    VALUES (@id, @appName, @startTime, @endTime, @duration, @syncStatus, @createdAt, @clientSessionId)";
 
                 command.Parameters.AddWithValue("@id", log.Id.ToString());
                 command.Parameters.AddWithValue("@appName", log.AppName);
@@ -48,6 +96,7 @@ public class SqliteLogRepository : ILogRepository
                 command.Parameters.AddWithValue("@duration", log.Duration.TotalSeconds);
                 command.Parameters.AddWithValue("@syncStatus", log.SyncStatus.ToString());
                 command.Parameters.AddWithValue("@createdAt", log.CreatedAt.ToString("O"));
+                command.Parameters.AddWithValue("@clientSessionId", log.ClientSessionId);
 
                 await command.ExecuteNonQueryAsync();
             }
@@ -68,9 +117,19 @@ public class SqliteLogRepository : ILogRepository
                 {
                     while (await reader.ReadAsync())
                     {
+                        var id = Guid.Parse(reader["Id"].ToString()!);
+
+                        // Fall back to the log id if a row somehow has no session id, so the
+                        // value stays stable across sync attempts (idempotency key).
+                        var clientSessionId = reader["ClientSessionId"].ToString();
+                        if (string.IsNullOrWhiteSpace(clientSessionId))
+                        {
+                            clientSessionId = id.ToString();
+                        }
+
                         logs.Add(new Log
                         {
-                            Id = Guid.Parse(reader["Id"].ToString()!),
+                            Id = id,
                             AppName = reader["AppName"].ToString()!,
                             StartTime = DateTime.Parse(
                                 reader["StartTime"].ToString()!,
@@ -85,7 +144,8 @@ public class SqliteLogRepository : ILogRepository
                             CreatedAt = DateTime.Parse(
                                 reader["CreatedAt"].ToString()!,
                                 null,
-                                System.Globalization.DateTimeStyles.RoundtripKind)
+                                System.Globalization.DateTimeStyles.RoundtripKind),
+                            ClientSessionId = clientSessionId!
                         });
                     }
                 }

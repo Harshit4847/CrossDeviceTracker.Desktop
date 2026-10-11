@@ -4,7 +4,8 @@
 
 ### 1. **Models/Log.cs** — Core Log Model
 - Represents a single app usage session
-- Properties: `Id` (GUID), `AppName`, `StartTime`, `EndTime`, `Duration`, `SyncStatus`, `CreatedAt`
+- Properties: `Id` (GUID), `AppName`, `StartTime`, `EndTime`, `Duration`, `SyncStatus`, `CreatedAt`, `ClientSessionId`
+- `ClientSessionId` — client-generated idempotency key sent to the backend as `clientSessionId`; generated once per session, persisted, and reused on every retry
 - `SyncStatus` enum: `Pending`, `Sent`, `Failed`
 - `ToString()` override for debugging output
 
@@ -24,6 +25,7 @@
 - Full async/await support via `System.Data.SQLite`
 - Stores all Log properties as text (ISO 8601 for dates, REAL for duration)
 - Supports querying by sync status for retry logic
+- **Schema migration**: databases created before `ClientSessionId` existed are upgraded at startup (column added, existing rows backfilled with unique ids); the migration is idempotent and never rewrites an existing session id
 
 ### 5. **Core/AppTracker.cs** — Foreground Tracking Engine
 - **Polling**: Every 2 seconds (configurable via `PollingIntervalMs`)
@@ -42,7 +44,8 @@
 - **Device Linking**: POSTs to `/api/devices/link` with `linkToken`, `deviceName`, `platform`
 - **JWT Auth**: Attaches `Authorization: Bearer <jwt>` header to all API requests
 - **401 Handling**: Fires `DeviceUnauthorized` event on HTTP 401 response
-- **Payload Format**: `{ appName, startTime (ISO 8601), durationSeconds }`
+- **Payload Format**: `{ clientSessionId, appName, startTimeUtc, endTimeUtc, durationSeconds, createdAtUtc }`
+- **Idempotency**: sends `clientSessionId` (required by the backend) so retries of the same session are deduplicated instead of inserted twice
 - **Error Handling**: Catches and logs exceptions, returns success/failure per log
 
 ### 7. **Services/DeviceAuthService.cs** — Device Authentication
@@ -162,7 +165,8 @@ CREATE TABLE Logs (
     EndTime TEXT NOT NULL,         -- ISO 8601 format
     DurationSeconds REAL NOT NULL, -- Calculated duration in seconds
     SyncStatus TEXT NOT NULL,      -- Pending | Sent | Failed
-    CreatedAt TEXT NOT NULL        -- UTC timestamp, ISO 8601
+    CreatedAt TEXT NOT NULL,       -- UTC timestamp, ISO 8601
+    ClientSessionId TEXT NOT NULL  -- Idempotency key sent to the backend as clientSessionId
 )
 ```
 
