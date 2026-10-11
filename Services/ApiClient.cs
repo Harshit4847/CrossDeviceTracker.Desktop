@@ -106,6 +106,7 @@ public class ApiClient : IApiClient
             // Build the request body
             var payload = new
             {
+                clientSessionId = ResolveClientSessionId(log),
                 appName = log.AppName,
                 startTimeUtc = log.StartTime,
                 endTimeUtc = log.StartTime.Add(log.Duration),
@@ -158,6 +159,15 @@ public class ApiClient : IApiClient
             return false;
         }
     }
+
+    /// <summary>
+    /// Returns the value sent as <c>clientSessionId</c>. The backend requires it and uses
+    /// (DeviceId, ClientSessionId) as its idempotency key, so the same log must always be sent
+    /// with the same value — otherwise retries create duplicate rows. Falls back to the log id
+    /// (stable, persisted) if a session id is missing.
+    /// </summary>
+    private static string ResolveClientSessionId(Log log) =>
+        string.IsNullOrWhiteSpace(log.ClientSessionId) ? log.Id.ToString() : log.ClientSessionId;
 
     public async Task<LinkDesktopResponse> LinkDeviceAsync(string linkToken)
     {
